@@ -1,0 +1,17 @@
+/* ==========================================================================
+   ARQUIVO PRINCIPAL: css/style.css
+   DESCRIÇÃO: Ponto de entrada CSS que consolida e importa todos os módulos do projeto.
+   
+   MAPA DE NAVEGAÇÃO:
+   - Variáveis de Cores/Fontes  -> css/variables.css
+   - Base/Reset/Tipografia      -> css/base.css
+   - Layout Header/Hero/Footer  -> css/layout.css
+   - Componentes (Botões/Cards) -> css/components.css
+   - Animações e Keyframes      -> css/animations.css
+   ========================================================================== */
+
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'animations.css';

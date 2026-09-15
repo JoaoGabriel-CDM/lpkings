@@ -1,0 +1,116 @@
+/* ==========================================================================
+   ARQUIVO: css/components.css
+   DESCRIÇÃO: Estilos de componentes independentes e reutilizáveis do projeto.
+   
+   MAPA DE EDIÇÃO / ONDE ALTERAR:
+   - Botões CTA: Altere .cta-primary ou .cta-button.
+   - Cards de Preço: Altere .price-card e .price-card-pro.
+   - FAQ Accordion: Altere .faq-item, .faq-content e .faq-icon.
+   - Botão Flutuante do WhatsApp: Altere .whatsapp-float.
+   ========================================================================== */
+
+/* --- Botões Call To Action --- */
+.cta-primary {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal);
+}
+.cta-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Features (Brilho na imagem) --- */
+.feature-img-wrap {
+  position: relative;
+}
+.feature-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.07), transparent 70%);
+  border-radius: 32px;
+  pointer-events: none;
+}
+.dark .feature-img-wrap::before {
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12), transparent 70%);
+}
+
+/* --- Cards de Preço --- */
+.price-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.price-card:hover {
+  transform: translateY(-5px);
+}
+.price-card-pro {
+  box-shadow: 0 0 0 4px #facc15, 0 24px 48px rgba(0, 0, 0, 0.25);
+}
+.price-card-pro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 4px #facc15, 0 32px 56px rgba(0, 0, 0, 0.30);
+}
+
+/* --- Cards de CTA & Formulários --- */
+.cta-card {
+  background: var(--gradient-cta-light);
+}
+.dark .cta-card {
+  background: var(--gradient-cta-dark);
+  border-color: rgba(59, 130, 246, 0.20) !important;
+}
+
+.form-input {
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* --- FAQ Component --- */
+.faq-item {
+  overflow: hidden;
+  transition: box-shadow var(--transition-normal);
+}
+.faq-item.faq-open {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+
+.faq-icon {
+  transition: transform var(--transition-slow), background-color var(--transition-normal);
+  line-height: 1;
+}
+.faq-item.faq-open .faq-icon {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* --- Botão Flutuante do WhatsApp --- */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 28px;
+  right: 20px;
+  background: var(--color-whatsapp);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: wa-pulse 2.5s ease-out infinite;
+  transition: transform var(--transition-normal), background-color var(--transition-normal);
+}
+.whatsapp-float:hover {
+  background: var(--color-whatsapp-hover);
+  transform: scale(1.08);
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 16px;
+  }
+}

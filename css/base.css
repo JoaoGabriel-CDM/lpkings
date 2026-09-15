@@ -1,0 +1,34 @@
+/* ==========================================================================
+   ARQUIVO: css/base.css
+   DESCRIÇÃO: Reset global, box-sizing, carregamento de fontes e tipografia base.
+   
+   MAPA DE EDIÇÃO / ONDE ALTERAR:
+   - Scroll suave: Configurado na regra 'html'.
+   - Estilos globais do corpo da página: Altere a regra 'body'.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* --- Reset & Box Sizing --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* --- Tipografia Personalizada --- */
+.text-blue-gradient {
+  background: var(--gradient-blue-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

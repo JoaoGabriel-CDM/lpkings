@@ -1,0 +1,382 @@
+<!-- 
+==========================================================================
+ARQUIVO: politica.html
+DESCRIÇÃO: Página de Política de Privacidade / Aviso de Privacidade do AtendeLink.
+
+MAPA DE GUIA E NAVEGAÇÃO:
+- Cabeçalho / Navegação: <header id="site-header">
+- Conteúdo Principal do Aviso: <main> -> <section>
+- Tabela de Bases Legais: Elemento <table> dentro da section
+- Rodapé: <footer id="site-footer">
+- Estilos CSS: css/style.css
+- Script de Tema: js/theme.js
+========================================================================== 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - AtendeLink</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS (Ponto de Entrada Modular) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800 dark:bg-[#020B18] dark:text-gray-100 flex flex-col min-h-screen transition-colors duration-200">
+
+    <!-- Header Fixo e Navegação -->
+    <header id="site-header" class="sticky top-0 z-50 bg-white shadow-sm backdrop-blur-md bg-opacity-95 dark:bg-[#020B18] dark:shadow-gray-800 border-b border-gray-100 dark:border-slate-800 transition-colors duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex items-center space-x-2 text-3xl font-extrabold text-blue-700">
+                <a href="index.html" class="focus:outline-none transition-transform hover:scale-105">
+                    <img id="logo" src="images/logo-dark.png" alt="AtendeLink Logo" class="h-10 w-auto">
+                </a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#recursos" class="text-sm font-medium hover:text-blue-600 transition duration-150">Recursos</a>
+                    <a href="index.html#precos" class="text-sm font-medium hover:text-blue-600 transition duration-150">Preços</a>
+                    <a href="index.html#faq" class="text-sm font-medium hover:text-blue-600 transition duration-150">FAQ</a>
+                </nav>
+                <a href="https://wa.me/+5535933005536" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-150 cta-button space-x-2 shadow-sm">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Começar Agora</span>
+                </a>
+                
+                <!-- Botão de Alternância de Tema -->
+                <button id="theme-toggle" aria-label="Alternar tema"
+                  class="w-9 h-9 rounded-full flex items-center justify-center
+                         bg-gray-100 dark:bg-[#0D1B2E] hover:bg-gray-200 dark:hover:bg-[#162235]
+                         border border-gray-200 dark:border-slate-700/60 transition-all">
+                  <svg id="icon-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+                  </svg>
+                  <svg id="icon-moon" class="w-4 h-4 text-blue-300 hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                  </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow transition-colors duration-200">
+        <section class="py-12 md:py-24 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+                <div class="space-y-6 text-gray-600 dark:text-gray-300">
+                    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-8">Aviso de Privacidade</h1>
+
+                    <p>Como o Atendelink trata dados pessoais em modelo self-hosted: responsabilidades do assinante, coleta, armazenamento e conformidade com a LGPD.</p>
+                    <p><strong>Versão original:</strong> 22/05/2024<br>
+                    <strong>Última atualização:</strong> 12/05/2026<br>
+                    <strong>Versão vigente em:</strong> <a href="https://ajuda.zdg.com.br/aviso-de-privacidade" target="_blank" class="underline hover:opacity-70">https://ajuda.zdg.com.br/aviso-de-privacidade</a></p>
+
+                    <p>A BIANCA SANT ANA PEREIRA & CIA LTDA, inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG ("ZDG"), criou este Aviso de Privacidade (o "Aviso") para explicar como trata dados pessoais quando você contrata, instala ou utiliza o Atendelink, ou quando acessa o nosso Site.</p>
+
+                    <p>O Atendelink é um software omnichannel de gestão e automação de atendimento, licenciado em modelo auto-hospedado (self-hosted): a ZDG entrega a licença e o instalador, e o Cliente roda o Software na própria infraestrutura (VPS). Esse desenho é determinante para entender quem trata o quê — por isso há um capítulo dedicado ao tema mais adiante (ver o capítulo Particularidades do modelo self-hosted).</p>
+
+                    <p>Este Aviso integra de forma indissociável os <a href="termos.html" class="underline hover:opacity-70">Termos e Condições de Uso do Atendelink</a>. Em caso de dúvida ou para exercer seus direitos como Titular, fale conosco pelos canais informados ao final do documento.</p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">SUMÁRIO - INFORMAÇÕES CONTIDAS NESTE AVISO</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><a href="#id-1.-definicoes" class="underline hover:opacity-70">1. Definições</a></li>
+                        <li><a href="#id-2.-a-quem-se-aplica-este-aviso" class="underline hover:opacity-70">2. A quem se aplica este Aviso</a></li>
+                        <li><a href="#id-3.-quais-dados-coletamos-e-como" class="underline hover:opacity-70">3. Quais dados coletamos e como</a></li>
+                        <li><a href="#id-4.-finalidades-do-tratamento" class="underline hover:opacity-70">4. Finalidades do tratamento</a></li>
+                        <li><a href="#id-5.-bases-legais-aplicaveis" class="underline hover:opacity-70">5. Bases legais aplicáveis</a></li>
+                        <li><a href="#id-6.-com-quem-compartilhamos-seus-dados" class="underline hover:opacity-70">6. Com quem compartilhamos seus dados</a></li>
+                        <li><a href="#id-7.-particularidades-do-modelo-self-hosted" class="underline hover:opacity-70">7. Particularidades do modelo self-hosted</a></li>
+                        <li><a href="#id-8.-por-quanto-tempo-guardamos-seus-dados" class="underline hover:opacity-70">8. Por quanto tempo guardamos seus dados</a></li>
+                        <li><a href="#id-9.-como-protegemos-seus-dados" class="underline hover:opacity-70">9. Como protegemos seus dados</a></li>
+                        <li><a href="#id-10.-direitos-do-titular" class="underline hover:opacity-70">10. Direitos do Titular</a></li>
+                        <li><a href="#id-11.-cookies" class="underline hover:opacity-70">11. Cookies</a></li>
+                        <li><a href="#id-12.-transferencia-internacional-de-dados" class="underline hover:opacity-70">12. Transferência internacional de dados</a></li>
+                        <li><a href="#id-13.-encarregado-e-canais-de-contato" class="underline hover:opacity-70">13. Encarregado e canais de contato</a></li>
+                        <li><a href="#id-14.-alteracoes-desta-politica" class="underline hover:opacity-70">14. Alterações desta Política</a></li>
+                    </ul>
+
+                    <h2 id="id-1.-definicoes" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Definições</h2>
+                    <p>Para facilitar a leitura, alguns termos usados ao longo deste Aviso:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Cliente.</strong> Pessoa física ou jurídica que contrata a licença do Atendelink e gerencia, sob sua responsabilidade, a VPS onde o Software é instalado.</li>
+                        <li><strong>Usuário.</strong> Pessoa indicada pelo Cliente para utilizar o Atendelink (administrador ou usuário interno) ou que apenas navega no Site.</li>
+                        <li><strong>Titular.</strong> Pessoa natural a quem se referem os dados pessoais.</li>
+                        <li><strong>Controlador / Operador.</strong> Conceitos da LGPD: o Controlador toma as decisões sobre o tratamento; o Operador trata os dados segundo as instruções do Controlador.</li>
+                        <li><strong>LGPD.</strong> Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais.</li>
+                        <li><strong>ANPD.</strong> Autoridade Nacional de Proteção de Dados.</li>
+                        <li><strong>Site.</strong> Domínios e subdomínios operados pela ZDG no contexto do Atendelink. As páginas principais são o site corporativo (<a href="https://zdg.com.br" target="_blank" class="underline hover:opacity-70">https://zdg.com.br</a>) e o site institucional do produto (<a href="https://atendelink.zdg.com.br" target="_blank" class="underline hover:opacity-70">https://atendelink.zdg.com.br</a>); demais subdomínios da ZDG voltados a atendimento, documentação, treinamento de Clientes e canais correlatos estão igualmente cobertos por este Aviso. Produtos distintos do Atendelink, como a Comunidade ZDG, são regidos por avisos de privacidade próprios.</li>
+                        <li><strong>VPS (Virtual Private Server).</strong> Servidor virtual contratado e custeado pelo próprio Cliente, junto a provedores de infraestrutura, onde o Atendelink é instalado e operado sob exclusiva guarda do Cliente.</li>
+                        <li><strong>Plataforma WhatsApp.</strong> Plataformas operadas pela WhatsApp LLC (grupo Meta Platforms, Inc.), integradas ao Atendelink via API Oficial — arquitetura na qual a ZDG atua como Tech Provider certificado — ou via APIs configuradas pelo Cliente, conforme <a href="https://www.whatsapp.com/legal/" target="_blank" class="underline hover:opacity-70">termos da plataforma</a>.</li>
+                        <li><strong>Canais de Integração de Terceiros.</strong> Redes sociais, mensageiros, marketplaces, CRMs, gateways de pagamento e demais sistemas integráveis ao Atendelink via APIs, webhooks ou conectores, ativados e configurados sob exclusiva responsabilidade do Cliente, que atua como Controlador dos dados que decide trafegar por cada canal.</li>
+                        <li><strong>Plano de Assinatura.</strong> Licença de uso do Atendelink por período determinado, contratada pelo Cliente nas plataformas de pagamento parceiras.</li>
+                        <li><strong>Tratamento.</strong> Qualquer operação realizada com dados pessoais (coleta, armazenamento, transmissão, eliminação etc.), nos termos do art. 5º, X, da LGPD.</li>
+                    </ul>
+
+                    <h2 id="id-2.-a-quem-se-aplica-este-aviso" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. A quem se aplica este Aviso</h2>
+                    <p>Este Aviso se aplica aos seguintes Titulares:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Visitantes do Site e leads que preenchem formulários de contato;</li>
+                        <li>Clientes que contratam a licença de uso do Atendelink;</li>
+                        <li>Usuários indicados pelos Clientes para operar o Software.</li>
+                    </ul>
+                    <p>Este Aviso não se aplica aos contatos finais (leads, clientes do Cliente, destinatários de mensagens) cujos dados o Cliente trafega pelo Atendelink instalado em sua própria VPS. Em relação a esses dados, o Cliente é o Controlador — cabe a ele manter sua própria política de privacidade, obter os consentimentos cabíveis e atender às solicitações dos titulares (ver o capítulo Particularidades do modelo self-hosted).</p>
+
+                    <h2 id="id-3.-quais-dados-coletamos-e-como" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Quais dados coletamos e como</h2>
+                    <p>A ZDG coleta dados pessoais em três contextos distintos. Cada um tem fonte e finalidade próprias, descritas a seguir.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.1. Dados que você nos fornece diretamente</h3>
+                    <p>Quando você se cadastra para usar o Atendelink, preenche formulários no Site ou interage com nossas redes sociais, coletamos:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Identificação e contato.</strong> Nome, e-mail, telefone e CPF ou CNPJ (este último para faturamento e validação da licença).</li>
+                        <li><strong>Credenciais de acesso.</strong> Senha (armazenada em hash) e registros de aceite dos Termos e deste Aviso.</li>
+                        <li><strong>Dados da instalação.</strong> Domínio e subdomínios cadastrados pelo Cliente para vinculação da licença.</li>
+                        <li><strong>Mensagens espontâneas.</strong> Quando você nos escreve, eventualmente armazenamos o conteúdo da mensagem para resposta e histórico de atendimento.</li>
+                        <li><strong>Foto de perfil de redes sociais.</strong> Quando você fala conosco via WhatsApp, Instagram ou Facebook, a foto de perfil pode ficar visível ao nosso atendimento (não é extraída nem armazenada por nós).</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.2. Dados coletados automaticamente</h3>
+                    <p>Durante a navegação no Site e o uso do painel administrativo do Atendelink, registramos automaticamente:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Logs de acesso.</strong> Endereço IP, data e hora das ações, dispositivo e navegador, nos termos do art. 15 da Lei nº 12.965/2014 (Marco Civil da Internet).</li>
+                        <li><strong>Cookies.</strong> Mecanismos e gestão de consentimento são detalhados no capítulo Cookies deste Aviso.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.3. Dados técnicos do sistema de licenciamento</h3>
+                    <p>Em razão da natureza self-hosted do Atendelink, a ZDG não acessa os dados operacionais que trafegam na VPS do Cliente (mensagens, contatos, conversas, mídias). Para validação de licença, segurança e combate à pirataria, o Software emite, a partir da VPS do Cliente, telemetria limitada:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Chave de licença e seu status (ativa/inativa);</li>
+                        <li>Subdomínios cadastrados na instalação;</li>
+                        <li>Estatísticas agregadas de logins no sistema;</li>
+                        <li>IP do servidor de instalação e versão do Software;</li>
+                        <li>Status de conexão e identificadores técnicos das integrações com APIs oficiais da Meta (WhatsApp Business Platform, Instagram, Facebook Messenger): App ID, WABA ID, tokens OAuth, eventos de webhook e indicadores de qualidade fornecidos pela própria Meta.</li>
+                    </ul>
+                    <p>Esses dados são tratados exclusivamente para segurança, prevenção a abuso, auditoria de compliance, estabilidade operacional e proteção da infraestrutura compartilhada com a Meta — conforme cláusulas 9.3 e 10 dos Termos e Condições de Uso.</p>
+
+                    <h2 id="id-4.-finalidades-do-tratamento" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Finalidades do tratamento</h2>
+                    <p>Tratamos os dados acima exclusivamente para as finalidades abaixo. Qualquer tratamento para finalidade não prevista neste Aviso dependerá de nova base legal ou novo consentimento.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Operação do contrato.</strong> Identificar Cliente e Usuário, faturar, validar a licença, prestar suporte técnico e comunicar aspectos contratuais (renovações, alterações de plano, comunicados oficiais).</li>
+                        <li><strong>Comunicação institucional e marketing.</strong> Responder dúvidas, enviar conteúdos e novidades sobre o Atendelink, mensurar campanhas e segmentar comunicação — sempre com possibilidade de descadastro (opt-out).</li>
+                        <li><strong>Segurança e prevenção a fraudes.</strong> Identificar tentativas de pirataria, abuso e fraude e proteger a integridade da infraestrutura compartilhada com a Meta.</li>
+                        <li><strong>Cumprimento de obrigações legais.</strong> Atender ordens judiciais, requisições da ANPD e demais obrigações legais (em especial o Marco Civil da Internet).</li>
+                        <li><strong>Exercício regular de direitos.</strong> Defesa em processos judiciais, administrativos ou arbitrais.</li>
+                        <li><strong>Mensuração e melhoria do Site.</strong> Analisar tráfego, comportamento de visitantes e desempenho de páginas e campanhas, observado o regime de consentimento descrito no capítulo Cookies.</li>
+                    </ul>
+
+                    <h2 id="id-5.-bases-legais-aplicaveis" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Bases legais aplicáveis</h2>
+                    <p>Cada finalidade encontra base legal na LGPD, conforme a tabela abaixo:</p>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm">
+                            <thead>
+                                <tr class="bg-gray-100 dark:bg-gray-700">
+                                    <th class="py-2 px-4 border-b text-left">Dados</th>
+                                    <th class="py-2 px-4 border-b text-left">Finalidade</th>
+                                    <th class="py-2 px-4 border-b text-left">Base legal (LGPD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Cadastro de Cliente e Usuário</td>
+                                    <td class="py-2 px-4 border-b">Formação e execução do contrato de licença do Atendelink</td>
+                                    <td class="py-2 px-4 border-b">Execução de contrato (art. 7º, V)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Comunicação com Titular e marketing direto</td>
+                                    <td class="py-2 px-4 border-b">Atendimento, comunicação contratual e promocional</td>
+                                    <td class="py-2 px-4 border-b">Execução de contrato (art. 7º, V) e legítimo interesse (art. 7º, IX), com opt-out</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Logs de IP, sessão, dispositivo e navegador</td>
+                                    <td class="py-2 px-4 border-b">Segurança, registro de atividades e cumprimento do Marco Civil da Internet</td>
+                                    <td class="py-2 px-4 border-b">Obrigação legal (art. 7º, II) e legítimo interesse (art. 7º, IX)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Telemetria de licenciamento e identificadores técnicos das integrações Meta</td>
+                                    <td class="py-2 px-4 border-b">Validação da licença, prevenção a pirataria e proteção da infraestrutura Tech Provider</td>
+                                    <td class="py-2 px-4 border-b">Execução de contrato (art. 7º, V) e legítimo interesse (art. 7º, IX)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Cookies estritamente necessários ao Site</td>
+                                    <td class="py-2 px-4 border-b">Funcionamento técnico e segurança da navegação</td>
+                                    <td class="py-2 px-4 border-b">Legítimo interesse (art. 7º, IX)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Cookies opcionais (estatísticos, de marketing e funcionais)</td>
+                                    <td class="py-2 px-4 border-b">Mensuração, personalização e direcionamento publicitário</td>
+                                    <td class="py-2 px-4 border-b">Consentimento (art. 7º, I)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4">Você pode revogar consentimentos a qualquer tempo pelos canais informados ao final deste Aviso.</p>
+
+                    <h2 id="id-6.-com-quem-compartilhamos-seus-dados" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">6. Com quem compartilhamos seus dados</h2>
+                    <p>A ZDG compartilha dados pessoais apenas com terceiros indispensáveis à operação do Atendelink, do Site e do sistema de licenciamento. Esses terceiros se enquadram em três grupos: (i) Operadores, que tratam dados sob nossas instruções; (ii) Controladores parceiros, que tratam dados de forma autônoma para fins próprios; e (iii) Controladores independentes acionados pelo próprio Cliente.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.1. Operadores</h3>
+                    <p>Os Operadores contratados pela ZDG são organizados em categorias funcionais. Mantemos contratos de tratamento de dados e exigimos padrões mínimos de segurança da informação compatíveis com a LGPD.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Infraestrutura corporativa.</strong> Hospedagem da VPS corporativa, automações internas e e-mail técnico — Hostinger Brasil Hospedagem de Sites LTDA (<a href="https://www.hostinger.com/br/legal/privacy-policy/" target="_blank" class="underline hover:opacity-70">política de privacidade</a>).</li>
+                        <li><strong>Sistema de licenciamento centralizado.</strong> VPS dedicada que valida licenças do Atendelink e recebe a telemetria descrita no capítulo Quais dados coletamos — Hetzner Online GmbH, com infraestrutura na Alemanha (entra em transferência internacional, ver capítulo Transferência internacional de dados).</li>
+                        <li><strong>Rede global de CDN, proxy reverso e proteção anti-spam.</strong> Utilizada na hospedagem do Site institucional e no roteamento da camada Tech Provider Meta.</li>
+                        <li><strong>Suíte de produtividade corporativa.</strong> E-mail corporativo, planilhas e documentos usados internamente pela ZDG para gestão operacional e comunicação com Clientes.</li>
+                        <li><strong>Plataforma de CRM, e-mail marketing e e-mails transacionais.</strong> Gestão de contatos, segmentação e envio de comunicados.</li>
+                        <li><strong>Plataformas de documentação, treinamento e atendimento de Clientes.</strong> Central de ajuda, portal de aulas e ferramentas correlatas de relacionamento.</li>
+                    </ul>
+                    <p>Esta enumeração é exemplificativa: a ZDG pode adicionar, substituir ou remover Operadores de mesma natureza e finalidade a qualquer tempo, sem necessidade de atualização individual deste Aviso. A lista nominal atualizada de Operadores pode ser solicitada a qualquer momento pelo Titular, nos termos do art. 18, VII, da LGPD, pelo e-mail privacidade@zdg.com.br.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.2. Controladores parceiros</h3>
+                    <p>Algumas relações envolvem terceiros que tratam dados pessoais com finalidades próprias, na qualidade de Controladores autônomos (não Operadores):</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Plataformas de pagamento.</strong> A compra da licença do Atendelink é processada por Hotmart (<a href="https://hotmart.com/pt-br/legal/privacidade-de-dados" target="_blank" class="underline hover:opacity-70">política</a>) e Greenn (<a href="https://greenn.com.br/politica-de-privacidade-greenn/" target="_blank" class="underline hover:opacity-70">política</a>), que coletam e tratam seus dados de faturamento, conciliação e prevenção a fraudes conforme suas próprias políticas.</li>
+                        <li><strong>Meta Platforms, Inc. / WhatsApp LLC</strong> (<a href="https://www.whatsapp.com/legal/" target="_blank" class="underline hover:opacity-70">termos</a>). Provedora das APIs oficiais do WhatsApp Business Platform, Instagram Direct e Facebook Messenger. A ZDG opera como Tech Provider certificado dessas APIs e, em relação ao Meta Pixel instalado no Site, atua como Controladora Conjunta com a Meta nos termos do <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" class="underline hover:opacity-70">Controller Addendum</a>.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.3. Ferramentas de mensuração do Site</h3>
+                    <p>O Site institucional utiliza ferramentas de terceiros para análise estatística de tráfego, mensuração de campanhas, gestão de tags e segmentação publicitária ("Ferramentas de Mensuração"). Essas ferramentas coletam dados técnicos do visitante (endereço IP, identificadores de dispositivo, páginas acessadas, tempo de navegação, origem da visita e padrões de interação), com finalidade de melhoria da experiência, mensuração de performance e prevenção a fraudes.</p>
+                    <p>A ativação de Ferramentas de Mensuração que dependam de cookies opcionais ocorre somente mediante consentimento prestado pelo banner de cookies — ver capítulo Cookies. A ZDG pode adicionar, substituir ou remover Ferramentas de Mensuração de mesma natureza a qualquer tempo, sem atualização individual deste Aviso.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.4. Integrações de Terceiros configuradas pelo Cliente</h3>
+                    <p>O Atendelink é uma plataforma omnichannel projetada para integrar-se a múltiplos canais e sistemas — redes sociais, mensageiros, marketplaces, CRMs, gateways de pagamento e outros — via APIs, webhooks ou conectores. A ativação dessas integrações é decisão exclusiva do Cliente, na qualidade de Controlador dos dados que decide trafegar por cada canal.</p>
+                    <p>Os dados pessoais transitando por essas integrações são governados pelos termos de uso e políticas de privacidade das respectivas plataformas, sobre as quais a ZDG não tem ingerência, controle ou responsabilidade. Cabe ao Cliente, antes de habilitar qualquer integração, revisar os termos da plataforma de destino e adequar seu próprio aviso de privacidade. Esta cláusula aplica-se a qualquer nova integração disponibilizada pelo Atendelink no futuro.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.5. Recursos externos incorporados ao Site</h3>
+                    <p>O Site pode incorporar recursos hospedados em servidores de terceiros (vídeos, fontes web, mapas, bibliotecas e CDNs públicas) que, ao serem carregados pelo navegador do visitante, podem coletar dados técnicos com finalidades técnicas e, eventualmente, estatísticas próprias do provedor. Tais coletas são governadas pelas políticas de privacidade dos respectivos provedores.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.6. Provedor de VPS contratado pelo Cliente</h3>
+                    <p>No modelo self-hosted, o provedor de VPS contratado pelo próprio Cliente é Operador contratado diretamente pelo Cliente, e não pela ZDG. A ZDG não responde pelas políticas de privacidade, segurança ou disponibilidade do provedor de infraestrutura escolhido pelo Cliente.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">6.7. Links para sites e plataformas de terceiros</h3>
+                    <p>Nosso Site pode conter links para sites e plataformas de terceiros (parceiros, anunciantes, redes sociais). Esses sites têm seus próprios avisos e políticas de privacidade, pelas quais a ZDG não é responsável. Recomendamos verificar tais avisos antes de enviar quaisquer dados pessoais a esses terceiros.</p>
+
+                    <h2 id="id-7.-particularidades-do-modelo-self-hosted" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">7. Particularidades do modelo self-hosted</h2>
+                    <p>O Atendelink é um software auto-hospedado: a ZDG entrega a licença e o instalador, e o Cliente contrata, gerencia e custeia a infraestrutura (VPS) onde o Software roda. Esse desenho redistribui responsabilidades de privacidade e merece capítulo próprio.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">7.1. Divisão de papéis ZDG / Cliente</h3>
+                    <p>A relação envolvendo dados pessoais segue a divisão abaixo:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>ZDG como Controladora.</strong> A ZDG é Controladora apenas dos dados cadastrais do Cliente (nome, e-mail, CPF/CNPJ, telefone, domínio, IP, registros de login), tratados para faturamento, validação da licença, suporte técnico e cumprimento de obrigações legais.</li>
+                        <li><strong>Cliente como Controlador.</strong> O Cliente é o único e exclusivo Controlador dos dados pessoais de terceiros (seus clientes finais, leads e contatos) que trafegam pelo Atendelink instalado em sua VPS. Cabe ao Cliente manter sua própria política de privacidade, obter os consentimentos cabíveis, atender às solicitações dos titulares e adotar medidas técnicas e administrativas de segurança da informação compatíveis com a LGPD.</li>
+                        <li><strong>ZDG como Operadora (eventual).</strong> A ZDG poderá atuar como Operadora, sob instruções do Cliente, em situações específicas: (i) durante o setup de instalação inicial realizado pela equipe técnica via SSH (item 5.5 dos Termos de Uso); (ii) quando o Cliente fornecer voluntariamente credenciais de acesso temporário para fins de suporte técnico (item 10.2.2 dos Termos de Uso); (iii) na operação da camada centralizada de integração com a API Oficial da Meta (Tech Provider, descrita abaixo).</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">7.2. O que a ZDG não acessa</h3>
+                    <p>Por força do modelo self-hosted, a ZDG não tem acesso:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Ao banco de dados do Cliente armazenado em sua VPS;</li>
+                        <li>Aos contatos, conversas, mensagens e mídias trafegados pelo Software;</li>
+                        <li>Aos dados dos clientes finais (tenants) atendidos pelo Cliente.</li>
+                    </ul>
+                    <p>A única exceção é o acesso operacional eventual descrito no item anterior, sempre limitado ao escopo do serviço e à autorização expressa do Cliente.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">7.3. Camada Tech Provider Meta</h3>
+                    <p>Para as conexões via API Oficial do WhatsApp Business Platform, Instagram Direct e Facebook Messenger, a ZDG opera um aplicativo Meta certificado como Tech Provider e roteia o tráfego dessas APIs através de sua infraestrutura de proxy/webhooks antes de entregá-lo à VPS do Cliente. Nesse contexto, a ZDG trata exclusivamente dados técnicos da Meta (App ID, WABA ID, tokens OAuth, eventos de webhook, indicadores de qualidade, status de conexão) — não conteúdos de mensagem — para execução do contrato com a Meta, validação de licença, prevenção a fraudes e segurança operacional (itens 9.3 e 10 dos Termos de Uso).</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">7.4. Limites de responsabilidade</h3>
+                    <p>A ZDG não responde pelo tratamento de dados realizado por terceiros, em especial:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Pelo provedor de VPS contratado pelo Cliente (operador do Cliente);</li>
+                        <li>Pelas plataformas de pagamento parceiras (controladoras autônomas);</li>
+                        <li>Pelas plataformas Meta e demais Controladores parceiros;</li>
+                        <li>Pelas integrações de canais e sistemas de terceiros ativadas pelo Cliente em seu dashboard.</li>
+                    </ul>
+                    <p>O Cliente, por sua vez, é responsável pela segurança da própria VPS (firewalls, atualizações, gestão de credenciais) e pelos eventos de segurança decorrentes da sua operação (item 10.3 dos Termos de Uso).</p>
+
+                    <h2 id="id-8.-por-quanto-tempo-guardamos-seus-dados" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">8. Por quanto tempo guardamos seus dados</h2>
+                    <p>Os dados pessoais sob responsabilidade da ZDG são tratados pelos seguintes prazos:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Cadastro ativo.</strong> Enquanto o Cliente mantiver licença ativa, os dados cadastrais são tratados para execução do contrato e prestação do serviço.</li>
+                        <li><strong>Após o término ou exclusão.</strong> Os dados podem ser conservados por até 5 (cinco) anos após o término da relação, com base em legítimo interesse, para defesa em eventuais processos judiciais, administrativos ou arbitrais (arts. 7º, IX, e 16, II, LGPD).</li>
+                        <li><strong>Logs de aplicação.</strong> Mantidos por, no mínimo, 6 (seis) meses, em cumprimento ao art. 15 da Lei nº 12.965/2014 (Marco Civil da Internet).</li>
+                        <li><strong>Obrigações legais específicas.</strong> Documentos fiscais e demais dados sujeitos a prazos de guarda definidos em legislação aplicável são conservados pelo prazo correspondente.</li>
+                    </ul>
+                    <p>A solicitação de exclusão pode ser feita a qualquer momento pelo e-mail privacidade@zdg.com.br. Após o atendimento, os dados são deletados permanentemente, ressalvadas as hipóteses de conservação acima.</p>
+                    <p><strong>Dados na VPS do Cliente.</strong> Em razão do modelo self-hosted, os dados operacionais armazenados na VPS do Cliente (mensagens, contatos, conversas, base de dados dos tenants) são de guarda exclusiva do Cliente. A ZDG não tem poder de exclusão sobre essa base — solicitações nesse sentido devem ser dirigidas diretamente ao Cliente.</p>
+
+                    <h2 id="id-9.-como-protegemos-seus-dados" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">9. Como protegemos seus dados</h2>
+                    <p>A ZDG adota medidas técnicas e organizacionais para proteger os dados pessoais sob sua responsabilidade contra acessos não autorizados, perda, destruição e uso indevido. Entre as medidas: controle de acesso baseado em funções, autenticação multifator nos sistemas internos, criptografia em trânsito (TLS), gestão de credenciais, monitoramento de eventos e contratos de tratamento com os Operadores listados no capítulo Com quem compartilhamos.</p>
+                    <p>No modelo self-hosted, a segurança da VPS do Cliente — incluindo firewalls, atualizações do sistema operacional, gestão de credenciais e demais controles — é de responsabilidade exclusiva do Cliente (item 10.3 dos Termos de Uso). A ZDG não se responsabiliza por vazamentos decorrentes de invasões, falhas de configuração ou engenharia social sofridas na infraestrutura do Cliente ou por sua equipe.</p>
+                    <p>Nenhuma operação realizada via internet é 100% segura. Caso identifique vulnerabilidade ou suspeita de incidente envolvendo nossos sistemas, entre em contato imediato pelo e-mail privacidade@zdg.com.br.</p>
+
+                    <h2 id="id-10.-direitos-do-titular" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">10. Direitos do Titular</h2>
+                    <p>A LGPD assegura a você, na qualidade de Titular, os direitos abaixo, que podem ser exercidos pelo e-mail privacidade@zdg.com.br:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Confirmação e acesso ao tratamento de seus dados;</li>
+                        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+                        <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD;</li>
+                        <li>Portabilidade dos dados a outro fornecedor de serviços, observados o segredo comercial e industrial;</li>
+                        <li>Eliminação dos dados tratados com consentimento, ressalvadas as hipóteses legais de conservação;</li>
+                        <li>Informação sobre as entidades públicas e privadas com as quais a ZDG compartilha dados;</li>
+                        <li>Revogação de consentimento a qualquer tempo, de forma gratuita;</li>
+                        <li>Oposição ao tratamento realizado com base em legítimo interesse;</li>
+                        <li>Revisão de decisões automatizadas que afetem seus interesses;</li>
+                        <li>Reclamação perante a ANPD ou demais órgãos competentes.</li>
+                    </ul>
+                    <p>Para garantir que os direitos sejam exercidos por você ou por seu representante legal, a ZDG pode solicitar informações ou comprovações de identidade. Atenderemos às solicitações dentro do prazo da LGPD; em casos complexos ou de alto volume, manteremos você atualizado sobre o andamento.</p>
+                    <p>Quando a ZDG atuar como Operadora (situações descritas no capítulo Particularidades do modelo self-hosted), as solicitações relativas aos dados dos contatos finais do Cliente devem ser dirigidas ao próprio Cliente — Controlador desses dados.</p>
+
+                    <h2 id="id-11.-cookies" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">11. Cookies</h2>
+                    <p>O Site utiliza cookies para garantir seu funcionamento técnico, medir audiência e melhorar a experiência de navegação. Os cookies utilizados são de duas naturezas:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Cookies estritamente necessários.</strong> Indispensáveis ao funcionamento e à segurança do Site. Não dependem de consentimento, com base em legítimo interesse e obrigação legal (art. 7º, II e IX, LGPD).</li>
+                        <li><strong>Cookies opcionais (estatísticos, de performance, funcionais e de marketing).</strong> Associados às Ferramentas de Mensuração descritas no capítulo Com quem compartilhamos e ativados somente mediante o seu consentimento prestado no banner exibido ao acessar o Site.</li>
+                    </ul>
+                    <p>Você pode aceitar, rejeitar ou alterar sua escolha a qualquer momento. A rejeição dos cookies opcionais não compromete o funcionamento básico do Site.</p>
+
+                    <h2 id="id-12.-transferencia-internacional-de-dados" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">12. Transferência internacional de dados</h2>
+                    <p>Para entregar o Atendelink e operar nossa infraestrutura, podemos transferir dados pessoais para fora do Brasil. As transferências observam o art. 33 da LGPD e são protegidas por cláusulas-padrão contratuais, decisões de adequação do país de destino ou outras salvaguardas previstas em lei.</p>
+                    <p>As principais regiões de destino dos Operadores e Controladores parceiros são:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Brasil.</strong> Hostinger Brasil e demais provedores nacionais utilizados na operação corporativa;</li>
+                        <li><strong>União Europeia (Alemanha, França e Irlanda).</strong> Hetzner Online GmbH (sistema de licenciamento) e demais Operadores europeus de CRM, documentação e produtividade, todos sob regime do GDPR;</li>
+                        <li><strong>Estados Unidos e outras regiões.</strong> Meta Platforms, suíte de produtividade corporativa, ferramentas de mensuração estatística e rede global de CDN/proxy.</li>
+                    </ul>
+                    <p>No modelo self-hosted, o Cliente é livre para escolher provedores de VPS em qualquer país. A transferência internacional decorrente dessa escolha é de responsabilidade exclusiva do Cliente, na qualidade de Controlador dos dados de seus clientes finais. O mesmo se aplica às integrações configuradas pelo Cliente.</p>
+
+                    <h2 id="id-13.-encarregado-e-canais-de-contato" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">13. Encarregado e canais de contato</h2>
+                    <p>Em cumprimento ao art. 41 da LGPD, a ZDG mantém Encarregado pela Proteção de Dados Pessoais designado internamente, que pode ser contatado pelos canais abaixo:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>E-mail do Encarregado (privacidade, LGPD e exercício de direitos):</strong> privacidade@zdg.com.br</li>
+                        <li><strong>E-mail para comunicação geral:</strong> suporte@zdg.com.br</li>
+                    </ul>
+
+                    <h2 id="id-14.-alteracoes-desta-politica" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">14. Alterações desta Política</h2>
+                    <p>Este Aviso pode ser atualizado a qualquer tempo para refletir mudanças na operação, na legislação ou nas práticas de tratamento da ZDG. Quando houver alterações relevantes, o Titular será notificado pelos canais cadastrados ou por aviso no Site, e a versão atualizada valerá a partir de sua publicação. A continuidade no uso do Atendelink ou do Site após a atualização confirmará a ciência e a vigência do novo Aviso.</p>
+                    <p>A versão vigente está sempre disponível em <a href="https://ajuda.zdg.com.br/aviso-de-privacidade" target="_blank" class="underline hover:opacity-70">https://ajuda.zdg.com.br/aviso-de-privacidade</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="site-footer" class="bg-gray-50 dark:bg-[#020B18] border-t border-gray-100 dark:border-slate-800/80 py-8 mt-auto transition-colors duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center space-x-2 text-2xl font-extrabold mb-3">
+                <img id="footer-logo" src="images/logo-dark.png" alt="AtendeLink Logo" class="h-7 w-auto">
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2024-2026 AtendeLink. Todos os direitos reservados.</p>
+            <div class="mt-3 space-x-4">
+                <a href="termos.html" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-150 text-sm font-medium">Termos de Serviço</a>
+                <span class="text-gray-300 dark:text-gray-700">|</span>
+                <a href="politica.html" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-150 text-sm font-medium">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Lógica do Tema e Interação -->
+    <script src="js/theme.js" defer></script>
+</body>
+</html>

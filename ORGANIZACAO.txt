@@ -1,0 +1,20 @@
+atendelink-frontend/
+│
+├── css/
+│   ├── style.css           # Arquivo principal (Ponto de entrada que importa todos os módulos)
+│   ├── variables.css       # Variáveis CSS globais (Cores, Fontes, Efeitos, Temas)
+│   ├── base.css            # Reset, configurações globais e tipografia
+│   ├── layout.css          # Estilos de estrutura (Header, Footer, Hero, Grids de Seção)
+│   ├── components.css      # Componentes reutilizáveis (Botões, Cards, FAQ, WhatsApp Float)
+│   └── animations.css      # Animações de entrada, keyframes do robô e efeitos de scroll
+│
+├── js/
+│   └── theme.js            # Lógica de alternância de tema (Dark/Light mode) e controle de logotipos
+│
+├── images/                 # Imagens, logotipos e favicon do projeto
+│   ├── favicon.png
+│   ├── logo.png
+│   └── logo-dark.png
+│
+├── termos.html             # Página de Termos e Condições de Uso
+└── politica.html           # Página de Política de Privacidade

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtendeLink — Transforme Atendimentos em Vendas</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+<script>
+  (function() {
+    var t = localStorage.getItem('theme');
+    if (t === 'light') document.documentElement.classList.remove('dark');
+    else document.documentElement.classList.add('dark');
+  })();
+</script>
+
+<body class="font-sans antialiased bg-white dark:bg-[#020B18] text-gray-900 dark:text-slate-100 overflow-x-hidden">
+
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <a href="#" class="flex items-center shrink-0">
+        <img id="logo" src="images/logo.png" alt="AtendeLink" class="h-10 w-auto">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#recursos" class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Recursos</a>
+        <a href="#precos"   class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Preços</a>
+        <a href="#faq"      class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button id="theme-toggle" aria-label="Alternar tema"
+          class="w-9 h-9 rounded-full flex items-center justify-center
+                 bg-gray-100 dark:bg-[#0D1B2E] hover:bg-gray-200 dark:hover:bg-[#162235]
+                 border border-gray-200 dark:border-slate-700/60 transition-all">
+          <svg id="icon-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+          </svg>
+          <svg id="icon-moon" class="w-4 h-4 text-blue-300 hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
+
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="hidden md:inline-flex items-center gap-2 px-4 py-2
+                  bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold
+                  rounded-lg transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20">
+          <i class="fab fa-whatsapp"></i> Começar Agora
+        </a>
+
+        <button id="mobile-menu-btn"
+          class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center
+                 bg-gray-100 dark:bg-[#0D1B2E] border border-gray-200 dark:border-slate-700/60">
+          <i class="fas fa-bars text-sm text-gray-600 dark:text-slate-400"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu"
+    class="hidden md:hidden border-t border-gray-100 dark:border-slate-800
+           bg-white/95 dark:bg-[#020B18]/95 backdrop-blur-md">
+    <div class="px-5 py-5 space-y-1">
+      <a href="#recursos" class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">Recursos</a>
+      <a href="#precos"   class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">Preços</a>
+      <a href="#faq"      class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">FAQ</a>
+      <a href="https://wa.me/+5535933005536" target="_blank"
+         class="flex items-center justify-center gap-2 mt-3 w-full py-3 px-4
+                bg-blue-600 text-white text-sm font-semibold rounded-xl">
+        <i class="fab fa-whatsapp"></i> Começar Agora
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero-section relative min-h-screen flex items-center pt-16 overflow-hidden">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center py-24 md:py-32">
+
+    <!-- Status badge -->
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full
+                bg-blue-50 dark:bg-blue-500/10
+                border border-blue-200 dark:border-blue-500/25
+                text-blue-700 dark:text-blue-400 text-sm font-medium mb-10 animate-item">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+      </span>
+      Lançamento — 7 dias grátis, sem cartão
+    </div>
+
+    <!-- Headline -->
+    <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-7 animate-item delay-100">
+      Converta seus<br class="hidden sm:block">
+      <span class="relative inline-block mt-1">
+  <img src="images/roboLupa.png" alt="Robô AtendeLink" class="absolute -top-10 sm:-top-14 -left-14 sm:-left-20 w-16 sm:w-24 pointer-events-none z-0 drop-shadow-xl robot-float">
+  <span class="text-blue-gradient relative z-10">Atendimentos</span>
+</span>
+      <br class="hidden sm:block">em Vendas Recorrentes.
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="max-w-xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-slate-400 leading-relaxed mb-11 animate-item delay-200">
+      Distribua automaticamente, monitore sua equipe em tempo real e escale o faturamento sem complicações.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 animate-item delay-300">
+      <a href="https://wa.me/+5535933005536" target="_blank"
+         class="cta-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
+                bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl
+                transition-all shadow-xl shadow-blue-600/30 hover:shadow-blue-600/40 text-base">
+        <i class="fab fa-whatsapp text-lg"></i> Garantir Meu Acesso
+      </a>
+      <a href="#recursos"
+         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4
+                bg-white dark:bg-[#0D1B2E] hover:bg-gray-50 dark:hover:bg-[#162235]
+                text-gray-700 dark:text-slate-300
+                border border-gray-200 dark:border-slate-700/60
+                font-medium rounded-2xl transition-all text-base">
+        Como funciona
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Social proof -->
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm animate-item delay-400">
+      <div class="flex items-center gap-2.5">
+        <div class="flex -space-x-1.5">
+          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-400 flex items-center justify-center text-white text-xs font-bold">A</div>
+          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-500 flex items-center justify-center text-white text-xs font-bold">M</div>
+          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-600 flex items-center justify-center text-white text-xs font-bold">C</div>
+          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-700 flex items-center justify-center text-white text-xs font-bold">+</div>
+        </div>
+        <span class="text-gray-500 dark:text-slate-500">+50 empresas ativas</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <span class="text-yellow-400 tracking-tight">★★★★★</span>
+        <span class="text-gray-500 dark:text-slate-500">4.9 de satisfação</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-gray-500 dark:text-slate-500">
+        <i class="fas fa-lock text-green-500 text-xs"></i> Sem fidelidade
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     METRICS BAR
+══════════════════════════════════════════════ -->
+<div class="border-y border-gray-100 dark:border-slate-800/70 bg-gray-50 dark:bg-[#0D1B2E]">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="animate-item">
+        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">50+</div>
+        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Empresas atendidas</div>
+      </div>
+      <div class="animate-item delay-100">
+        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">98%</div>
+        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Taxa de satisfação</div>
+      </div>
+      <div class="animate-item delay-200">
+        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">3×</div>
+        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Mais conversões</div>
+      </div>
+      <div class="animate-item delay-300">
+        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">1 min</div>
+        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Para conectar WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     RECURSOS
+══════════════════════════════════════════════ -->
+<section id="recursos" class="py-24 md:py-32 bg-white dark:bg-[#020B18]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+
+    <div class="max-w-2xl mb-20 animate-item">
+      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Plataforma completa</p>
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
+        Tudo que sua equipe precisa para atender melhor.
+      </h2>
+      <p class="mt-5 text-lg text-gray-500 dark:text-slate-400">Chega de clientes sem resposta. Controle total na palma da mão.</p>
+    </div>
+
+    <div class="space-y-28">
+
+      <!-- Feature 1 -->
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Distribuição inteligente de atendimentos</h3>
+          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Distribua automaticamente os atendimentos entre seus usuários. Garanta que nenhum cliente fique sem resposta e otimize a carga de trabalho da equipe.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Fila inteligente por disponibilidade dos atendentes
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Atribuição automática por setor ou especialidade
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Histórico completo de cada contato disponível
+            </li>
+          </ul>
+          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
+            Saiba mais sobre distribuição
+            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <div class="feature-img-wrap">
+          <img src="images/image2.png" alt="Painel de distribuição de atendimentos"
+               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
+        <div class="order-last lg:order-first feature-img-wrap">
+          <img src="images/image3.png" alt="Relatórios e métricas em tempo real"
+               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
+        </div>
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Métricas em tempo real</h3>
+          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Acesse métricas de usuários, atendimentos e setores. Monitore tudo em tempo real com acesso supervisor e tome decisões com base em dados concretos.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Painel supervisor com visão geral em tempo real
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Relatórios exportáveis por período e setor
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Performance individual por atendente
+            </li>
+          </ul>
+          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
+            Conhecer os relatórios
+            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
+        <div class="space-y-6">
+          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Controle total por setores</h3>
+          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Organize atendimentos por setores para melhor eficiência e controle total sobre suas operações. Cada setor com sua própria fila e relatório independente.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Criação ilimitada de setores e departamentos
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Transferência entre setores com agilidade
+            </li>
+            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+              Configurações personalizadas por equipe
+            </li>
+          </ul>
+          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
+            Explorar controle de setores
+            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+        <div class="feature-img-wrap">
+          <img src="images/image1.png" alt="Tela de controle de setores"
+               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     PREÇOS
+══════════════════════════════════════════════ -->
+<section id="precos" class="py-24 md:py-32 pricing-bg text-white dark:bg-gradient-to-r dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+    <div class="text-center mb-16 animate-item">
+      <p class="text-sm font-semibold text-blue-300 dark:text-blue-400 mb-3 tracking-wide">Sem taxas escondidas</p>
+      <h2 class="text-4xl md:text-5xl font-black dark:text-white">Planos para cada momento do seu negócio.</h2>
+      <p class="mt-4 text-lg text-blue-200 dark:text-slate-300 max-w-xl mx-auto">Comece pequeno, cresça conosco. Cancele quando quiser.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+
+      <!-- Básico -->
+      <div class="price-card animate-item delay-100 flex flex-col p-8 rounded-2xl
+                  bg-white/8 border border-white/12 backdrop-blur-sm
+                  dark:bg-slate-900/50 dark:border-slate-800">
+        <div class="grow">
+          <h3 class="text-xl font-bold mb-1 dark:text-white">Básico</h3>
+          <p class="text-sm text-blue-200 dark:text-slate-400 mb-8">Ideal para pequenas equipes que estão começando.</p>
+          <div class="flex items-baseline gap-1 mb-8">
+            <span class="text-5xl font-black dark:text-white">R$149</span>
+            <span class="text-blue-300 dark:text-slate-400 text-sm">/mês</span>
+          </div>
+          <ul class="space-y-3.5 mb-8">
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> 5 usuários simultâneos
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> Automação essencial
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> 5 GB de armazenamento
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> Relatórios básicos
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="block w-full py-3.5 text-center text-sm font-semibold
+                  border border-white/25 hover:bg-white/10 rounded-xl transition-all
+                  dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white">
+          Começar com Básico
+        </a>
+      </div>
+
+      <!-- Profissional (destaque) -->
+      <div class="price-card price-card-pro animate-item delay-200 flex flex-col p-8 rounded-2xl
+                  bg-white text-gray-900 relative lg:-mt-5 lg:-mb-5 lg:pt-12
+                  dark:bg-slate-900 dark:text-white dark:border-2 dark:border-yellow-400 shadow-2xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2
+                     bg-yellow-400 text-gray-900 text-xs font-black
+                     px-5 py-1.5 rounded-full tracking-wide shadow-lg">
+          Mais popular
+        </span>
+        <div class="grow">
+          <h3 class="text-xl font-bold mb-1 dark:text-white">Profissional</h3>
+          <p class="text-sm text-gray-500 dark:text-slate-400 mb-8">Para equipes em crescimento que precisam de poder total.</p>
+          <div class="flex items-baseline gap-1 mb-8">
+            <span class="text-5xl font-black text-blue-600 dark:text-blue-400">R$299</span>
+            <span class="text-gray-400 dark:text-slate-400 text-sm">/mês</span>
+          </div>
+          <ul class="space-y-3.5 mb-8">
+            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
+              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Usuários ilimitados
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
+              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Automação avançada
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
+              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> 50 GB de armazenamento
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
+              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Suporte prioritário 24/7
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
+              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Relatórios avançados por setor
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="block w-full py-3.5 text-center text-sm font-bold
+                  bg-blue-600 hover:bg-blue-700 text-white rounded-xl
+                  transition-all shadow-lg shadow-blue-600/25
+                  dark:bg-blue-600 dark:hover:bg-blue-500">
+          Escolher Profissional
+        </a>
+      </div>
+
+      <!-- Corporativo -->
+      <div class="price-card animate-item delay-300 flex flex-col p-8 rounded-2xl
+                  bg-white/8 border border-white/12 backdrop-blur-sm
+                  dark:bg-slate-900/50 dark:border-slate-800">
+        <div class="grow">
+          <h3 class="text-xl font-bold mb-1 dark:text-white">Corporativo</h3>
+          <p class="text-sm text-blue-200 dark:text-slate-400 mb-8">Soluções sob medida para grandes operações.</p>
+          <div class="flex items-baseline gap-1 mb-8">
+            <span class="text-2xl font-bold dark:text-white">Fale conosco</span>
+          </div>
+          <ul class="space-y-3.5 mb-8">
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> Implementação dedicada
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> Segurança nível enterprise
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> SLA personalizado
+            </li>
+            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
+              <i class="fas fa-check text-green-400 shrink-0"></i> Gerente de conta exclusivo
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="block w-full py-3.5 text-center text-sm font-semibold
+                  border border-white/25 hover:bg-white/10 rounded-xl transition-all
+                  dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white">
+          Solicitar cotação
+        </a>
+      </div>
+
+    </div>
+
+    <p class="text-center text-blue-300 dark:text-slate-400 text-sm mt-12 flex items-center justify-center gap-2 animate-item">
+      <i class="fas fa-shield-alt text-green-400"></i>
+      Todos os planos incluem 7 dias de teste gratuito. Cancele quando quiser, sem multa.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════════ -->
+<section id="faq" class="py-24 md:py-32 bg-gray-50 dark:bg-[#0D1B2E]">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-14 animate-item">
+      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Sem surpresas</p>
+      <h2 class="text-4xl font-black text-gray-900 dark:text-white">Respondemos tudo antes de você começar.</h2>
+    </div>
+
+    <div class="space-y-3">
+
+      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-100">
+        <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white pr-6">Preciso de cartão de crédito para o teste grátis?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Não. O teste de 7 dias é completamente sem compromisso. Você só precisará de dados de pagamento se decidir assinar um plano após a avaliação.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-200">
+        <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white pr-6">Como funciona o suporte ao cliente?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Oferecemos suporte 24/7 via chat, email e WhatsApp. Nossa equipe especializada está pronta para ajudar com qualquer dúvida, configuração ou problema.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-300">
+        <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white pr-6">Como integrar o WhatsApp na plataforma?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">É simples. Acesse as configurações dentro do AtendeLink e escaneie o QR Code com o WhatsApp do seu celular. A integração leva menos de 1 minuto e é totalmente segura.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-300">
+        <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white pr-6">Posso cancelar quando quiser?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+        </button>
+        <div class="faq-content">
+          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Sim. Não há fidelidade nem multa. Você pode cancelar a qualquer momento pelo painel ou entrando em contato com nosso suporte.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════════════ -->
+<section id="form-cta" class="py-24 md:py-32 bg-white dark:bg-[#020B18]">
+  <div class="max-w-xl mx-auto px-5 sm:px-8">
+    <div class="cta-card rounded-3xl p-9 md:p-12 border border-blue-100 dark:border-blue-900/40 animate-item">
+      <div class="text-center mb-9">
+        <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Comece agora</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mb-3">Pronto para transformar seu atendimento?</h2>
+        <p class="text-gray-500 dark:text-slate-400">Mais de 500 empresas já escalaram com o AtendeLink.</p>
+      </div>
+
+      <form id="cta-form" class="space-y-4">
+        <div>
+          <label for="nome" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Nome completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome"
+                 class="form-input w-full px-4 py-3.5 rounded-xl
+                        border border-gray-200 dark:border-slate-700
+                        bg-white dark:bg-[#0D1B2E]
+                        text-gray-900 dark:text-white
+                        placeholder-gray-400 dark:placeholder-slate-600
+                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                        outline-none transition-all">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Email corporativo</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com"
+                 class="form-input w-full px-4 py-3.5 rounded-xl
+                        border border-gray-200 dark:border-slate-700
+                        bg-white dark:bg-[#0D1B2E]
+                        text-gray-900 dark:text-white
+                        placeholder-gray-400 dark:placeholder-slate-600
+                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                        outline-none transition-all">
+        </div>
+        <div>
+          <label for="empresa" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Nome da empresa</label>
+          <input type="text" id="empresa" name="empresa" required placeholder="Sua empresa"
+                 class="form-input w-full px-4 py-3.5 rounded-xl
+                        border border-gray-200 dark:border-slate-700
+                        bg-white dark:bg-[#0D1B2E]
+                        text-gray-900 dark:text-white
+                        placeholder-gray-400 dark:placeholder-slate-600
+                        focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                        outline-none transition-all">
+        </div>
+        <button type="submit"
+                class="cta-primary w-full py-4 mt-2
+                       bg-blue-600 hover:bg-blue-700 text-white
+                       font-bold rounded-xl text-base
+                       transition-all shadow-lg shadow-blue-600/25">
+          Iniciar teste gratuito de 7 dias
+        </button>
+      </form>
+      <p class="text-xs text-center text-gray-400 dark:text-slate-600 mt-4">
+        <i class="fas fa-lock mr-1"></i> Seus dados estão seguros. Não compartilhamos suas informações.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/5535933005536?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20AtendeLink!"
+   target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+  <i class="fab fa-whatsapp fa-xl"></i>
+</a>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="bg-[#020B18] border-t border-slate-800/60 py-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <img src="images/logo-dark.png" alt="AtendeLink" class="h-8 w-auto">
+      <nav class="flex flex-wrap items-center justify-center gap-6">
+        <a href="termos-servico.html"            class="text-sm text-slate-500 hover:text-slate-300 transition-colors">Termos de Serviço</a>
+        <a href="termos-politica-privacidade.html" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">Política de Privacidade</a>
+      </nav>
+      <p class="text-sm text-slate-600">&copy; 2024–2026 AtendeLink</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════ -->
+<script>
+(function() {
+  // ── Theme ──
+  const html   = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  const sun    = document.getElementById('icon-sun');
+  const moon   = document.getElementById('icon-moon');
+  const logo   = document.getElementById('logo');
+
+  function applyTheme(dark) {
+    if (dark) {
+      html.classList.add('dark');
+      sun  && sun.classList.add('hidden');
+      moon && moon.classList.remove('hidden');
+      if (logo) logo.src = 'images/logo-dark.png';
+    } else {
+      html.classList.remove('dark');
+      sun  && sun.classList.remove('hidden');
+      moon && moon.classList.add('hidden');
+      if (logo) logo.src = 'images/logo.png';
+    }
+  }
+
+  const saved = localStorage.getItem('theme');
+  applyTheme(saved ? saved === 'dark' : true);
+
+  toggle && toggle.addEventListener('click', () => {
+    const isDark = !html.classList.contains('dark');
+    applyTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  // ── Sticky header ──
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('header-scrolled', window.scrollY > 12);
+  }, { passive: true });
+
+  // ── Mobile menu ──
+  const mBtn = document.getElementById('mobile-menu-btn');
+  const mMenu = document.getElementById('mobile-menu');
+  mBtn && mBtn.addEventListener('click', () => mMenu.classList.toggle('hidden'));
+  mMenu && mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mMenu.classList.add('hidden')));
+
+  // ── Scroll animations ──
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('animated'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.animate-item').forEach(el => io.observe(el));
+
+  // ── Form → WhatsApp ──
+  document.getElementById('cta-form') && document.getElementById('cta-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome    = document.getElementById('nome').value;
+    const email   = document.getElementById('email').value;
+    const empresa = document.getElementById('empresa').value;
+    const msg = `Olá! Quero iniciar o teste grátis do AtendeLink.\n\nNome: ${nome}\nEmail: ${email}\nEmpresa: ${empresa}`;
+    window.open(`https://wa.me/5535933005536?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+})();
+
+// ── FAQ ──
+function toggleFAQ(btn) {
+  const content = btn.nextElementSibling;
+  const icon    = btn.querySelector('.faq-icon');
+  const isOpen  = btn.closest('.faq-item').classList.contains('faq-open');
+
+  // Close all
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.classList.remove('faq-open');
+    item.querySelector('.faq-content').style.maxHeight = '0';
+    item.querySelector('.faq-icon').textContent = '+';
+    item.querySelector('.faq-icon').style.transform = '';
+  });
+
+  if (!isOpen) {
+    btn.closest('.faq-item').classList.add('faq-open');
+    content.style.maxHeight = content.scrollHeight + 'px';
+    icon.textContent = '×';
+    icon.style.transform = 'rotate(180deg)';
+  }
+}
+</script>
+
+</body>
+</html>

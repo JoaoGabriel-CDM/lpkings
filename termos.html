@@ -1,0 +1,389 @@
+<!-- 
+==========================================================================
+ARQUIVO: termos.html
+DESCRIÇÃO: Página de Termos e Condições Gerais de Uso e Licenciamento do AtendeLink.
+
+MAPA DE GUIA E NAVEGAÇÃO:
+- Cabeçalho / Navegação: <header id="site-header">
+- Conteúdo Principal dos Termos: <main> -> <section>
+- Índice do Sumário: Elementos <a href="#id-x">
+- Rodapé: <footer id="site-footer">
+- Estilos CSS: css/style.css
+- Script de Tema: js/theme.js
+========================================================================== 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Serviço - AtendeLink</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS (Ponto de Entrada Modular) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800 dark:bg-[#020B18] dark:text-gray-100 flex flex-col min-h-screen transition-colors duration-200">
+
+    <!-- Header Fixo e Navegação -->
+    <header id="site-header" class="sticky top-0 z-50 bg-white shadow-sm backdrop-blur-md bg-opacity-95 dark:bg-[#020B18] dark:shadow-gray-800 border-b border-gray-100 dark:border-slate-800 transition-colors duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex items-center space-x-2 text-3xl font-extrabold text-blue-700">
+                <a href="index.html" class="focus:outline-none transition-transform hover:scale-105">
+                    <img id="logo" src="images/logo-dark.png" alt="AtendeLink Logo" class="h-10 w-auto">
+                </a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#recursos" class="text-sm font-medium hover:text-blue-600 transition duration-150">Recursos</a>
+                    <a href="index.html#precos" class="text-sm font-medium hover:text-blue-600 transition duration-150">Preços</a>
+                    <a href="index.html#faq" class="text-sm font-medium hover:text-blue-600 transition duration-150">FAQ</a>
+                </nav>
+                <a href="https://wa.me/+5535933005536" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-150 cta-button space-x-2 shadow-sm">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Começar Agora</span>
+                </a>
+                
+                <!-- Botão de Alternância de Tema -->
+                <button id="theme-toggle" aria-label="Alternar tema"
+                  class="w-9 h-9 rounded-full flex items-center justify-center
+                         bg-gray-100 dark:bg-[#0D1B2E] hover:bg-gray-200 dark:hover:bg-[#162235]
+                         border border-gray-200 dark:border-slate-700/60 transition-all">
+                  <svg id="icon-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+                  </svg>
+                  <svg id="icon-moon" class="w-4 h-4 text-blue-300 hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                  </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow transition-colors duration-200">
+        <section class="py-12 md:py-24 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+                <div class="space-y-6 text-gray-600 dark:text-gray-300">
+                    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-8">Termos e Condições Gerais de Uso e Licenciamento</h1>
+
+                    <p>Contrato de uso do Atendelink: regras de licenciamento, obrigações do assinante, limitação de responsabilidade e condições gerais de uso da plataforma.</p>
+                    <p><strong>Data de disponibilização:</strong> 22/05/2024<br>
+                    <strong>Última atualização:</strong> 12/05/2026</p>
+
+                    <p>Estes Termos e Condições de Uso (“Termos”) regulam a relação comercial e o licenciamento de uso entre a empresa BIANCA SANT ANA PEREIRA & CIA LTDA, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº 35.617.749/0001-67, doravante denominada “Atendelink” ou “LICENCIANTE”, e a pessoa física ou jurídica que adquire a licença, doravante denominada “CLIENTE” ou “LICENCIADO”.</p>
+
+                    <p>O objeto deste instrumento é o regramento da utilização do software de gestão e automação de atendimentos denominado “SISTEMA Atendelink”, fornecido na modalidade auto-hospedada (selfhosted).</p>
+
+                    <p><strong>AO CONTRATAR E UTILIZAR O SISTEMA Atendelink, O CLIENTE DECLARA TER LIDO, COMPREENDIDO E ACEITO INTEGRALMENTE ESTES TERMOS.</strong></p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">QUAIS AS INFORMAÇÕES QUE VOCÊ ENCONTRARÁ NESTES TERMOS</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><a href="#id-1" class="underline hover:opacity-70">CONCEITOS IMPORTANTES NESTES TERMOS</a></li>
+                        <li><a href="#id-2" class="underline hover:opacity-70">NATUREZA E EFICÁCIA DOS TERMOS</a></li>
+                        <li><a href="#id-3" class="underline hover:opacity-70">REQUISITOS TÉCNICOS E CONDIÇÕES DE OPERAÇÃO</a></li>
+                        <li><a href="#id-4" class="underline hover:opacity-70">DELIMITAÇÃO DE RESPONSABILIDADES E RELAÇÃO COM TERCEIROS</a></li>
+                        <li><a href="#id-5" class="underline hover:opacity-70">OBJETO E LICENÇA DE USO</a></li>
+                        <li><a href="#id-6" class="underline hover:opacity-70">PLANOS, PAGAMENTO, RENOVAÇÃO E CANCELAMENTO</a></li>
+                        <li><a href="#id-7" class="underline hover:opacity-70">POLÍTICA DE SUPORTE TÉCNICO E SLA</a></li>
+                        <li><a href="#id-8" class="underline hover:opacity-70">OBRIGAÇÕES, RESPONSABILIDADES E LIMITAÇÕES</a></li>
+                        <li><a href="#id-9" class="underline hover:opacity-70">PROPRIEDADE INTELECTUAL</a></li>
+                        <li><a href="#id-10" class="underline hover:opacity-70">PRIVACIDADE E PROTEÇÃO DE DADOS (LGPD)</a></li>
+                        <li><a href="#id-11" class="underline hover:opacity-70">DISPOSIÇÕES GERAIS</a></li>
+                        <li><a href="#id-12" class="underline hover:opacity-70">FORO E LEGISLAÇÃO APLICÁVEL</a></li>
+                    </ul>
+
+                    <h2 id="id-1" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. CONCEITOS IMPORTANTES NESTES TERMOS</h2>
+                    <p>Para facilitar a leitura e interpretação deste documento, adotamos as seguintes definições:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Cliente (ou Licenciado):</strong> Pessoa física ou jurídica que adquire a Licença de Uso do Software Atendelink, responsável pelo pagamento, pela contratação da infraestrutura (VPS) e pela gestão dos Usuários e Clientes Finais (Tenants).</li>
+                        <li><strong>Sistema Atendelink:</strong> Software desenvolvido e de propriedade exclusiva do Atendelink, fornecido sob regime de licenciamento self-hosted. Trata-se de uma solução tecnológica para centralização e gestão de multicanais de atendimento e automação.</li>
+                        <li><strong>Licença de Uso Anual:</strong> Modalidade de contratação que concede ao Cliente o direito de uso do Sistema Atendelink pelo período de 12 (doze) meses, instalada na infraestrutura providenciada pelo Cliente.</li>
+                        <li><strong>Modelo White-Label:</strong> Característica do Sistema Atendelink que permite ao Cliente personalizar a identidade visual e revender o acesso ao software para terceiros sob sua própria marca.</li>
+                        <li><strong>Infraestrutura (VPS):</strong> Servidor Virtual Privado (Virtual Private Server) contratado e custeado diretamente pelo Cliente junto a terceiros, onde o Sistema Atendelink será instalado.</li>
+                        <li><strong>Usuário:</strong> Pessoa autorizada pelo Cliente a acessar o painel do sistema (Super Admin, Admin, supervisores ou atendentes).</li>
+                        <li><strong>Tenant (Cliente Final):</strong> Conta ou instância criada pelo Cliente dentro do Sistema Atendelink para revender serviços a terceiros.</li>
+                    </ul>
+
+                    <h2 id="id-2" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. NATUREZA E EFICÁCIA DOS TERMOS</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>2.1.</strong> Ao adquirir a Licença de Uso, o Cliente concorda integralmente com estes Termos. A aceitação destas regras é condição indispensável para a liberação do acesso, instalação e utilização do Sistema Atendelink.</li>
+                        <li><strong>2.2.</strong> A realização do pagamento ou o simples início da utilização do Sistema Atendelink implica, para todos os fins de direito, na aceitação plena, inequívoca e irrevogável de todas as condições estabelecidas nestes Termos e suas futuras atualizações.</li>
+                        <li><strong>2.3.</strong> O Cliente reconhece que estes Termos possuem força de contrato vinculante, substituindo quaisquer acordos verbais ou trocas de mensagens anteriores.</li>
+                        <li><strong>2.4.</strong> Pela teoria da aparência, o Atendelink considerará válida a contratação realizada mediante o fornecimento de dados cadastrais e pagamento, declarando o Cliente que a pessoa responsável pela compra possui plenos poderes para representá-lo.</li>
+                        <li><strong>2.5.</strong> O Atendelink poderá alterar estes Termos a qualquer momento. O uso continuado do sistema após a publicação das alterações confirma a aceitação dos novos Termos.</li>
+                    </ul>
+
+                    <h2 id="id-3" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. REQUISITOS TÉCNICOS E CONDIÇÕES DE OPERAÇÃO</h2>
+                    <p>Para garantir a performance, segurança e estabilidade do Sistema Atendelink, o Cliente deve observar rigorosamente os seguintes requisitos técnicos.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.1. Requisitos da Estação de Trabalho (Usuário):</h3>
+                    <p>Recomendamos que o sistema operacional e o navegador do Usuário estejam atualizados. As máquinas utilizadas para acessar o painel devem satisfazer, no mínimo:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Memória (RAM):</strong> 8GB ou mais.</li>
+                        <li><strong>Processador:</strong> Intel i5 ou superior (ou equivalente).</li>
+                        <li><strong>Conexão:</strong> Internet rápida e estável.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.2. Requisitos do Servidor (Infraestrutura VPS):</h3>
+                    <p>A VPS onde o sistema será instalado deverá satisfazer os seguintes requisitos mínimos obrigatórios:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Memória (RAM):</strong> 16GB ou mais.</li>
+                        <li><strong>Processamento:</strong> 4 vCPUs ou mais.</li>
+                        <li><strong>Latência:</strong> 50ms ou menos (recomendado servidor no Brasil ou próximo).</li>
+                        <li><strong>Sistema Operacional:</strong> Ubuntu 20.04 ou 22.04 LTS (limpo, sem painel).</li>
+                        <li><strong>Armazenamento:</strong> SSD ou NVMe a partir de 200GB.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.3. Documentação Técnica:</h3>
+                    <p>Os requisitos detalhados e atualizados constam no link oficial: <a href="requisitos.html" target="_blank" class="text-blue-500 font-semibold underline hover:text-blue-600">requisitos.atendelink</a></p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.4. Versões Suportadas:</h3>
+                    <p>É crucial manter o sistema operacional e navegadores atualizados. As versões suportadas para conexão com a Plataforma WhatsApp são:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>API WhatsApp Business Account v19.0 (ou superior).</li>
+                        <li>WhatsApp Web v2.24xx.x (ou superior).</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.5. Veracidade das Informações:</h3>
+                    <p>O Usuário deve fornecer informações verdadeiras, exatas e atuais. O Atendelink reserva o direito de recusar o cadastro ou cancelar contas cujos Usuários adotem condutas contrárias a estes Termos ou aos valores da empresa, sem necessidade de notificação prévia ou indenização.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">3.6. Protocolos de Conexão (API Oficial vs. Outras APIs):</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>3.6.1. Padrão Recomendado:</strong> O Atendelink foi desenvolvido para utilizar a API Oficial do WhatsApp (WABA) como padrão. A API Oficial garante maior estabilidade, segurança e suporte direto da Meta, sendo a única opção para a qual oferecemos garantia plena de funcionalidade.</li>
+                        <li><strong>3.6.2. Outras APIs (Riscos):</strong> Para maior flexibilidade, o sistema permite integração com Outras APIs (WWebJS, Baileys, Meow, Evolution, Uazapi, Z-API, etc). O uso dessas APIs é de total responsabilidade do Cliente, que deve estar ciente dos riscos, incluindo:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Desconexões frequentes;</li>
+                                <li>Perda de mensagens enviadas ou recebidas;</li>
+                                <li>Instabilidade no funcionamento após atualizações do app WhatsApp;</li>
+                                <li>Possíveis bloqueios ou banimentos de contas pela Meta.</li>
+                            </ul>
+                        </li>
+                        <li><strong>3.6.3. Isenção de Garantia:</strong> O Atendelink não garante a estabilidade, o desempenho ou o suporte técnico para problemas decorrentes exclusivamente do uso destas outras APIs. Ao habilitar essa conexão, o Cliente assume integralmente os riscos e isenta o Atendelink de responsabilidade por perdas ou danos.</li>
+                    </ul>
+
+                    <h2 id="id-4" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. DELIMITAÇÃO DE RESPONSABILIDADES E RELAÇÃO COM TERCEIROS</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>4.1.</strong> Estes Termos disciplinam exclusivamente a relação comercial entre o Atendelink e o Cliente (Licenciado).</li>
+                        <li><strong>4.2. Responsabilidade sobre Equipe:</strong> O Cliente é o único responsável pela seleção, contratação, remuneração e gestão de seus funcionários (Usuários/Atendentes) que utilizam a plataforma, isentando o Atendelink de qualquer vínculo trabalhista ou solidariedade.</li>
+                        <li><strong>4.3. Responsabilidade sobre o Modelo White-Label (Tenants):</strong> Considerando que o Cliente pode revender o uso do sistema (SaaS) sob marca própria:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>4.3.1.</strong> O Atendelink atua como fornecedora de tecnologia e não possui relação com os clientes finais (Tenants) do Cliente.</li>
+                                <li><strong>4.3.2.</strong> O Cliente é o único responsável pelo suporte, cobrança e cumprimento legal perante seus próprios clientes. Qualquer disputa judicial iniciada por um Tenant deverá ser assumida integralmente pelo Cliente.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 id="id-5" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. OBJETO E LICENÇA DE USO</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>5.1. Objeto:</strong> O contrato concede ao Cliente uma Licença de Uso de Software (Direito de Uso), não exclusiva, intransferível e temporária, do Sistema Atendelink, para instalação em servidor (VPS) do Cliente.</li>
+                        <li><strong>5.2. Escopo:</strong> A licença permite instalar o software, configurar o White-Label, criar usuários ilimitados (conforme capacidade do servidor) e receber atualizações durante a vigência contratual.</li>
+                        <li><strong>5.3. Restrições:</strong> Sob pena de cancelamento imediato e medidas judiciais, é vedado:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>a) Copiar, vender ou distribuir o código-fonte ou o instalador do sistema.</li>
+                                <li>b) Realizar engenharia reversa ou descompilação do código fonte.</li>
+                                <li>c) Sublicenciamento e Distribuição: Vender, alugar, doar ou transferir os arquivos de instalação, o código-fonte ou a chave de licença para que terceiros realizem a instalação em infraestrutura própria (pirataria).</li>
+                                <li>Única Modalidade Permitida (SaaS): A comercialização autorizada restringe-se exclusivamente à venda do acesso ao sistema (login/senha), com o software rodando obrigatoriamente em infraestrutura gerida pelo Cliente Licenciado.</li>
+                            </ul>
+                        </li>
+                        <li><strong>5.4. Natureza Self-Hosted:</strong> O Cliente declara-se ciente de que o Atendelink fornece o software, não a infraestrutura. A gestão do servidor (VPS) é de responsabilidade do Cliente.</li>
+                        <li><strong>5.5. Serviço de Setup de Instalação:</strong> Além de disponibilizar o instalador automatizado e tutoriais na área de membros, caso o Cliente opte pela instalação agendada, o Atendelink realizará, uma única vez, a instalação técnica remota do software no servidor indicado pelo Cliente. A execução deste serviço está condicionada, obrigatoriamente, à entrega do ambiente nas seguintes condições:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>5.5.1. Estado do Servidor:</strong> A VPS deve ser entregue formatada (instalação limpa), contendo apenas o Sistema Operacional instalado, sem painéis de gestão (como cPanel, Plesk, CyberPanel) e sem outros serviços rodando (Apache, Nginx ou bancos de dados pré-instalados), para evitar conflitos de porta.</li>
+                                <li><strong>5.5.2. Especificações Obrigatórias:</strong> Sistema Operacional: Ubuntu Server nas versões 20.04, 22.04 ou 24.04 LTS. Hardware: Mínimo de 16GB de memória RAM.</li>
+                                <li><strong>5.5.3. Dados para Execução:</strong> O Cliente deverá fornecer previamente à equipe técnica: I. IP da VPS e senha de acesso SSH (usuário ROOT). II. Definição dos 02 (dois) subdomínios para a aplicação (Ex: app.dominio.com para frontend e api.dominio.com para backend), já com os apontamentos DNS (Tipo A) direcionados para o IP da VPS. III. E-mail de cadastro no Atendelink e número de WhatsApp para validação.</li>
+                                <li><strong>5.5.4. Método de Acesso:</strong> A instalação é realizada exclusivamente via protocolos de terminal (SSH). Não realizamos instalações via acesso remoto visual ou compartilhamento de tela (ex: AnyDesk, TeamViewer, Zoom), nem instalações em computadores locais (PC/Notebook).</li>
+                                <li><strong>5.5.5. Serviços Extra-Contratuais:</strong> Reinstalações, execução remota de atualizações, formatações, alterações de servidor ou migração de bancos de dados não estão cobertas pela licença. O Atendelink não se obriga a realizar estes procedimentos, sendo a sua eventual execução mera liberalidade, sujeita à disponibilidade de agenda técnica e aprovação de orçamento extra.</li>
+                                <li><strong>5.5.6. Prazo de Execução:</strong> O prazo para realização da instalação pela equipe técnica é de até 03 (três) dias úteis. A contagem deste prazo inicia-se exclusivamente após o envio completo e a validação bem-sucedida de todas as credenciais e requisitos técnicos necessários. Caso os dados fornecidos estejam incorretos ou o servidor apresente falhas de conexão, a solicitação entrará em pendência e o prazo será reiniciado a partir da regularização pelo Cliente.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 id="id-6" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">6. PLANOS, PAGAMENTO, RENOVAÇÃO E CANCELAMENTO</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>6.1. Natureza da Contratação e Licença Anual:</strong> A aquisição do Sistema Atendelink é realizada através da compra de uma Licença de Uso Anual, disponibilizada em diferentes categorias de Planos, conforme a finalidade de uso do Cliente.
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>6.1.1.</strong> O valor da licença corresponde a um pagamento único referente ao ciclo de 12 (doze) meses.</li>
+                                <li><strong>6.1.2. Parcelamento ≠ Mensalidade:</strong> Caso o Cliente opte pelo pagamento parcelado via cartão de crédito (ex: em 12 vezes), ele declara estar ciente de que não se trata de uma assinatura mensal cancelável, mas sim de uma única compra parcelada, assumindo o compromisso de quitar a integralidade das parcelas perante a operadora do cartão, independentemente da utilização efetiva do sistema durante todo o período.</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.2. Escopo de Uso, Planos e Auditoria:</strong> O limite de instâncias e os direitos comerciais de uso são estritamente determinados pela categoria do Plano adquirido pelo Cliente:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>6.2.1. Modalidades de Licenciamento:</strong><br>
+                                I. Plano "Uso Próprio" (Single-Tenant): Concede o direito de ativação de apenas 01 (uma) instância (Tenant) vinculada à chave de licença. Este plano é destinado exclusivamente à centralização e gestão do próprio negócio do Cliente, não havendo limites para a criação de usuários (atendentes) ou conexão de números telefônicos nesta mesma instância. É expressamente vedada a revenda, sublocação ou criação de contas para terceiros nesta modalidade.<br>
+                                II. Plano "Para Revenda" (Multi-Tenant): Concede o direito de criação e gestão de múltiplas instâncias (Tenants) de forma ilimitada. Este plano autoriza o Cliente a operar no modelo White-Label e revender acessos (SaaS) para múltiplos clientes finais. Todas as instâncias criadas devem estar vinculadas a subdomínios de um mesmo domínio raiz de titularidade do Cliente (ex: app1.cliente.com, app2.cliente.com), validado pela chave de licença no momento da ativação.</li>
+                                <li><strong>6.2.2. Intransferibilidade da Licença Matriz:</strong> A licença (chave de ativação) é pessoal, intransferível e vinculada ao CPF/CNPJ do Cliente adquirente. Mesmo no Plano "Para Revenda", o Cliente comercializa apenas o acesso (login) aos seus Tenants, sendo expressamente vedado o compartilhamento ou repasse da chave de licença para ativação em servidores ou domínios raízes de terceiros.</li>
+                                <li><strong>6.2.3. Auditoria e Penalidades:</strong> O Atendelink reserva-se o direito de verificar o cumprimento destas cláusulas a qualquer momento (via telemetria ou auditoria de banco de dados). A constatação de uso indevido — a exemplo de um Cliente do "Plano Uso Próprio" comercializando acessos a terceiros, ou ativações em domínios não autorizados — poderá acarretar a suspensão imediata da licença e a cobrança proporcional à diferença de plano ou licenças extras utilizadas irregularmente.</li>
+                                <li><strong>6.2.4. Condições Especiais (Multi-domínio):</strong> A critério exclusivo do Atendelink, poderão ser comercializadas licenças especiais ou oferecidos bônus promocionais que permitam a ativação em múltiplos domínios raízes dentro de uma mesma chave. Tais condições serão válidas apenas se expressamente descritas na oferta ou fatura correspondente.</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.3. Renovação da Licença:</strong> A licença possui validade de 1 ano a contar da data da compra. Para garantir a continuidade do uso, o Cliente deverá renovar a licença ao final do ciclo.
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>6.3.1. Renovação Automática (Assinatura):</strong> O Cliente poderá optar, no momento da compra ou através do painel de controle, pela ativação da Renovação Automática. Neste modelo, a cobrança da nova anuidade será realizada automaticamente no método de pagamento cadastrado, garantindo a continuidade do serviço sem interrupções. O Cliente pode desativar a renovação automática a qualquer momento antes da data de cobrança, sem penalidades, retornando ao modelo de renovação manual.</li>
+                                <li><strong>6.3.2. Antecipação de Renovação:</strong> O Cliente poderá, a seu critério, antecipar a renovação da licença antes do vencimento. Neste caso, o novo período de 12 meses será acrescido à data final da licença vigente (somando-se ao prazo restante), limitado a um acúmulo máximo de 24 (vinte e quatro) meses de validade total da chave de licença.</li>
+                                <li><strong>6.3.3. Bloqueio por Falta de Renovação:</strong> Caso não ocorra a renovação (manual ou automática) até a data de vencimento, a licença será desativada automaticamente no final do ciclo anual. O bloqueio da licença impede o acesso ao painel administrativo e interrompe imediatamente o funcionamento de todas as conexões, automações e APIs, até que a regularização financeira seja efetuada.</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.4. Política de Cancelamento e Reembolso (Venda Anual):</strong>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>6.4.1. Prazo de Arrependimento (7 Dias):</strong> Em conformidade com o Art. 49 do Código de Defesa do Consumidor, o Cliente poderá solicitar o cancelamento e o reembolso integral do valor pago em até 07 (sete) dias corridos após a data da compra inicial.</li>
+                                <li><strong>6.4.2. Irrevogabilidade após 7 Dias:</strong> Decorrido o prazo de 7 dias, a licença é considerada plenamente entregue e consumada. Não haverá reembolso, estorno ou cancelamento de parcelas vincendas (pro rata) caso o Cliente decida deixar de usar o sistema antes do fim do período de 12 meses.</li>
+                                <li><strong>6.4.3.</strong> O pedido de cancelamento efetuado após o prazo legal de arrependimento terá efeito apenas de não renovação para o próximo ciclo, permanecendo o sistema disponível para uso até o término da vigência já contratada e paga.</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.5. Reajuste de Preços e Proteção de Valor:</strong> O Atendelink reserva-se o direito de reajustar o valor da licença para novos licenciamentos ou renovações, visando preservar o equilíbrio econômico do serviço frente a variações de mercado, inflação ou custos operacionais.
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>6.5.1. Aviso Prévio:</strong> Para Clientes com licença ativa, eventuais reajustes serão aplicados somente na data da próxima renovação. O Atendelink compromete-se a comunicar qualquer alteração de preço com antecedência mínima via e-mail ou painel administrativo.</li>
+                                <li><strong>6.5.2. Travamento de Preço (Price Lock):</strong> O Cliente tem a opção de garantir o valor da tabela atual e proteger-se de futuros reajustes. Para isso, basta realizar a antecipação da renovação (conforme regras do item 6.3.2), o que permite "travar" o preço vigente pelo período contratado, até o limite máximo de 24 (vinte e quatro) meses acumulados.</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.6. Custos Variáveis de Terceiros:</strong> Os valores cobrados pelo Atendelink referem-se exclusivamente à licença de software. Custos variáveis decorrentes de serviços de terceiros integrados à plataforma são de responsabilidade exclusiva do Cliente e podem sofrer alterações alheias à vontade do Atendelink, tais como:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>I. Tarifas da Meta/WhatsApp (janelas de conversação, WABA);</li>
+                                <li>II. Consumo de APIs (OpenAI, Anthropic, Google, Grok, etc);</li>
+                                <li>III. Serviços de SMS, Gateways de Pagamento e Provedores de VPS.</li>
+                                <li>IV. Consumo de APIs externas gerenciadas por terceiros (Hub Notificame, Uazapi, Z-API, etc);</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.7. Inadimplência e Suspensão:</strong> Na hipótese de falha no processamento de pagamentos parcelados ou estornos indevidos (Chargeback):
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>I. O Atendelink suspenderá imediatamente o acesso à licença e ao suporte técnico.</li>
+                                <li>II. O Atendelink reserva-se o direito de recusar novas vendas a Clientes com histórico de inadimplência ou que tenham violado as regras de conduta e respeito com a equipe de suporte.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 id="id-7" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">7. POLÍTICA DE SUPORTE TÉCNICO E SLA</h2>
+                    <p>Este capítulo define o escopo, canais, horários e procedimentos para o acionamento do suporte técnico.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>7.1. Canais e Horários:</strong> O único canal oficial para solicitação de suporte técnico é através do nosso portal de tickets. Horário de Atendimento: De Segunda a Sexta-feira, das 08h às 18h (Horário de Brasília), exceto feriados nacionais.</li>
+                        <li><strong>7.2. Tempo de Resposta (SLA):</strong> Nosso prazo máximo para resposta a um novo chamado é de até 03 (três) dias úteis, contados a partir da abertura do ticket.</li>
+                        <li><strong>7.3. Escopo do Suporte (O que está incluso):</strong> Nossa equipe está preparada e restrita para auxiliar com:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>I. Esclarecimento de dúvidas sobre o funcionamento e os recursos nativos do sistema Atendelink.</li>
+                                <li>II. Investigação e correção de bugs ou falhas no código do sistema.</li>
+                                <li>III. Auxílio em configurações relacionadas exclusivamente ao software Atendelink.</li>
+                            </ul>
+                        </li>
+                        <li><strong>7.4. Limitações (O que NÃO está incluso):</strong> Para garantir a qualidade do atendimento, os seguintes itens estão fora do escopo do nosso suporte técnico padrão, sendo de responsabilidade do Cliente:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>I. Configuração, gestão, manutenção ou segurança do servidor (VPS) do cliente.</li>
+                                <li>II. Suporte para ferramentas de terceiros (Typebot, N8N, SIP, Webhooks externos, etc.).</li>
+                                <li>III. Criação de fluxos de chatbot, lógicas de atendimento, implementação de automações ou consultoria de negócios/marketing.</li>
+                                <li>IV. Acesso remoto à máquina do cliente (por questões de privacidade e segurança).</li>
+                                <li>V. Customizações de frontend, alterações de código ou design (CSS/HTML) de forma personalizada para o cliente.</li>
+                                <li>VI. Resolução de instabilidades ou falhas em outras APIs. O funcionamento destas conexões depende de bibliotecas de terceiros e rotas não homologadas (simulação do WhatsApp Web), estando sujeitas a bloqueios e interrupções por parte da Meta que fogem ao controle técnico do Atendelink.</li>
+                                <li>VII. Suporte a ambientes locais e redes restritivas: Diagnóstico de problemas de conexão decorrentes de instalações em infraestrutura local (Localhost, servidores físicos on-premise, máquinas virtuais em PCs pessoais), bem como dificuldades relacionadas a redes sem IP público dedicado (CGNAT), túneis de conexão (Ngrok, Cloudflare Tunnel), proxies reversos customizados ou firewalls de borda corporativos que divirjam do ambiente padrão homologado (VPS Cloud com IP Público).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 id="id-8" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">8. OBRIGAÇÕES, RESPONSABILIDADES E LIMITAÇÕES</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>8.1. Obrigações do Atendelink:</strong> Fornecer os arquivos de instalação, realizar o setup inicial, liberar atualizações (updates) de correção/segurança e prestar suporte técnico limitado ao funcionamento do software (bugs e dúvidas operacionais).</li>
+                        <li><strong>8.2. Obrigações do Cliente:</strong> Contratar e manter a VPS, realizar backups periódicos (o Atendelink não tem acesso aos dados), gerenciar as integrações de terceiros e administrar os usuários.</li>
+                        <li><strong>8.3. Limitações sobre Integrações de Terceiros:</strong> Conforme detalhado na Cláusula 3.6, o Atendelink não possui controle sobre serviços externos (Meta/WhatsApp, Gateways).
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>8.3.1.</strong> O Atendelink não será responsabilizada por indisponibilidade, mudanças de política, bloqueios ou banimentos de números aplicados por terceiros.</li>
+                                <li><strong>8.3.2.</strong> A indisponibilidade de serviços de terceiros não isenta o Cliente do pagamento da licença, nem gera direito a reembolso.</li>
+                                <li><strong>8.3.3.</strong> O Cliente declara ciência dos termos de uso do WhatsApp: <a href="https://www.whatsapp.com/legal/business-terms/" class="underline hover:opacity-70" target="_blank">https://www.whatsapp.com/legal/business-terms/</a></li>
+                                <li><strong>8.3.4. Alterações Operacionais e Compliance de Terceiros:</strong> O Atendelink poderá, por razões técnicas, operacionais, de segurança, compliance ou exigências impostas por terceiros integradores (como Meta, Facebook, Instagram e WhatsApp), alterar, substituir, migrar ou descontinuar aplicativos, contas comerciais, estruturas de autenticação, métodos de onboarding, permissões, credenciais ou integrações utilizadas pela plataforma, sem que isso configure falha na prestação do serviço ou gere obrigação de indenização.</li>
+                                <li><strong>8.3.5. Procedimentos de Reconexão e Migração:</strong> O Cliente reconhece que alterações promovidas por terceiros poderão exigir procedimentos adicionais de reconexão, revalidação OAuth, recriação de canais, atualização de permissões ou migração de integrações já existentes, sendo tais medidas consideradas parte natural da operação de serviços dependentes de plataformas externas.</li>
+                                <li><strong>8.3.6. Limitação de Responsabilidade sobre Restrições Externas:</strong> O Atendelink não poderá ser responsabilizada por suspensões, restrições, revisões de compliance, perda de permissões, bloqueios temporários ou definitivos aplicados por terceiros integradores sobre aplicativos, contas comerciais, Business Managers, números ou estruturas utilizadas para integração com serviços externos.</li>
+                                <li><strong>8.3.7.</strong> O Cliente reconhece que integrações OAuth, aplicativos compartilhados e estruturas vinculadas à Meta/Facebook/Instagram/WhatsApp poderão ser monitoradas pelo Atendelink para fins de segurança, compliance e preservação operacional. Em caso de métricas críticas de qualidade, uso indevido, spam, risco de bloqueio coletivo ou violação das políticas da Meta, o Atendelink poderá aplicar medidas preventivas e corretivas, incluindo limitação, desassociação de canais, bloqueio de onboarding ou suspensão de integrações compartilhadas, sem que isso gere direito a indenização ou reembolso. O Cliente permanece integralmente responsável pelas ações de seus usuários, tenants e clientes finais.</li>
+                            </ul>
+                        </li>
+                        <li><strong>8.4. Riscos Inerentes e Dependência Tecnológica:</strong>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>8.4.1.</strong> O Cliente reconhece que o sistema está sujeito a interferências, mau funcionamento ou atrasos inerentes ao uso da internet e infraestrutura de servidores.</li>
+                                <li><strong>8.4.2.</strong> O Cliente declara ter conhecimento desses riscos e concorda que falhas decorrentes de fatores externos não constituem defeito do software. Nestas hipóteses, não será devida pelo Atendelink qualquer indenização por prejuízos, incluindo, mas não se limitando a: danos materiais, lucros cessantes, perda de uma chance ou danos morais.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 id="id-9" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">9. PROPRIEDADE INTELECTUAL</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>9.1. Titularidade do Atendelink:</strong> O Sistema Atendelink, seu código-fonte, arquitetura de banco de dados, logotipos (da marca Atendelink), documentações, manuais e APIs são de propriedade intelectual exclusiva do Atendelink (Licenciante).
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>9.1.1.</strong> A contratação da licença não transfere, em hipótese alguma, a titularidade ou os direitos autorais do software para o Cliente. O Cliente recebe apenas uma autorização de uso (Licença), limitada, revogável e não exclusiva.</li>
+                                <li><strong>9.1.2.</strong> É vedado ao Cliente remover, ocultar ou alterar os avisos de copyright ou mecanismos de validação de licença embutidos no código-fonte, exceto nas áreas explicitamente designadas para personalização visual (White-Label).</li>
+                            </ul>
+                        </li>
+                        <li><strong>9.2. Titularidade do Cliente (White-Label e Dados):</strong> Pertencem exclusivamente ao Cliente:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>I. A marca, logotipo e identidade visual aplicados sobre a plataforma no modelo White-Label.</li>
+                                <li>II. A base de dados de contatos, históricos de conversas e informações de seus clientes finais (Tenants).</li>
+                                <li>III. A estratégia de precificação e os contratos firmados com seus próprios clientes.</li>
+                            </ul>
+                        </li>
+                        <li><strong>9.3. Auditoria:</strong> O Atendelink reserva-se o direito de monitorar remotamente, via telemetria do sistema, a validade da chave de licença, os subdomínios registrados e as estatísticas de logins realizados no sistema, respeitando a privacidade dos dados Cliente.</li>
+                    </ul>
+
+                    <h2 id="id-10" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">10. PRIVACIDADE E PROTEÇÃO DE DADOS (LGPD)</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>10.1. Papéis das Partes (Definição de Controlador e Operador):</strong> Para fins da Lei Geral de Proteção de Dados (Lei nº 13.709/2018):
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>10.1.1. Atendelink como Controlador:</strong> O Atendelink atua como Controladora apenas dos dados cadastrais do Cliente Direto (nome, e-mail, CPF/CNPJ, telefone, domínio), utilizados para faturamento, validação da licença e suporte.</li>
+                                <li><strong>10.1.2. Cliente como Controlador:</strong> O Cliente é o único e exclusivo Controlador dos dados pessoais de terceiros (seus clientes finais/tenants, leads e contatos) que trafegam pelo Sistema Atendelink instalado em seu servidor.</li>
+                            </ul>
+                        </li>
+                        <li><strong>10.2. Ausência de Acesso aos Dados (Modelo Self-Hosted):</strong> O Cliente reconhece que, devido à natureza auto-hospedada (self-hosted) do software:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>10.2.1.</strong> O banco de dados fica hospedado na infraestrutura (VPS) contratada pelo Cliente, sob sua guarda e responsabilidade.</li>
+                                <li><strong>10.2.2.</strong> O Atendelink não possui acesso ao conteúdo das mensagens, lista de contatos ou dados sensíveis processados pelo Cliente, exceto quando o Cliente fornece voluntariamente credenciais de acesso temporário para fins de suporte técnico.</li>
+                            </ul>
+                        </li>
+                        <li><strong>10.3. Responsabilidade por Vazamentos:</strong> Compete exclusivamente ao Cliente garantir a segurança de seu servidor (VPS), aplicando firewalls, atualizações de sistema operacional e boas práticas de segurança. O Atendelink não se responsabiliza por vazamentos de dados decorrentes de invasões, falhas de segurança na VPS ou engenharia social sofrida pelo Cliente ou sua equipe.</li>
+                    </ul>
+
+                    <h2 id="id-11" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">11. DISPOSIÇÕES GERAIS</h2>
+                    <p>O Atendelink informa que poderá, a qualquer momento, unilateralmente, modificar/atualizar estes Termos e Condições de Uso. Caso isso aconteça, o Usuário com Plano de Assinatura vigente será notificado e a versão atualizada valerá a partir de sua publicação. A continuidade de acesso ou utilização do Atendelink pelos Usuários, depois da divulgação, confirmará a aceitação e vigência dos novos Termos e Condições de Uso.</p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li><strong>11.1. Comunicações:</strong> Todas as comunicações, notificações e avisos serão considerados válidos quando enviados para os endereços de e-mail cadastrados pelo Cliente no momento da compra ou através de avisos no painel administrativo do sistema.</li>
+                        <li><strong>11.2. Tolerância:</strong> A eventual tolerância do Atendelink em exigir o cumprimento de qualquer cláusula deste contrato não configurará novação, renúncia ou perdão de direitos, podendo a cláusula ser exigida a qualquer tempo (não aplicação do supressio).</li>
+                        <li><strong>11.3. Conduta e Respeito:</strong> O Atendelink preza pelo respeito mútuo. Reserva-se o direito de suspender o suporte técnico ou, em casos extremos, rescindir a licença, caso o Cliente ou seus representantes tratem a equipe de atendimento com agressividade, ofensas, racismo, assédio ou qualquer comportamento inadequado.</li>
+                        <li><strong>11.4. Cessão:</strong> O Cliente não poderá ceder ou transferir este contrato a terceiros sem a prévia autorização por escrito do Atendelink. O Atendelink poderá ceder este contrato em caso de fusão, aquisição ou venda de ativos da empresa.</li>
+                        <li><strong>11.5. Independência das Cláusulas:</strong> Se qualquer disposição deste contrato for considerada inválida ou inexequível por um tribunal, as demais disposições permanecerão em pleno vigor e efeito.</li>
+                    </ul>
+
+                    <h2 id="id-12" class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">12. FORO E LEGISLAÇÃO APLICÁVEL</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>12.1.</strong> Este contrato é regido pelas leis da República Federativa do Brasil, em especial pelo Código Civil e pelas Leis de Propriedade Intelectual e Software.</li>
+                        <li><strong>12.2.</strong> Fica eleito o foro da Comarca de Alfenas - MG como o único competente para dirimir quaisquer dúvidas ou litígios oriundos deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja ou venha a ser.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="site-footer" class="bg-gray-50 dark:bg-[#020B18] border-t border-gray-100 dark:border-slate-800/80 py-8 mt-auto transition-colors duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center space-x-2 text-2xl font-extrabold mb-3">
+                <img id="footer-logo" src="images/logo-dark.png" alt="AtendeLink Logo" class="h-7 w-auto">
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2024-2026 AtendeLink. Todos os direitos reservados.</p>
+            <div class="mt-3 space-x-4">
+                <a href="termos.html" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-150 text-sm font-medium">Termos de Serviço</a>
+                <span class="text-gray-300 dark:text-gray-700">|</span>
+                <a href="politica.html" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition duration-150 text-sm font-medium">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Lógica do Tema e Interação -->
+    <script src="js/theme.js" defer></script>
+</body>
+</html>

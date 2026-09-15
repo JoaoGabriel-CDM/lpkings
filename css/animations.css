@@ -1,0 +1,43 @@
+/* ==========================================================================
+   ARQUIVO: css/animations.css
+   DESCRIÇÃO: Contém keyframes e classes de animações (Flutuação, Pulsar, Scroll).
+   
+   MAPA DE EDIÇÃO / ONDE ALTERAR:
+   - Animação do Robô: Altere @keyframes robot-float e .robot-float.
+   - Efeito de pulso do WhatsApp: Altere @keyframes wa-pulse.
+   - Animações de Scroll (fade-in): Altere .animate-item e as classes de delay.
+   ========================================================================== */
+
+/* --- Animação do Robô na Hero --- */
+@keyframes robot-float {
+  0%, 100% { transform: translateY(0px) rotate(-4deg); }
+  50%      { transform: translateY(-10px) rotate(4deg); }
+}
+
+.robot-float {
+  animation: robot-float 4s ease-in-out infinite;
+}
+
+/* --- Animação de Pulso do WhatsApp --- */
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40), 0 0 0 0 rgba(37, 211, 102, 0.45); }
+  70%  { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40), 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- Animações ao Rolar a Página (Scroll Reveal) --- */
+.animate-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.animate-item.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }

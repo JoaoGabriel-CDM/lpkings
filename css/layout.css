@@ -1,0 +1,95 @@
+/* ==========================================================================
+   ARQUIVO: css/layout.css
+   DESCRIÇÃO: Estilos estruturais de layout (Header, Hero Section, Pricing, Footer).
+   
+   MAPA DE EDIÇÃO / ONDE ALTERAR:
+   - Efeitos do Header ao rolar a página: Altere .header-scrolled e .dark .header-scrolled.
+   - Padrão de pontos e brilhos da Hero: Altere .hero-grid e .hero-glow.
+   - Fundo da seção de preços: Altere .pricing-bg.
+   ========================================================================== */
+
+/* --- Header Fixo e Scroll-Aware --- */
+/* --- Header Fixo e Scroll-Aware --- */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+#site-header.header-scrolled,
+.header-scrolled {
+  background: #ffffff !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.dark #site-header.header-scrolled,
+.dark .header-scrolled {
+  background: #020B18 !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Hero Section & Orbs --- */
+.hero-section {
+  background: #ffffff;
+}
+.dark .hero-section {
+  background: #020B18;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.10) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+}
+.dark .hero-grid {
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+.hero-glow-a {
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.13), transparent 70%);
+  top: -180px;
+  right: -120px;
+}
+.hero-glow-b {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%);
+  bottom: 0;
+  left: -80px;
+}
+.dark .hero-glow-a {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.20), transparent 70%);
+}
+.dark .hero-glow-b {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.13), transparent 70%);
+}
+
+/* --- Pricing Section --- */
+.pricing-bg {
+  background: var(--gradient-pricing-bg);
+  position: relative;
+}
+.pricing-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(59, 130, 246, 0.20), transparent),
+    radial-gradient(ellipse 50% 60% at 80% 20%, rgba(99, 102, 241, 0.15), transparent);
+}

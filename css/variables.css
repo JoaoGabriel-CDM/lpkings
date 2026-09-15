@@ -1,0 +1,31 @@
+/* ==========================================================================
+   ARQUIVO: css/variables.css
+   DESCRIÇÃO: Armazena todas as variáveis CSS globais do projeto.
+   
+   MAPA DE EDIÇÃO / ONDE ALTERAR:
+   - Cores da marca (Azul principal, WhatsApp): Altere --color-primary ou --color-whatsapp.
+   - Cores de fundo (Light / Dark mode): Altere --bg-dark, --bg-light, etc.
+   - Tipografia principal: Altere --font-primary.
+   ========================================================================== */
+
+:root {
+  /* Cores Principais */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #128c7e;
+
+  /* Gradientes de Texto e Fundo */
+  --gradient-blue-text: linear-gradient(135deg, #2563eb 0%, #3b82f6 60%, #60a5fa 100%);
+  --gradient-pricing-bg: linear-gradient(140deg, #1d4ed8 0%, #1e3a8a 45%, #0a1628 100%);
+  --gradient-cta-light: linear-gradient(135deg, #f0f7ff 0%, #e8f2fe 100%);
+  --gradient-cta-dark: linear-gradient(135deg, rgba(30, 58, 138, 0.12) 0%, rgba(2, 11, 24, 0.5) 100%);
+
+  /* Fontes */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Efeitos e Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
