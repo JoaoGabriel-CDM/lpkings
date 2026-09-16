@@ -10,6 +10,11 @@
 
 /* --- Header Fixo e Scroll-Aware --- */
 /* --- Header Fixo e Scroll-Aware --- */
+#site-header img {
+  width: 160px; /* Substitua 140px pelo tamanho ideal */
+  height: auto;
+}
+
 #site-header {
   position: fixed;
   top: 0;
