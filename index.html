@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AtendeLink — Transforme Atendimentos em Vendas</title>
+  <title>FlyNode — A tecnologia que faz sua empresa voar</title>
   <link rel="icon" href="images/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
@@ -31,7 +31,7 @@
     <div class="flex justify-between items-center h-16">
 
       <a href="#" class="flex items-center shrink-0">
-        <img id="logo" src="images/passarologo.jpg" alt="AtendeLink" class="h-10 w-auto">
+        <img id="logo" src="images/logo.svg" alt="FlyNode" class="h-10 w-auto">
       </a>
 
       <nav class="hidden md:flex items-center gap-8">
@@ -113,7 +113,7 @@
     <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-7 animate-item delay-100">
       Converta seus<br class="hidden sm:block">
       <span class="relative inline-block mt-1">
-  <img src="images/roboLupa.png" alt="Robô AtendeLink" class="absolute -top-10 sm:-top-14 -left-14 sm:-left-20 w-16 sm:w-24 pointer-events-none z-0 drop-shadow-xl robot-float">
+  <img src="images/passarologo.jpg" alt="Pássaro FlyNode" class="absolute -top-10 sm:-top-14 -left-14 sm:-left-20 w-16 sm:w-24 pointer-events-none z-0 drop-shadow-xl robot-float">
   <span class="text-blue-gradient relative z-10">Atendimentos</span>
 </span>
       <br class="hidden sm:block">em Vendas Recorrentes.
@@ -589,12 +589,12 @@
 <footer class="bg-[#020B18] border-t border-slate-800/60 py-10">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-      <img src="images/logo-dark.png" alt="AtendeLink" class="h-8 w-auto">
+      <img src="images/logo.svg" alt="FlyNode" class="h-8 w-auto">
       <nav class="flex flex-wrap items-center justify-center gap-6">
         <a href="termos-servico.html"            class="text-sm text-slate-500 hover:text-slate-300 transition-colors">Termos de Serviço</a>
         <a href="termos-politica-privacidade.html" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">Política de Privacidade</a>
       </nav>
-      <p class="text-sm text-slate-600">&copy; 2024–2026 AtendeLink</p>
+      <p class="text-sm text-slate-600">&copy; 2026 FlyNode</p>
     </div>
   </div>
 </footer>
@@ -617,12 +617,12 @@
       html.classList.add('dark');
       sun  && sun.classList.add('hidden');
       moon && moon.classList.remove('hidden');
-      if (logo) logo.src = 'images/logo-dark.png';
+      if (logo) logo.src = 'images/logo.svg';
     } else {
       html.classList.remove('dark');
       sun  && sun.classList.remove('hidden');
       moon && moon.classList.add('hidden');
-      if (logo) logo.src = 'images/passarologo.jpg';
+      if (logo) logo.src = 'images/logo.svg';
     }
   }
 
@@ -661,7 +661,7 @@
     const nome    = document.getElementById('nome').value;
     const email   = document.getElementById('email').value;
     const empresa = document.getElementById('empresa').value;
-    const msg = `Olá! Quero iniciar o teste grátis do AtendeLink.\n\nNome: ${nome}\nEmail: ${email}\nEmpresa: ${empresa}`;
+    const msg = `Olá! Quero iniciar o teste grátis na FlyNode.\n\nNome: ${nome}\nEmail: ${email}\nEmpresa: ${empresa}`;
     window.open(`https://wa.me/5535933005536?text=${encodeURIComponent(msg)}`, '_blank');
   });
 })();
