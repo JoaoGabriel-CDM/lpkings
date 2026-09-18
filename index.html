@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlyNode — Presença Digital &amp; Autoridade no Google</title>
+  <title>FlyNode — A tecnologia que faz sua empresa voar</title>
   <link rel="icon" href="images/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
@@ -89,7 +90,6 @@
         </span>
         Especialistas em Presença Digital
       </div>
-
       <!-- H1 -->
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white animate-item delay-100">
         Sua empresa com a
@@ -105,15 +105,15 @@
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row gap-3 animate-item delay-300">
         <a href="https://wa.me/+5535933005536" target="_blank"
-           class="cta-primary inline-flex items-center justify-center gap-2.5
+           class="inline-flex items-center justify-center gap-2.5
                   bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-7 rounded-lg
-                  shadow-lg shadow-blue-600/25 transition-all text-base">
+                  shadow-lg shadow-blue-500/25 transition-all text-base">
           <i class="fab fa-whatsapp text-lg"></i> Solicitar Landing Page
         </a>
         <a href="#servicos"
            class="inline-flex items-center justify-center gap-2
-                  border border-slate-700 text-slate-300 font-medium py-3.5 px-7 rounded-lg
-                  hover:border-slate-500 hover:text-white transition-all text-base">
+                  border-2 border-blue-500/60 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 font-medium py-3.5 px-7 rounded-lg
+                  transition-all text-base">
           Ver Como Funciona
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -250,7 +250,7 @@
       <p class="mt-4 text-lg text-slate-400 max-w-xl mx-auto">Fazer o cliente certo encontrar e confiar na sua empresa.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
 
       <!-- PILAR 1: Landing Pages -->
       <div class="service-card flex flex-col justify-between h-full rounded-2xl p-8 border border-blue-500/15 bg-[#0D1B2E]/60 animate-item delay-100
@@ -299,17 +299,17 @@
 
         <a href="https://wa.me/+5535933005536" target="_blank"
            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white
-                  font-semibold py-3 px-6 rounded-lg transition-all shadow-lg shadow-blue-600/20 text-sm self-start">
+                  font-semibold py-3 px-6 rounded-lg transition-all shadow-lg shadow-blue-500/25 text-sm self-start mt-auto">
           <i class="fab fa-whatsapp"></i> Solicitar Landing Page
         </a>
       </div>
 
       <!-- PILAR 2: Cartão NFC -->
       <div class="service-card rounded-2xl border border-blue-500/15 bg-[#0D1B2E]/60 animate-item delay-200
-                  hover:border-blue-500/35 transition-all duration-300 overflow-hidden">
+                  hover:border-blue-500/35 transition-all duration-300 overflow-hidden flex flex-col h-full">
 
         <!-- Topo com layout em 2 colunas internas -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 h-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 h-full flex-grow">
 
           <!-- Texto -->
           <div class="p-8 flex flex-col justify-between h-full">
@@ -352,9 +352,9 @@
             </div>
 
             <a href="https://wa.me/+5535933005536" target="_blank"
-               class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/60
-                      text-slate-300 hover:text-blue-400 font-semibold py-3 px-5 rounded-lg
-                      transition-all text-sm self-start">
+               class="inline-flex items-center gap-2 border-2 border-blue-500/60 bg-blue-500/10 hover:bg-blue-500/20
+                      text-blue-300 font-medium py-3 px-5 rounded-lg
+                      transition-all text-sm self-start mt-auto">
               <i class="fab fa-whatsapp"></i> Saber mais
             </a>
           </div>
@@ -793,6 +793,36 @@
 ══════════════════════════════════════════════ -->
 <script>
 (function() {
+  // ── Theme ──
+  const html   = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  const sun    = document.getElementById('icon-sun');
+  const moon   = document.getElementById('icon-moon');
+  const logo   = document.getElementById('logo');
+
+  function applyTheme(dark) {
+    if (dark) {
+      html.classList.add('dark');
+      sun  && sun.classList.add('hidden');
+      moon && moon.classList.remove('hidden');
+      if (logo) logo.src = 'images/logo (2).png';
+    } else {
+      html.classList.remove('dark');
+      sun  && sun.classList.remove('hidden');
+      moon && moon.classList.add('hidden');
+      if (logo) logo.src = 'images/logo (2).png';
+    }
+  }
+
+  const saved = localStorage.getItem('theme');
+  applyTheme(saved ? saved === 'dark' : true);
+
+  toggle && toggle.addEventListener('click', () => {
+    const isDark = !html.classList.contains('dark');
+    applyTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
   // ── Sticky header ──
   const header = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
