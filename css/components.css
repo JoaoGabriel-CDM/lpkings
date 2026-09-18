@@ -38,10 +38,6 @@
   transform: translateY(-5px);
 }
 
-/* Card destaque "Profissional" */
-.price-card-pro {
-  /* Estilos de destaque tratados pelas classes inline no HTML */
-}
 .price-card-pro:hover {
   transform: translateY(-5px);
 }
