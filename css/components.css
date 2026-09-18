@@ -3,7 +3,7 @@
    DESCRIÇÃO: Estilos de componentes independentes e reutilizáveis do projeto.
    
    MAPA DE EDIÇÃO / ONDE ALTERAR:
-   - Botões CTA: Altere .cta-primary ou .cta-button.
+   - Botões CTA: Altere .cta-primary.
    - Cards de Preço: Altere .price-card e .price-card-pro.
    - FAQ Accordion: Altere .faq-item, .faq-content e .faq-icon.
    - Botão Flutuante do WhatsApp: Altere .whatsapp-float.
@@ -25,12 +25,9 @@
   content: '';
   position: absolute;
   inset: -16px;
-  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.07), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12), transparent 70%);
   border-radius: 32px;
   pointer-events: none;
-}
-.dark .feature-img-wrap::before {
-  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12), transparent 70%);
 }
 
 /* --- Cards de Preço --- */
@@ -40,19 +37,17 @@
 .price-card:hover {
   transform: translateY(-5px);
 }
+
+/* Card destaque "Profissional" */
 .price-card-pro {
-  box-shadow: 0 0 0 4px #facc15, 0 24px 48px rgba(0, 0, 0, 0.25);
+  /* Estilos de destaque tratados pelas classes inline no HTML */
 }
 .price-card-pro:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 0 4px #facc15, 0 32px 56px rgba(0, 0, 0, 0.30);
 }
 
 /* --- Cards de CTA & Formulários --- */
 .cta-card {
-  background: var(--gradient-cta-light);
-}
-.dark .cta-card {
   background: var(--gradient-cta-dark);
   border-color: rgba(59, 130, 246, 0.20) !important;
 }
