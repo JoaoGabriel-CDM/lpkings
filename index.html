@@ -12,16 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+</head>
 
-<script>
-  (function() {
-    var t = localStorage.getItem('theme');
-    if (t === 'light') document.documentElement.classList.remove('dark');
-    else document.documentElement.classList.add('dark');
-  })();
-</script>
-
-<body class="font-sans antialiased bg-white dark:bg-[#020B18] text-gray-900 dark:text-slate-100 overflow-x-hidden">
+<body class="font-sans antialiased overflow-x-hidden">
 
 <!-- ══════════════════════════════════════════════
      HEADER
@@ -35,35 +28,23 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8">
-        <a href="#recursos" class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Recursos</a>
-        <a href="#precos"   class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Preços</a>
-        <a href="#faq"      class="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">FAQ</a>
+        <a href="#servicos" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="#precos"   class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">Preços</a>
+        <a href="#faq"      class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">FAQ</a>
       </nav>
 
       <div class="flex items-center gap-2.5">
-        <button id="theme-toggle" aria-label="Alternar tema"
-          class="w-9 h-9 rounded-full flex items-center justify-center
-                 bg-gray-100 dark:bg-[#0D1B2E] hover:bg-gray-200 dark:hover:bg-[#162235]
-                 border border-gray-200 dark:border-slate-700/60 transition-all">
-          <svg id="icon-sun" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
-          </svg>
-          <svg id="icon-moon" class="w-4 h-4 text-blue-300 hidden" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-          </svg>
-        </button>
-
         <a href="https://wa.me/+5535933005536" target="_blank"
            class="hidden md:inline-flex items-center gap-2 px-4 py-2
                   bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold
                   rounded-lg transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20">
-          <i class="fab fa-whatsapp"></i> Começar Agora
+          <i class="fab fa-whatsapp"></i> Falar com Especialista
         </a>
 
         <button id="mobile-menu-btn"
           class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center
-                 bg-gray-100 dark:bg-[#0D1B2E] border border-gray-200 dark:border-slate-700/60">
-          <i class="fas fa-bars text-sm text-gray-600 dark:text-slate-400"></i>
+                 bg-[#0D1B2E] border border-slate-700/60">
+          <i class="fas fa-bars text-sm text-slate-400"></i>
         </button>
       </div>
     </div>
@@ -71,16 +52,15 @@
 
   <!-- Mobile menu -->
   <div id="mobile-menu"
-    class="hidden md:hidden border-t border-gray-100 dark:border-slate-800
-           bg-white/95 dark:bg-[#020B18]/95 backdrop-blur-md">
+    class="hidden md:hidden border-t border-slate-800 bg-[#020B18]/95 backdrop-blur-md">
     <div class="px-5 py-5 space-y-1">
-      <a href="#recursos" class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">Recursos</a>
-      <a href="#precos"   class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">Preços</a>
-      <a href="#faq"      class="block text-sm font-medium text-gray-700 dark:text-slate-300 py-2.5 border-b border-gray-100 dark:border-slate-800">FAQ</a>
+      <a href="#servicos" class="block text-sm font-medium text-slate-300 py-2.5 border-b border-slate-800">Serviços</a>
+      <a href="#precos"   class="block text-sm font-medium text-slate-300 py-2.5 border-b border-slate-800">Preços</a>
+      <a href="#faq"      class="block text-sm font-medium text-slate-300 py-2.5 border-b border-slate-800">FAQ</a>
       <a href="https://wa.me/+5535933005536" target="_blank"
          class="flex items-center justify-center gap-2 mt-3 w-full py-3 px-4
                 bg-blue-600 text-white text-sm font-semibold rounded-xl">
-        <i class="fab fa-whatsapp"></i> Começar Agora
+        <i class="fab fa-whatsapp"></i> Falar com Especialista
       </a>
     </div>
   </div>
@@ -88,26 +68,17 @@
 
 
 <!-- ══════════════════════════════════════════════
-     HERO
+     HERO — 2 COLUNAS
 ══════════════════════════════════════════════ -->
 <section class="hero-section relative min-h-screen flex items-center pt-16 overflow-hidden">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center py-24 md:py-32">
+  <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-5 sm:px-8 py-20">
 
-    <!-- Status badge -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full
-                bg-blue-50 dark:bg-blue-500/10
-                border border-blue-200 dark:border-blue-500/25
-                text-blue-700 dark:text-blue-400 text-sm font-medium mb-10 animate-item">
-      <span class="relative flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-      </span>
-      Lançamento — 7 dias grátis, sem cartão
-    </div>
+    <!-- COLUNA ESQUERDA: Copy + CTAs -->
+    <div class="flex flex-col gap-7">
 
     <!-- Headline -->
     <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-7 animate-item delay-100">
@@ -119,204 +90,429 @@
       <br class="hidden sm:block">em Vendas Recorrentes.
     </h1>
 
-    <!-- Subtitle -->
-    <p class="max-w-xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-slate-400 leading-relaxed mb-11 animate-item delay-200">
-      Distribua automaticamente, monitore sua equipe em tempo real e escale o faturamento sem complicações.
-    </p>
+      <!-- H1 -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white animate-item delay-100">
+        Sua empresa com a
+        <span class="text-blue-500"> Presença Digital</span>
+        que ela merece.
+      </h1>
 
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 animate-item delay-300">
-      <a href="https://wa.me/+5535933005536" target="_blank"
-         class="cta-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
-                bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl
-                transition-all shadow-xl shadow-blue-600/30 hover:shadow-blue-600/40 text-base">
-        <i class="fab fa-whatsapp text-lg"></i> Garantir Meu Acesso
-      </a>
-      <a href="#recursos"
-         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4
-                bg-white dark:bg-[#0D1B2E] hover:bg-gray-50 dark:hover:bg-[#162235]
-                text-gray-700 dark:text-slate-300
-                border border-gray-200 dark:border-slate-700/60
-                font-medium rounded-2xl transition-all text-base">
-        Como funciona
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </a>
+      <!-- Subtítulo -->
+      <p class="text-lg text-slate-400 leading-relaxed max-w-lg animate-item delay-200">
+        Criamos Landing Pages de alta conversão e estruturamos sua autoridade no Google para atrair mais clientes diariamente.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3 animate-item delay-300">
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="cta-primary inline-flex items-center justify-center gap-2.5
+                  bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-7 rounded-lg
+                  shadow-lg shadow-blue-600/25 transition-all text-base">
+          <i class="fab fa-whatsapp text-lg"></i> Solicitar Landing Page
+        </a>
+        <a href="#servicos"
+           class="inline-flex items-center justify-center gap-2
+                  border border-slate-700 text-slate-300 font-medium py-3.5 px-7 rounded-lg
+                  hover:border-slate-500 hover:text-white transition-all text-base">
+          Ver Como Funciona
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Social proof -->
+      <div class="flex flex-wrap items-center gap-x-7 gap-y-3 text-sm animate-item delay-400">
+        <div class="flex items-center gap-2.5">
+          <div class="flex -space-x-1.5">
+            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-400 flex items-center justify-center text-white text-xs font-bold">A</div>
+            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-500 flex items-center justify-center text-white text-xs font-bold">M</div>
+            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-600 flex items-center justify-center text-white text-xs font-bold">C</div>
+            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-700 flex items-center justify-center text-white text-xs font-bold">+</div>
+          </div>
+          <span class="text-slate-500">+50 empresas atendidas</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-yellow-400">★★★★★</span>
+          <span class="text-slate-500">4.9 no Google</span>
+        </div>
+        <div class="flex items-center gap-1.5 text-slate-500">
+          <i class="fas fa-shield-alt text-green-500 text-xs"></i> Sem fidelidade
+        </div>
+      </div>
     </div>
 
-    <!-- Social proof -->
-    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm animate-item delay-400">
-      <div class="flex items-center gap-2.5">
-        <div class="flex -space-x-1.5">
-          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-400 flex items-center justify-center text-white text-xs font-bold">A</div>
-          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-500 flex items-center justify-center text-white text-xs font-bold">M</div>
-          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-600 flex items-center justify-center text-white text-xs font-bold">C</div>
-          <div class="w-7 h-7 rounded-full border-2 border-white dark:border-[#020B18] bg-blue-700 flex items-center justify-center text-white text-xs font-bold">+</div>
+    <!-- COLUNA DIREITA: Mockup Visual -->
+    <div class="flex items-center justify-center animate-item delay-200 relative">
+      <div class="absolute inset-0 z-0" style="background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%); filter: blur(40px);"></div>
+      <div class="hero-mockup-container relative w-full max-w-md z-10">
+
+        <!-- Card de mockup de landing page -->
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-[#060f1e] shadow-2xl p-1 z-10">
+
+          <!-- Barra do browser -->
+          <div class="bg-slate-900 rounded-t-xl px-4 py-2.5 flex items-center gap-2 border-b border-slate-800">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+            </div>
+            <div class="flex-1 bg-[#020B18] rounded-md px-3 py-1 mx-2 flex items-center gap-2 border border-slate-800">
+              <i class="fas fa-lock text-green-400 text-[9px]"></i>
+              <span class="text-slate-400 text-[11px] font-medium">seusite.com.br</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo simulado da landing page -->
+          <div class="bg-[#020B18] rounded-b-xl px-5 py-7 space-y-5">
+            <!-- Headline simulada -->
+            <div class="space-y-2.5">
+              <div class="h-3 bg-blue-500 rounded-full w-3/4"></div>
+              <div class="h-3 bg-slate-300 rounded-full w-full"></div>
+              <div class="h-3 bg-slate-300 rounded-full w-5/6"></div>
+            </div>
+            <!-- Subtítulo simulado -->
+            <div class="space-y-2 pt-1">
+              <div class="h-2 bg-slate-500 rounded-full w-full"></div>
+              <div class="h-2 bg-slate-500 rounded-full w-4/5"></div>
+              <div class="h-2 bg-slate-500 rounded-full w-11/12"></div>
+            </div>
+            <!-- CTA simulado -->
+            <div class="pt-3 flex gap-3">
+              <div class="h-9 bg-blue-600 rounded-lg w-2/5 flex items-center justify-center shadow-lg shadow-blue-600/30">
+                <div class="h-2 bg-white rounded-full w-3/4"></div>
+              </div>
+              <div class="h-9 bg-slate-800 rounded-lg border border-slate-600 w-1/3 flex items-center justify-center">
+                <div class="h-2 bg-slate-300 rounded-full w-3/4"></div>
+              </div>
+            </div>
+            <!-- Seção de features simulada -->
+            <div class="grid grid-cols-3 gap-3 pt-4">
+              <div class="bg-[#0D1B2E] rounded-lg p-3 border border-slate-700 shadow-md">
+                <div class="h-5 w-5 rounded bg-blue-500 mb-2.5"></div>
+                <div class="h-1.5 bg-slate-300 rounded w-full mb-1.5"></div>
+                <div class="h-1.5 bg-slate-500 rounded w-3/4"></div>
+              </div>
+              <div class="bg-[#0a1628] rounded-lg p-3 border border-blue-500/40 shadow-md">
+                <div class="h-5 w-5 rounded bg-blue-400 mb-2.5"></div>
+                <div class="h-1.5 bg-blue-300 rounded w-full mb-1.5"></div>
+                <div class="h-1.5 bg-slate-400 rounded w-3/4"></div>
+              </div>
+              <div class="bg-[#0D1B2E] rounded-lg p-3 border border-slate-700 shadow-md">
+                <div class="h-5 w-5 rounded bg-blue-500 mb-2.5"></div>
+                <div class="h-1.5 bg-slate-300 rounded w-full mb-1.5"></div>
+                <div class="h-1.5 bg-slate-500 rounded w-3/4"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <span class="text-gray-500 dark:text-slate-500">+50 empresas ativas</span>
+
+        <!-- Badge flutuante: conversão -->
+        <div class="absolute -bottom-4 -left-4 backdrop-blur-md bg-slate-900/80 border border-blue-500/30 rounded-xl px-4 py-3
+                    shadow-lg z-20 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center">
+            <i class="fas fa-arrow-trend-up text-green-400 text-sm"></i>
+          </div>
+          <div>
+            <p class="text-white text-sm font-bold leading-tight">+280%</p>
+            <p class="text-slate-400 text-[10px]">Taxa de Conversão</p>
+          </div>
+        </div>
+
+        <!-- Badge flutuante: velocidade -->
+        <div class="absolute -top-4 -right-4 backdrop-blur-md bg-slate-900/80 border border-blue-500/30 rounded-xl px-4 py-3
+                    shadow-lg z-20 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/15 flex items-center justify-center">
+            <i class="fas fa-bolt text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <p class="text-white text-sm font-bold leading-tight">100/100</p>
+            <p class="text-slate-400 text-[10px]">Google PageSpeed</p>
+          </div>
+        </div>
+
       </div>
-      <div class="flex items-center gap-1.5">
-        <span class="text-yellow-400 tracking-tight">★★★★★</span>
-        <span class="text-gray-500 dark:text-slate-500">4.9 de satisfação</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SERVIÇOS — 2 PILARES
+══════════════════════════════════════════════ -->
+<section id="servicos" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 animate-item">
+      <p class="text-sm font-semibold text-blue-400 mb-3 tracking-wide uppercase">O que fazemos</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white">Dois pilares, um único objetivo:</h2>
+      <p class="mt-4 text-lg text-slate-400 max-w-xl mx-auto">Fazer o cliente certo encontrar e confiar na sua empresa.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- PILAR 1: Landing Pages -->
+      <div class="service-card flex flex-col justify-between h-full rounded-2xl p-8 border border-blue-500/15 bg-[#0D1B2E]/60 animate-item delay-100
+                  hover:border-blue-500/35 transition-all duration-300">
+        <div>
+          <!-- Ícone -->
+          <div class="w-12 h-12 rounded-xl bg-blue-600/15 border border-blue-500/20
+                      flex items-center justify-center mb-6">
+            <i class="fas fa-layer-group text-blue-400 text-xl"></i>
+          </div>
+
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+              Carro-chefe
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-black text-white mb-3">Landing Pages de Alta Conversão</h3>
+          <p class="text-slate-400 leading-relaxed mb-7">
+            Sites criados para transformar visitas em clientes. Design moderno, carregamento ultrarrápido e estratégia de copy focada em vendas.
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+              Design profissional e responsivo (mobile first)
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+              Copy persuasivo focado em conversão
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+              100/100 no Google PageSpeed
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+              Integração com WhatsApp e CRM
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+              Entrega em até 7 dias úteis
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white
+                  font-semibold py-3 px-6 rounded-lg transition-all shadow-lg shadow-blue-600/20 text-sm self-start">
+          <i class="fab fa-whatsapp"></i> Solicitar Landing Page
+        </a>
       </div>
-      <div class="flex items-center gap-1.5 text-gray-500 dark:text-slate-500">
-        <i class="fas fa-lock text-green-500 text-xs"></i> Sem fidelidade
+
+      <!-- PILAR 2: Cartão NFC -->
+      <div class="service-card rounded-2xl border border-blue-500/15 bg-[#0D1B2E]/60 animate-item delay-200
+                  hover:border-blue-500/35 transition-all duration-300 overflow-hidden">
+
+        <!-- Topo com layout em 2 colunas internas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 h-full">
+
+          <!-- Texto -->
+          <div class="p-8 flex flex-col justify-between h-full">
+            <div>
+              <!-- Ícone -->
+              <div class="w-12 h-12 rounded-xl bg-blue-600/15 border border-blue-500/20
+                          flex items-center justify-center mb-6">
+                <i class="fas fa-id-card text-blue-400 text-xl"></i>
+              </div>
+
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xs font-bold text-slate-400 bg-slate-800/60 border border-slate-700/50 px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+                  Complementar
+                </span>
+              </div>
+
+              <h3 class="text-2xl font-black text-white mb-3">Cartão NFC + QR Code</h3>
+              <p class="text-slate-400 leading-relaxed mb-6 text-sm">
+                Acelerador de avaliações reais no Google. Prova social física e digital que constrói autoridade de forma automática.
+              </p>
+
+              <ul class="space-y-2.5 mb-7">
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+                  Tecnologia NFC + QR Code dual
+                </li>
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+                  Avaliação Google em menos de 3s
+                </li>
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+                  Material premium em metal
+                </li>
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+                  Sem aplicativo necessário
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/+5535933005536" target="_blank"
+               class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/60
+                      text-slate-300 hover:text-blue-400 font-semibold py-3 px-5 rounded-lg
+                      transition-all text-sm self-start">
+              <i class="fab fa-whatsapp"></i> Saber mais
+            </a>
+          </div>
+
+          <!-- Cartão NFC Visual -->
+          <div class="flex items-center justify-center p-6 sm:p-4 bg-[#060f1e]/40">
+            <div class="card-3d nfc-card-wrapper" style="width:200px;">
+              <div class="card-surface rounded-[16px] overflow-hidden" style="width:100%; padding: 20px 18px 16px;">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="nfc-chip rounded-md" style="width:32px;height:22px;position:relative;">
+                    <svg viewBox="0 0 38 28" class="w-full h-full opacity-60">
+                      <rect x="12" y="0" width="1" height="28" fill="#555"/>
+                      <rect x="19" y="0" width="1" height="28" fill="#555"/>
+                      <rect x="26" y="0" width="1" height="28" fill="#555"/>
+                      <rect x="0" y="9" width="38" height="1" fill="#555"/>
+                      <rect x="0" y="18" width="38" height="1" fill="#555"/>
+                    </svg>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-60">
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="#3b82f6" stroke-width="1.2" fill="none"/>
+                    <path d="M8.5 8.5C7 9.8 6 11.3 6 12s1 2.2 2.5 3.5" stroke="#3b82f6" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    <path d="M15.5 8.5C17 9.8 18 11.3 18 12s-1 2.2-2.5 3.5" stroke="#3b82f6" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    <circle cx="12" cy="12" r="1.5" fill="#3b82f6"/>
+                  </svg>
+                </div>
+
+                <div class="flex justify-center mb-2">
+                  <div style="position:relative;width:56px;height:56px;">
+                    <svg viewBox="0 0 72 72" width="56" height="56">
+                      <circle cx="36" cy="36" r="34" fill="none" stroke-width="5" stroke="url(#googleRingBlue)" />
+                      <defs>
+                        <linearGradient id="googleRingBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%"   stop-color="#EA4335"/>
+                          <stop offset="25%"  stop-color="#FBBC05"/>
+                          <stop offset="50%"  stop-color="#34A853"/>
+                          <stop offset="75%"  stop-color="#4285F4"/>
+                          <stop offset="100%" stop-color="#EA4335"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                      <span style="font-size:22px;font-weight:700;letter-spacing:-1px;">
+                        <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-center gap-0.5 mb-1.5">
+                  <span style="color:#FBBC05;font-size:13px;">★★★★★</span>
+                </div>
+
+                <p class="text-center text-white font-bold text-[11px] mb-2">Nos avalie no Google</p>
+
+                <div class="flex justify-center mb-2">
+                  <div style="background:#fff;padding:4px;border-radius:5px;display:inline-block;">
+                    <svg width="48" height="48" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="21" height="21" fill="white"/>
+                      <rect x="1" y="1" width="7" height="7" fill="#111" rx="1"/>
+                      <rect x="2" y="2" width="5" height="5" fill="white" rx="0.5"/>
+                      <rect x="3" y="3" width="3" height="3" fill="#111"/>
+                      <rect x="13" y="1" width="7" height="7" fill="#111" rx="1"/>
+                      <rect x="14" y="2" width="5" height="5" fill="white" rx="0.5"/>
+                      <rect x="15" y="3" width="3" height="3" fill="#111"/>
+                      <rect x="1" y="13" width="7" height="7" fill="#111" rx="1"/>
+                      <rect x="2" y="14" width="5" height="5" fill="white" rx="0.5"/>
+                      <rect x="3" y="15" width="3" height="3" fill="#111"/>
+                      <rect x="9" y="1" width="1" height="1" fill="#111"/>
+                      <rect x="11" y="1" width="1" height="1" fill="#111"/>
+                      <rect x="9" y="3" width="2" height="1" fill="#111"/>
+                      <rect x="10" y="5" width="1" height="2" fill="#111"/>
+                      <rect x="9" y="9" width="3" height="1" fill="#111"/>
+                      <rect x="13" y="9" width="1" height="3" fill="#111"/>
+                      <rect x="15" y="9" width="3" height="1" fill="#111"/>
+                      <rect x="17" y="11" width="3" height="1" fill="#111"/>
+                      <rect x="13" y="13" width="1" height="3" fill="#111"/>
+                      <rect x="15" y="13" width="3" height="1" fill="#111"/>
+                      <rect x="17" y="15" width="3" height="3" fill="#111"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2 border-t border-white/[0.07]">
+                  <span class="text-[8px] tracking-[0.2em] text-[#444] uppercase font-semibold">NFC-Stars</span>
+                  <div class="flex gap-1">
+                    <span class="w-1 h-1 rounded-full bg-[#333]"></span>
+                    <span class="w-1 h-1 rounded-full bg-[#444]"></span>
+                    <span class="w-1 h-1 rounded-full bg-blue-600 opacity-60"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
-     METRICS BAR
+     COMO FUNCIONA — 3 PASSOS
 ══════════════════════════════════════════════ -->
-<div class="border-y border-gray-100 dark:border-slate-800/70 bg-gray-50 dark:bg-[#0D1B2E]">
-  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="animate-item">
-        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">50+</div>
-        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Empresas atendidas</div>
-      </div>
-      <div class="animate-item delay-100">
-        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">98%</div>
-        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Taxa de satisfação</div>
-      </div>
-      <div class="animate-item delay-200">
-        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">3×</div>
-        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Mais conversões</div>
-      </div>
-      <div class="animate-item delay-300">
-        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">1 min</div>
-        <div class="text-sm text-gray-500 dark:text-slate-500 mt-1">Para conectar WhatsApp</div>
-      </div>
-    </div>
-  </div>
-</div>
+<section id="como-funciona" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
 
-
-<!-- ══════════════════════════════════════════════
-     RECURSOS
-══════════════════════════════════════════════ -->
-<section id="recursos" class="py-24 md:py-32 bg-white dark:bg-[#020B18]">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-
-    <div class="max-w-2xl mb-20 animate-item">
-      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Plataforma completa</p>
-      <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
-        Tudo que sua equipe precisa para atender melhor.
-      </h2>
-      <p class="mt-5 text-lg text-gray-500 dark:text-slate-400">Chega de clientes sem resposta. Controle total na palma da mão.</p>
+    <div class="text-center mb-16 animate-item">
+      <p class="text-sm font-semibold text-blue-400 mb-3 tracking-wide uppercase">Processo</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white">Do zero à primeira conversão.</h2>
+      <p class="mt-4 text-lg text-slate-400 max-w-xl mx-auto">Três passos. Resultado em dias.</p>
     </div>
 
-    <div class="space-y-28">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 relative max-w-7xl mx-auto">
+      <div class="hidden md:block absolute top-[52px] left-[calc(16.66%+16px)] right-[calc(16.66%+16px)] h-px
+                  bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
 
-      <!-- Feature 1 -->
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
-        <div class="space-y-6">
-          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Distribuição inteligente de atendimentos</h3>
-          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Distribua automaticamente os atendimentos entre seus usuários. Garanta que nenhum cliente fique sem resposta e otimize a carga de trabalho da equipe.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Fila inteligente por disponibilidade dos atendentes
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Atribuição automática por setor ou especialidade
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Histórico completo de cada contato disponível
-            </li>
-          </ul>
-          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
-            Saiba mais sobre distribuição
-            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </a>
-        </div>
-        <div class="feature-img-wrap">
-          <img src="images/image2.png" alt="Painel de distribuição de atendimentos"
-               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
-        </div>
+      <!-- Passo 1 -->
+      <div class="step-card rounded-2xl p-7 animate-item delay-100 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
+        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">01</p>
+        <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-xl">💬</div>
+        <h3 class="text-white font-bold text-lg mb-3">Briefing estratégico</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Entendemos o seu negócio, público-alvo e objetivo. Definimos o posicionamento e a proposta de valor que vai converter.
+        </p>
       </div>
 
-      <!-- Feature 2 -->
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
-        <div class="order-last lg:order-first feature-img-wrap">
-          <img src="images/image3.png" alt="Relatórios e métricas em tempo real"
-               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
-        </div>
-        <div class="space-y-6">
-          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Métricas em tempo real</h3>
-          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Acesse métricas de usuários, atendimentos e setores. Monitore tudo em tempo real com acesso supervisor e tome decisões com base em dados concretos.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Painel supervisor com visão geral em tempo real
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Relatórios exportáveis por período e setor
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Performance individual por atendente
-            </li>
-          </ul>
-          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
-            Conhecer os relatórios
-            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </a>
-        </div>
+      <!-- Passo 2 -->
+      <div class="step-card rounded-2xl p-7 border-blue-500/15 bg-blue-500/3 animate-item delay-200 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
+        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">02</p>
+        <div class="w-11 h-11 rounded-xl bg-blue-500/12 flex items-center justify-center mb-6 text-xl">⚡</div>
+        <h3 class="text-white font-bold text-lg mb-3">Criação e desenvolvimento</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Nossa equipe cria o design, escreve o copy e desenvolve a landing page em até 7 dias úteis. Você aprova antes de publicar.
+        </p>
       </div>
 
-      <!-- Feature 3 -->
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
-        <div class="space-y-6">
-          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Controle total por setores</h3>
-          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Organize atendimentos por setores para melhor eficiência e controle total sobre suas operações. Cada setor com sua própria fila e relatório independente.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Criação ilimitada de setores e departamentos
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Transferência entre setores com agilidade
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Configurações personalizadas por equipe
-            </li>
-          </ul>
-          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
-            Explorar controle de setores
-            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </a>
-        </div>
-        <div class="feature-img-wrap">
-          <img src="images/image1.png" alt="Tela de controle de setores"
-               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
-        </div>
+      <!-- Passo 3 -->
+      <div class="step-card rounded-2xl p-7 animate-item delay-300 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
+        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">03</p>
+        <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-xl">🚀</div>
+        <h3 class="text-white font-bold text-lg mb-3">Publicação e resultados</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Colocamos no ar, configuramos as integrações e você começa a receber leads. Acompanhamos os primeiros 30 dias.
+        </p>
       </div>
-
     </div>
+
+    <div class="flex justify-center mt-12 animate-item delay-300">
+      <a href="https://wa.me/+5535933005536" target="_blank"
+         class="cta-primary inline-flex items-center gap-2 px-10 py-4 text-sm font-bold
+                bg-blue-600 hover:bg-blue-700 text-white rounded-lg
+                transition-all shadow-lg shadow-blue-600/25">
+        <i class="fab fa-whatsapp"></i> Quero minha Landing Page agora
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -324,132 +520,126 @@
 <!-- ══════════════════════════════════════════════
      PREÇOS
 ══════════════════════════════════════════════ -->
-<section id="precos" class="py-24 md:py-32 pricing-bg text-white dark:bg-gradient-to-r dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 overflow-hidden">
+<section id="precos" class="py-24 md:py-32 pricing-bg overflow-hidden">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
 
     <div class="text-center mb-16 animate-item">
-      <p class="text-sm font-semibold text-blue-300 dark:text-blue-400 mb-3 tracking-wide">Sem taxas escondidas</p>
-      <h2 class="text-4xl md:text-5xl font-black dark:text-white">Planos para cada momento do seu negócio.</h2>
-      <p class="mt-4 text-lg text-blue-200 dark:text-slate-300 max-w-xl mx-auto">Comece pequeno, cresça conosco. Cancele quando quiser.</p>
+      <p class="text-sm font-semibold text-blue-400 mb-3 tracking-wide">Sem taxas escondidas</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white">Planos para cada momento do seu negócio.</h2>
+      <p class="mt-4 text-lg text-slate-300 max-w-xl mx-auto">Comece agora, escale quando quiser.</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
 
-      <!-- Básico -->
+      <!-- Essencial -->
       <div class="price-card animate-item delay-100 flex flex-col p-8 rounded-2xl
-                  bg-white/8 border border-white/12 backdrop-blur-sm
-                  dark:bg-slate-900/50 dark:border-slate-800">
+                  bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
         <div class="grow">
-          <h3 class="text-xl font-bold mb-1 dark:text-white">Básico</h3>
-          <p class="text-sm text-blue-200 dark:text-slate-400 mb-8">Ideal para pequenas equipes que estão começando.</p>
+          <h3 class="text-xl font-bold mb-1 text-white">Essencial</h3>
+          <p class="text-sm text-slate-300 mb-8">Landing page profissional para começar a captar clientes.</p>
           <div class="flex items-baseline gap-1 mb-8">
-            <span class="text-5xl font-black dark:text-white">R$149</span>
-            <span class="text-blue-300 dark:text-slate-400 text-sm">/mês</span>
+            <span class="text-5xl font-black text-white">R$997</span>
+            <span class="text-slate-300 text-sm">único</span>
           </div>
           <ul class="space-y-3.5 mb-8">
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> 5 usuários simultâneos
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> 1 Landing Page completa
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> Automação essencial
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Design responsivo
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> 5 GB de armazenamento
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Formulário + WhatsApp integrado
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> Relatórios básicos
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Entrega em 7 dias úteis
             </li>
           </ul>
         </div>
         <a href="https://wa.me/+5535933005536" target="_blank"
            class="block w-full py-3.5 text-center text-sm font-semibold
-                  border border-white/25 hover:bg-white/10 rounded-xl transition-all
-                  dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white">
-          Começar com Básico
+                  border border-slate-700 hover:bg-slate-800 rounded-xl transition-all text-white">
+          Contratar Essencial
         </a>
       </div>
 
       <!-- Profissional (destaque) -->
       <div class="price-card price-card-pro animate-item delay-200 flex flex-col p-8 rounded-2xl
-                  bg-white text-gray-900 relative lg:-mt-5 lg:-mb-5 lg:pt-12
-                  dark:bg-slate-900 dark:text-white dark:border-2 dark:border-yellow-400 shadow-2xl">
+                  bg-slate-900 relative md:-mt-5 md:-mb-5 md:pt-12 border-2 border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.25)]">
         <span class="absolute -top-4 left-1/2 -translate-x-1/2
-                     bg-yellow-400 text-gray-900 text-xs font-black
+                     bg-blue-600 text-white text-xs font-black
                      px-5 py-1.5 rounded-full tracking-wide shadow-lg">
-          Mais popular
+          Mais escolhido
         </span>
         <div class="grow">
-          <h3 class="text-xl font-bold mb-1 dark:text-white">Profissional</h3>
-          <p class="text-sm text-gray-500 dark:text-slate-400 mb-8">Para equipes em crescimento que precisam de poder total.</p>
+          <h3 class="text-xl font-bold mb-1 text-white">Profissional</h3>
+          <p class="text-sm text-slate-300 mb-8">Landing Page premium + Cartão NFC para máxima autoridade.</p>
           <div class="flex items-baseline gap-1 mb-8">
-            <span class="text-5xl font-black text-blue-600 dark:text-blue-400">R$299</span>
-            <span class="text-gray-400 dark:text-slate-400 text-sm">/mês</span>
+            <span class="text-5xl font-black text-blue-400">R$1.697</span>
+            <span class="text-slate-300 text-sm">único</span>
           </div>
           <ul class="space-y-3.5 mb-8">
-            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
-              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Usuários ilimitados
+            <li class="flex items-center gap-3 text-sm text-white">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Tudo do Essencial
             </li>
-            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
-              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Automação avançada
+            <li class="flex items-center gap-3 text-sm text-white">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Copy estratégico incluso
             </li>
-            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
-              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> 50 GB de armazenamento
+            <li class="flex items-center gap-3 text-sm text-white">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> SEO On-Page completo
             </li>
-            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
-              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Suporte prioritário 24/7
+            <li class="flex items-center gap-3 text-sm text-white">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> 1 Cartão NFC Premium incluso
             </li>
-            <li class="flex items-center gap-3 text-sm text-gray-700 dark:text-slate-200">
-              <i class="fas fa-check text-blue-500 dark:text-blue-400 shrink-0"></i> Relatórios avançados por setor
+            <li class="flex items-center gap-3 text-sm text-white">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> 30 dias de suporte pós-entrega
             </li>
           </ul>
         </div>
         <a href="https://wa.me/+5535933005536" target="_blank"
            class="block w-full py-3.5 text-center text-sm font-bold
                   bg-blue-600 hover:bg-blue-700 text-white rounded-xl
-                  transition-all shadow-lg shadow-blue-600/25
-                  dark:bg-blue-600 dark:hover:bg-blue-500">
+                  transition-all shadow-lg shadow-blue-600/25">
           Escolher Profissional
         </a>
       </div>
 
-      <!-- Corporativo -->
+      <!-- Autoridade Total -->
       <div class="price-card animate-item delay-300 flex flex-col p-8 rounded-2xl
-                  bg-white/8 border border-white/12 backdrop-blur-sm
-                  dark:bg-slate-900/50 dark:border-slate-800">
+                  bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
         <div class="grow">
-          <h3 class="text-xl font-bold mb-1 dark:text-white">Corporativo</h3>
-          <p class="text-sm text-blue-200 dark:text-slate-400 mb-8">Soluções sob medida para grandes operações.</p>
+          <h3 class="text-xl font-bold mb-1 text-white">Autoridade Total</h3>
+          <p class="text-sm text-slate-300 mb-8">Solução completa para negócios que querem dominar o mercado local.</p>
           <div class="flex items-baseline gap-1 mb-8">
-            <span class="text-2xl font-bold dark:text-white">Fale conosco</span>
+            <span class="text-2xl font-bold text-white">Sob consulta</span>
           </div>
           <ul class="space-y-3.5 mb-8">
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> Implementação dedicada
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Múltiplas Landing Pages
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> Segurança nível enterprise
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Cartões NFC para equipe
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> SLA personalizado
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Gestão de tráfego pago
             </li>
-            <li class="flex items-center gap-3 text-sm text-blue-100 dark:text-slate-300">
-              <i class="fas fa-check text-green-400 shrink-0"></i> Gerente de conta exclusivo
+            <li class="flex items-center gap-3 text-sm text-slate-200">
+              <i class="fas fa-check text-blue-500 shrink-0"></i> Consultoria de posicionamento
             </li>
           </ul>
         </div>
         <a href="https://wa.me/+5535933005536" target="_blank"
            class="block w-full py-3.5 text-center text-sm font-semibold
-                  border border-white/25 hover:bg-white/10 rounded-xl transition-all
-                  dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white">
-          Solicitar cotação
+                  border border-slate-700 hover:bg-slate-800 rounded-xl transition-all text-white">
+          Solicitar proposta
         </a>
       </div>
 
     </div>
 
-    <p class="text-center text-blue-300 dark:text-slate-400 text-sm mt-12 flex items-center justify-center gap-2 animate-item">
+    <p class="text-center text-slate-400 text-sm mt-12 flex items-center justify-center gap-2 animate-item">
       <i class="fas fa-shield-alt text-green-400"></i>
-      Todos os planos incluem 7 dias de teste gratuito. Cancele quando quiser, sem multa.
+      Todos os projetos incluem revisões ilimitadas até sua aprovação. Satisfação garantida.
     </p>
 
   </div>
@@ -459,53 +649,53 @@
 <!-- ══════════════════════════════════════════════
      FAQ
 ══════════════════════════════════════════════ -->
-<section id="faq" class="py-24 md:py-32 bg-gray-50 dark:bg-[#0D1B2E]">
+<section id="faq" class="py-24 md:py-32">
   <div class="max-w-3xl mx-auto px-5 sm:px-8">
 
     <div class="text-center mb-14 animate-item">
-      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Sem surpresas</p>
-      <h2 class="text-4xl font-black text-gray-900 dark:text-white">Respondemos tudo antes de você começar.</h2>
+      <p class="text-sm font-semibold text-blue-400 mb-3 tracking-wide">Sem surpresas</p>
+      <h2 class="text-4xl font-black text-white">Respondemos tudo antes de você começar.</h2>
     </div>
 
     <div class="space-y-3">
 
-      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-100">
+      <div class="faq-item bg-[#0D1B2E] rounded-2xl border border-slate-700/40 animate-item delay-100">
         <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
-          <span class="font-semibold text-gray-900 dark:text-white pr-6">Preciso de cartão de crédito para o teste grátis?</span>
-          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+          <span class="font-semibold text-white pr-6">Quanto tempo leva para entregar minha landing page?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-900/40 flex items-center justify-center text-blue-400 text-xl font-bold">+</span>
         </button>
         <div class="faq-content">
-          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Não. O teste de 7 dias é completamente sem compromisso. Você só precisará de dados de pagamento se decidir assinar um plano após a avaliação.</p>
+          <p class="px-6 pb-6 text-slate-400">O prazo médio é de 5 a 7 dias úteis após a aprovação do briefing. Você receberá atualizações diárias do andamento e poderá solicitar ajustes antes da publicação final.</p>
         </div>
       </div>
 
-      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-200">
+      <div class="faq-item bg-[#0D1B2E] rounded-2xl border border-slate-700/40 animate-item delay-200">
         <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
-          <span class="font-semibold text-gray-900 dark:text-white pr-6">Como funciona o suporte ao cliente?</span>
-          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+          <span class="font-semibold text-white pr-6">Preciso ter um domínio ou hosting para contratar?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-900/40 flex items-center justify-center text-blue-400 text-xl font-bold">+</span>
         </button>
         <div class="faq-content">
-          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Oferecemos suporte 24/7 via chat, email e WhatsApp. Nossa equipe especializada está pronta para ajudar com qualquer dúvida, configuração ou problema.</p>
+          <p class="px-6 pb-6 text-slate-400">Não é obrigatório. Caso não tenha, podemos indicar as melhores opções de domínio e hospedagem com ótimo custo-benefício, ou gerenciar isso por você dentro do projeto.</p>
         </div>
       </div>
 
-      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-300">
+      <div class="faq-item bg-[#0D1B2E] rounded-2xl border border-slate-700/40 animate-item delay-300">
         <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
-          <span class="font-semibold text-gray-900 dark:text-white pr-6">Como integrar o WhatsApp na plataforma?</span>
-          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+          <span class="font-semibold text-white pr-6">Como funciona o Cartão NFC?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-900/40 flex items-center justify-center text-blue-400 text-xl font-bold">+</span>
         </button>
         <div class="faq-content">
-          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">É simples. Acesse as configurações dentro do AtendeLink e escaneie o QR Code com o WhatsApp do seu celular. A integração leva menos de 1 minuto e é totalmente segura.</p>
+          <p class="px-6 pb-6 text-slate-400">O cliente aproxima o celular do cartão ou escaneia o QR Code. Em menos de 3 segundos, a página de avaliações do seu Google Meu Negócio abre automaticamente — sem precisar de app ou digitar nada. Simples assim.</p>
         </div>
       </div>
 
-      <div class="faq-item bg-white dark:bg-[#162235] rounded-2xl border border-gray-100 dark:border-slate-700/40 animate-item delay-300">
+      <div class="faq-item bg-[#0D1B2E] rounded-2xl border border-slate-700/40 animate-item delay-300">
         <button class="faq-btn flex justify-between items-center w-full text-left p-6" onclick="toggleFAQ(this)">
-          <span class="font-semibold text-gray-900 dark:text-white pr-6">Posso cancelar quando quiser?</span>
-          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">+</span>
+          <span class="font-semibold text-white pr-6">Posso solicitar alterações após a entrega?</span>
+          <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-blue-900/40 flex items-center justify-center text-blue-400 text-xl font-bold">+</span>
         </button>
         <div class="faq-content">
-          <p class="px-6 pb-6 text-gray-500 dark:text-slate-400">Sim. Não há fidelidade nem multa. Você pode cancelar a qualquer momento pelo painel ou entrando em contato com nosso suporte.</p>
+          <p class="px-6 pb-6 text-slate-400">Sim. O plano Profissional inclui 30 dias de suporte pós-entrega com ajustes inclusos. Para outros planos, oferecemos pacotes de manutenção mensal com preço acessível.</p>
         </div>
       </div>
 
@@ -517,46 +707,40 @@
 <!-- ══════════════════════════════════════════════
      CTA FINAL
 ══════════════════════════════════════════════ -->
-<section id="form-cta" class="py-24 md:py-32 bg-white dark:bg-[#020B18]">
+<section id="form-cta" class="pt-24 md:pt-32 pb-12">
   <div class="max-w-xl mx-auto px-5 sm:px-8">
-    <div class="cta-card rounded-3xl p-9 md:p-12 border border-blue-100 dark:border-blue-900/40 animate-item">
+    <div class="cta-card rounded-3xl p-9 pt-12 md:p-12 md:pt-16 border border-blue-900/40 animate-item">
       <div class="text-center mb-9">
-        <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Comece agora</p>
-        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mb-3">Pronto para transformar seu atendimento?</h2>
-        <p class="text-gray-500 dark:text-slate-400">Mais de 500 empresas já escalaram com o AtendeLink.</p>
+        <p class="text-sm font-semibold text-blue-400 mb-3 tracking-wide">Comece agora</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Pronto para atrair mais clientes?</h2>
+        <p class="text-slate-400">Mais de 50 empresas já cresceram com a FlyNode.</p>
       </div>
 
       <form id="cta-form" class="space-y-4">
         <div>
-          <label for="nome" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Nome completo</label>
+          <label for="nome" class="block text-sm font-medium text-slate-300 mb-1.5">Nome completo</label>
           <input type="text" id="nome" name="nome" required placeholder="Seu nome"
                  class="form-input w-full px-4 py-3.5 rounded-xl
-                        border border-gray-200 dark:border-slate-700
-                        bg-white dark:bg-[#0D1B2E]
-                        text-gray-900 dark:text-white
-                        placeholder-gray-400 dark:placeholder-slate-600
+                        border border-slate-700 bg-[#0D1B2E] text-white
+                        placeholder-slate-600
                         focus:ring-2 focus:ring-blue-500 focus:border-transparent
                         outline-none transition-all">
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Email corporativo</label>
+          <label for="email" class="block text-sm font-medium text-slate-300 mb-1.5">Seu e-mail</label>
           <input type="email" id="email" name="email" required placeholder="seu@email.com"
                  class="form-input w-full px-4 py-3.5 rounded-xl
-                        border border-gray-200 dark:border-slate-700
-                        bg-white dark:bg-[#0D1B2E]
-                        text-gray-900 dark:text-white
-                        placeholder-gray-400 dark:placeholder-slate-600
+                        border border-slate-700 bg-[#0D1B2E] text-white
+                        placeholder-slate-600
                         focus:ring-2 focus:ring-blue-500 focus:border-transparent
                         outline-none transition-all">
         </div>
         <div>
-          <label for="empresa" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1.5">Nome da empresa</label>
+          <label for="empresa" class="block text-sm font-medium text-slate-300 mb-1.5">Nome da empresa</label>
           <input type="text" id="empresa" name="empresa" required placeholder="Sua empresa"
                  class="form-input w-full px-4 py-3.5 rounded-xl
-                        border border-gray-200 dark:border-slate-700
-                        bg-white dark:bg-[#0D1B2E]
-                        text-gray-900 dark:text-white
-                        placeholder-gray-400 dark:placeholder-slate-600
+                        border border-slate-700 bg-[#0D1B2E] text-white
+                        placeholder-slate-600
                         focus:ring-2 focus:ring-blue-500 focus:border-transparent
                         outline-none transition-all">
         </div>
@@ -565,11 +749,11 @@
                        bg-blue-600 hover:bg-blue-700 text-white
                        font-bold rounded-xl text-base
                        transition-all shadow-lg shadow-blue-600/25">
-          Iniciar teste gratuito de 7 dias
+          Solicitar orçamento gratuito
         </button>
       </form>
-      <p class="text-xs text-center text-gray-400 dark:text-slate-600 mt-4">
-        <i class="fas fa-lock mr-1"></i> Seus dados estão seguros. Não compartilhamos suas informações.
+      <p class="text-xs text-center text-slate-600 mt-4">
+        <i class="fas fa-lock mr-1"></i> Seus dados estão seguros. Sem spam, jamais.
       </p>
     </div>
   </div>
@@ -577,7 +761,7 @@
 
 
 <!-- WhatsApp flutuante -->
-<a href="https://wa.me/5535933005536?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20AtendeLink!"
+<a href="https://wa.me/5535933005536?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Landing%20Page%20da%20FlyNode!"
    target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
   <i class="fab fa-whatsapp fa-xl"></i>
 </a>
@@ -586,7 +770,7 @@
 <!-- ══════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════ -->
-<footer class="bg-[#020B18] border-t border-slate-800/60 py-10">
+<footer class="py-8 border-t border-slate-800/60">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <img src="images/logo.svg" alt="FlyNode" class="h-8 w-auto">
@@ -642,10 +826,12 @@
   }, { passive: true });
 
   // ── Mobile menu ──
-  const mBtn = document.getElementById('mobile-menu-btn');
+  const mBtn  = document.getElementById('mobile-menu-btn');
   const mMenu = document.getElementById('mobile-menu');
-  mBtn && mBtn.addEventListener('click', () => mMenu.classList.toggle('hidden'));
-  mMenu && mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mMenu.classList.add('hidden')));
+  mBtn  && mBtn.addEventListener('click', () => mMenu.classList.toggle('hidden'));
+  mMenu && mMenu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => mMenu.classList.add('hidden'))
+  );
 
   // ── Scroll animations ──
   const io = new IntersectionObserver((entries) => {
@@ -656,7 +842,8 @@
   document.querySelectorAll('.animate-item').forEach(el => io.observe(el));
 
   // ── Form → WhatsApp ──
-  document.getElementById('cta-form') && document.getElementById('cta-form').addEventListener('submit', function(e) {
+  const form = document.getElementById('cta-form');
+  form && form.addEventListener('submit', function(e) {
     e.preventDefault();
     const nome    = document.getElementById('nome').value;
     const email   = document.getElementById('email').value;
@@ -672,7 +859,6 @@ function toggleFAQ(btn) {
   const icon    = btn.querySelector('.faq-icon');
   const isOpen  = btn.closest('.faq-item').classList.contains('faq-open');
 
-  // Close all
   document.querySelectorAll('.faq-item').forEach(item => {
     item.classList.remove('faq-open');
     item.querySelector('.faq-content').style.maxHeight = '0';

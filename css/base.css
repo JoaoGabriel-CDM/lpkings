@@ -18,11 +18,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Fundo único escuro — estratégia de scroll infinito monocor */
 body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: #020B18;
+  color: #e2e8f0;
 }
 
 /* --- Tipografia Personalizada --- */

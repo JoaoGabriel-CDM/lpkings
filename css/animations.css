@@ -8,15 +8,7 @@
    - Animações de Scroll (fade-in): Altere .animate-item e as classes de delay.
    ========================================================================== */
 
-/* --- Animação do Robô na Hero --- */
-@keyframes robot-float {
-  0%, 100% { transform: translateY(0px) rotate(-4deg); }
-  50%      { transform: translateY(-10px) rotate(4deg); }
-}
 
-.robot-float {
-  animation: robot-float 4s ease-in-out infinite;
-}
 
 /* --- Animação de Pulso do WhatsApp --- */
 @keyframes wa-pulse {
