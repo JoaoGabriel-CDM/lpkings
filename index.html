@@ -76,167 +76,275 @@
   <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center py-24 md:py-32">
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-    <!-- Status badge -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full
-                bg-blue-50 dark:bg-blue-500/10
-                border border-blue-200 dark:border-blue-500/25
-                text-blue-700 dark:text-blue-400 text-sm font-medium mb-10 animate-item">
-      <span class="relative flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-      </span>
-      Lançamento — 7 dias grátis, sem cartão
-    </div>
+    <!-- COLUNA ESQUERDA: Copy + CTAs -->
+    <div class="flex flex-col gap-8 text-left z-20">
 
-    <!-- Headline -->
-    <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-7 animate-item delay-100">
-      Converta seus<br class="hidden sm:block">
-      <span class="relative inline-block mt-1">
-  <img src="images/passarologo.jpg" alt="Pássaro FlyNode" class="absolute -top-10 sm:-top-14 -left-14 sm:-left-20 w-16 sm:w-24 pointer-events-none z-0 drop-shadow-xl robot-float">
-  <span class="text-blue-gradient relative z-10">Atendimentos</span>
-</span>
-      <br class="hidden sm:block">em Vendas Recorrentes.
-    </h1>
+      <!-- Badge de credibilidade -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full self-start
+                  bg-blue-500/10 border border-blue-500/25 text-blue-400 text-sm font-medium animate-item backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+        </span>
+        Premium Digital Agency
+      </div>
 
-    <!-- Subtitle -->
-    <p class="max-w-xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-slate-400 leading-relaxed mb-11 animate-item delay-200">
-      Distribua automaticamente, monitore sua equipe em tempo real e escale o faturamento sem complicações.
-    </p>
+      <!-- Headline -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white animate-item delay-100">
+        Sua empresa com a<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500">Presença Digital</span><br>
+        que ela merece.
+      </h1>
 
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 animate-item delay-300">
-      <a href="https://wa.me/+5535933005536" target="_blank"
-         class="cta-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
-                bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl
-                transition-all shadow-xl shadow-blue-600/30 hover:shadow-blue-600/40 text-base">
-        <i class="fab fa-whatsapp text-lg"></i> Garantir Meu Acesso
-      </a>
-      <a href="#recursos"
-         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4
-                bg-white dark:bg-[#0D1B2E] hover:bg-gray-50 dark:hover:bg-[#162235]
-                text-gray-700 dark:text-slate-300
-                border border-gray-200 dark:border-slate-700/60
-                font-medium rounded-2xl transition-all text-base">
-        Como funciona
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </a>
-    </div>
+      <!-- Subtítulo -->
+      <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-lg animate-item delay-200">
+        Criamos Landing Pages de alta conversão e cartões NFC premium para estruturar sua autoridade no Google.
+      </p>
 
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 animate-item delay-300 mt-2">
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="cta-primary inline-flex items-center justify-center gap-3
+                  bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-xl
+                  shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:shadow-[0_0_60px_rgba(37,99,235,0.5)] transition-all text-base ring-1 ring-blue-500/50">
+          <i class="fab fa-whatsapp text-xl"></i> Falar com Especialista
+        </a>
+        <a href="#servicos"
+           class="inline-flex items-center justify-center gap-2
+                  border border-slate-700/60 bg-slate-800/30 backdrop-blur-md text-slate-300 font-medium py-4 px-8 rounded-xl
+                  hover:bg-slate-800/60 hover:border-slate-600 hover:text-white transition-all text-base">
+          Ver Como Funciona
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+      
       <!-- Social proof -->
-      <div class="flex flex-wrap items-center gap-x-7 gap-y-3 text-sm animate-item delay-400">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm animate-item delay-400 mt-4">
         <div class="flex items-center gap-2.5">
-          <div class="flex -space-x-1.5">
-            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-400 flex items-center justify-center text-white text-xs font-bold">A</div>
-            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-500 flex items-center justify-center text-white text-xs font-bold">M</div>
-            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-600 flex items-center justify-center text-white text-xs font-bold">C</div>
-            <div class="w-7 h-7 rounded-full border-2 border-[#020B18] bg-blue-700 flex items-center justify-center text-white text-xs font-bold">+</div>
+          <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-[#020B18] bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-lg">A</div>
+            <div class="w-8 h-8 rounded-full border-2 border-[#020B18] bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-white text-xs font-bold shadow-lg">M</div>
+            <div class="w-8 h-8 rounded-full border-2 border-[#020B18] bg-gradient-to-br from-slate-400 to-slate-600 flex items-center justify-center text-white text-xs font-bold shadow-lg">+</div>
           </div>
-          <span class="text-slate-500">+50 empresas atendidas</span>
+          <span class="text-slate-400 font-medium">Marcas Elevadas</span>
         </div>
-        <div class="flex items-center gap-1.5">
-          <span class="text-yellow-400">★★★★★</span>
-          <span class="text-slate-500">4.9 no Google</span>
-        </div>
-        <div class="flex items-center gap-1.5 text-slate-500">
-          <i class="fas fa-shield-alt text-green-500 text-xs"></i> Sem fidelidade
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-400 text-sm">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="text-slate-400 font-medium">5.0 Google</span>
         </div>
       </div>
     </div>
 
-    <!-- COLUNA DIREITA: Mockup Visual -->
-    <div class="flex items-center justify-center animate-item delay-200 relative">
-      <div class="absolute inset-0 z-0" style="background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%); filter: blur(40px);"></div>
-      <div class="hero-mockup-container relative w-full max-w-md z-10">
+    <!-- COLUNA DIREITA: MacBook Premium High-End -->
+    <div class="relative w-full flex items-center justify-center animate-item delay-200 z-10 py-8"
+         style="perspective: 2000px;">
 
-        <!-- Card de mockup de landing page -->
-        <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-[#060f1e] shadow-2xl p-1 z-10">
+      <!-- Aura ambiente multi-camada -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-blue-600/15 blur-[80px] rounded-full"></div>
+        <div class="absolute top-1/3 right-0 w-[200px] h-[200px] bg-indigo-500/10 blur-[60px] rounded-full"></div>
+        <div class="absolute bottom-0 left-1/4 w-[180px] h-[150px] bg-violet-500/8 blur-[50px] rounded-full"></div>
+      </div>
 
-          <!-- Barra do browser -->
-          <div class="bg-slate-900 rounded-t-xl px-4 py-2.5 flex items-center gap-2 border-b border-slate-800">
-            <div class="flex gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-            </div>
-            <div class="flex-1 bg-[#020B18] rounded-md px-3 py-1 mx-2 flex items-center gap-2 border border-slate-800">
-              <i class="fas fa-lock text-green-400 text-[9px]"></i>
-              <span class="text-slate-400 text-[11px] font-medium">seusite.com.br</span>
-            </div>
-          </div>
+      <!-- ═══════════════════════════════════
+           MACBOOK PRO — CORPO PRINCIPAL
+      ═══════════════════════════════════ -->
+      <div class="macbook-wrapper relative w-full max-w-[560px] mx-auto" style="transform-style: preserve-3d;">
 
-          <!-- Conteúdo simulado da landing page -->
-          <div class="bg-[#020B18] rounded-b-xl px-5 py-7 space-y-5">
-            <!-- Headline simulada -->
-            <div class="space-y-2.5">
-              <div class="h-3 bg-blue-500 rounded-full w-3/4"></div>
-              <div class="h-3 bg-slate-300 rounded-full w-full"></div>
-              <div class="h-3 bg-slate-300 rounded-full w-5/6"></div>
-            </div>
-            <!-- Subtítulo simulado -->
-            <div class="space-y-2 pt-1">
-              <div class="h-2 bg-slate-500 rounded-full w-full"></div>
-              <div class="h-2 bg-slate-500 rounded-full w-4/5"></div>
-              <div class="h-2 bg-slate-500 rounded-full w-11/12"></div>
-            </div>
-            <!-- CTA simulado -->
-            <div class="pt-3 flex gap-3">
-              <div class="h-9 bg-blue-600 rounded-lg w-2/5 flex items-center justify-center shadow-lg shadow-blue-600/30">
-                <div class="h-2 bg-white rounded-full w-3/4"></div>
-              </div>
-              <div class="h-9 bg-slate-800 rounded-lg border border-slate-600 w-1/3 flex items-center justify-center">
-                <div class="h-2 bg-slate-300 rounded-full w-3/4"></div>
+        <!-- ─── TAMPA / DISPLAY ─── -->
+        <div class="macbook-lid relative w-full" style="transform-style: preserve-3d;">
+
+          <!-- Moldura exterior (Space Gray alumínio) -->
+          <div class="relative w-full"
+               style="background: linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 60%, #1c1c1e 100%);
+                      border-radius: 14px 14px 0 0;
+                      padding: 10px 10px 0 10px;
+                      box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 -2px 0 rgba(0,0,0,0.4) inset;">
+
+            <!-- Notch superior (câmara) -->
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
+              <div class="w-2 h-2 rounded-full"
+                   style="background: #0a0a0a; box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;">
+                <!-- Webcam LED -->
+                <div class="w-0.5 h-0.5 rounded-full bg-green-400/60 mx-auto mt-[3px]"></div>
               </div>
             </div>
-            <!-- Seção de features simulada -->
-            <div class="grid grid-cols-3 gap-3 pt-4">
-              <div class="bg-[#0D1B2E] rounded-lg p-3 border border-slate-700 shadow-md">
-                <div class="h-5 w-5 rounded bg-blue-500 mb-2.5"></div>
-                <div class="h-1.5 bg-slate-300 rounded w-full mb-1.5"></div>
-                <div class="h-1.5 bg-slate-500 rounded w-3/4"></div>
-              </div>
-              <div class="bg-[#0a1628] rounded-lg p-3 border border-blue-500/40 shadow-md">
-                <div class="h-5 w-5 rounded bg-blue-400 mb-2.5"></div>
-                <div class="h-1.5 bg-blue-300 rounded w-full mb-1.5"></div>
-                <div class="h-1.5 bg-slate-400 rounded w-3/4"></div>
-              </div>
-              <div class="bg-[#0D1B2E] rounded-lg p-3 border border-slate-700 shadow-md">
-                <div class="h-5 w-5 rounded bg-blue-500 mb-2.5"></div>
-                <div class="h-1.5 bg-slate-300 rounded w-full mb-1.5"></div>
-                <div class="h-1.5 bg-slate-500 rounded w-3/4"></div>
-              </div>
+
+            <!-- Logótipo Apple na tampa (verso simulado via reflexo) -->
+            <div class="absolute top-2.5 left-1/2 -translate-x-1/2 opacity-20 z-20">
+              <svg width="16" height="20" viewBox="0 0 814 1000" fill="white">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46.7 790.7 0 663 0 541.8c0-207.3 131.4-317.7 260.8-317.7 70.2 0 128.9 46.4 172.3 46.4 42.8 0 110-49.8 190.5-49.8zm-234.6-165.9c26.4-32.9 44.8-78 44.8-123.1 0-6.4-.6-12.8-1.9-18.6-42.2 1.6-92.1 28.1-122.5 61.6-23.5 26.1-45.7 71.9-45.7 117.7 0 7 1.3 14.1 1.9 16.4 2.6.3 6.4 1 10.3 1 37.9 0 85.5-25.4 113.1-55z"/>
+              </svg>
             </div>
-          </div>
+
+            <!-- ─── ECRÃ DO MACBOOK ─── -->
+            <div class="relative w-full overflow-hidden"
+                 style="aspect-ratio: 16/10; border-radius: 8px; background: #000;">
+
+              <!-- ══ CONTEÚDO DO ECRÃ: Landing Page Premium ══ -->
+              <div class="absolute inset-0 overflow-hidden" style="font-family: Inter, sans-serif;">
+
+                <!-- Fundo da landing page — gradiente vibrante escuro -->
+                <div class="absolute inset-0"
+                     style="background: linear-gradient(135deg, #060818 0%, #0a0f2e 35%, #120828 65%, #050d1a 100%);">
+                </div>
+
+                <!-- Grade de pontos subtil -->
+                <div class="absolute inset-0 opacity-30"
+                     style="background-image: radial-gradient(circle, rgba(99,102,241,0.4) 1px, transparent 1px);
+                            background-size: 24px 24px;"></div>
+
+                <!-- Orbes de luz no fundo -->
+                <div class="absolute" style="top: -10%; left: 10%; width: 45%; height: 60%; background: radial-gradient(circle, rgba(99,102,241,0.35) 0%, transparent 70%); filter: blur(30px);"></div>
+                <div class="absolute" style="bottom: -20%; right: 5%; width: 40%; height: 60%; background: radial-gradient(circle, rgba(168,85,247,0.3) 0%, transparent 70%); filter: blur(25px);"></div>
+                <div class="absolute" style="top: 50%; left: 40%; width: 30%; height: 50%; background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, transparent 70%); filter: blur(20px);"></div>
+
+                <!-- ─ NAVBAR simulada ─ -->
+                <div class="absolute top-0 left-0 right-0 flex items-center justify-between px-4 py-2 z-20"
+                     style="background: rgba(10,10,30,0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <div style="width:20px; height:6px; background: linear-gradient(90deg,#6366f1,#a855f7); border-radius:3px;"></div>
+                    <div style="width:24px; height:4px; background:rgba(255,255,255,0.15); border-radius:2px;"></div>
+                  </div>
+                  <div style="display:flex; gap:6px; align-items:center;">
+                    <div style="width:20px; height:3px; background:rgba(255,255,255,0.12); border-radius:2px;"></div>
+                    <div style="width:20px; height:3px; background:rgba(255,255,255,0.12); border-radius:2px;"></div>
+                    <div style="width:20px; height:3px; background:rgba(255,255,255,0.12); border-radius:2px;"></div>
+                    <div style="width:30px; height:14px; background:linear-gradient(135deg,#6366f1,#4f46e5); border-radius:4px;"></div>
+                  </div>
+                </div>
+
+                <!-- ─ HERO CONTENT ─ -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4" style="padding-top: 24px;">
+
+                  <!-- Badge -->
+                  <div style="display:inline-flex; align-items:center; gap:4px; padding:3px 8px; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.35); border-radius:20px; margin-bottom:8px;">
+                    <div style="width:4px; height:4px; border-radius:50%; background:#6366f1; box-shadow:0 0 4px #6366f1;"></div>
+                    <div style="width:40px; height:3px; background:rgba(165,163,255,0.5); border-radius:2px;"></div>
+                  </div>
+
+                  <!-- Headline simulada -->
+                  <div style="width:75%; height:10px; background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0.85) 100%); border-radius:5px; margin-bottom:5px;"></div>
+                  <div style="width:55%; height:10px; background:linear-gradient(90deg,rgba(255,255,255,0.7) 0%,rgba(165,180,252,0.8) 100%); border-radius:5px; margin-bottom:12px;"></div>
+
+                  <!-- Sub-texto -->
+                  <div style="width:60%; height:5px; background:rgba(148,163,184,0.4); border-radius:3px; margin-bottom:4px;"></div>
+                  <div style="width:45%; height:5px; background:rgba(148,163,184,0.3); border-radius:3px; margin-bottom:14px;"></div>
+
+                  <!-- CTA Buttons -->
+                  <div style="display:flex; gap:6px; margin-bottom:16px;">
+                    <div style="padding:5px 12px; background:linear-gradient(135deg,#6366f1,#4f46e5); border-radius:6px; display:flex; align-items:center; gap:3px; box-shadow:0 4px 14px rgba(99,102,241,0.4);">
+                      <div style="width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,0.7);"></div>
+                      <div style="width:28px; height:4px; background:rgba(255,255,255,0.85); border-radius:2px;"></div>
+                    </div>
+                    <div style="padding:5px 12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:6px;">
+                      <div style="width:22px; height:4px; background:rgba(255,255,255,0.4); border-radius:2px;"></div>
+                    </div>
+                  </div>
+
+                  <!-- ─ Glassmorphism Cards ─ -->
+                  <div style="display:flex; gap:8px; width:90%; justify-content:center;">
+
+                    <!-- Card 1 -->
+                    <div style="flex:1; max-width:90px; padding:8px; background:rgba(255,255,255,0.06); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+                      <div style="width:16px; height:16px; border-radius:4px; background:linear-gradient(135deg,#6366f1,#8b5cf6); margin-bottom:5px; display:flex; align-items:center; justify-content:center;">
+                        <div style="width:6px; height:6px; background:rgba(255,255,255,0.8); border-radius:1px;"></div>
+                      </div>
+                      <div style="width:55%; height:4px; background:rgba(255,255,255,0.6); border-radius:2px; margin-bottom:3px;"></div>
+                      <div style="width:75%; height:3px; background:rgba(255,255,255,0.2); border-radius:2px; margin-bottom:3px;"></div>
+                      <div style="width:65%; height:3px; background:rgba(255,255,255,0.15); border-radius:2px; margin-bottom:6px;"></div>
+                      <div style="width:45%; height:12px; background:linear-gradient(90deg,#6366f1,#4f46e5); border-radius:4px;"></div>
+                    </div>
+
+                    <!-- Card 2 (maior, destaque) -->
+                    <div style="flex:1.4; max-width:120px; padding:8px; background:rgba(99,102,241,0.1); backdrop-filter:blur(10px); border:1px solid rgba(99,102,241,0.25); border-radius:10px; box-shadow:0 8px 24px rgba(99,102,241,0.15), 0 0 0 1px rgba(99,102,241,0.1) inset;">
+                      <div style="width:100%; height:30px; background:linear-gradient(135deg,rgba(99,102,241,0.3),rgba(168,85,247,0.2)); border-radius:6px; margin-bottom:6px; display:flex; align-items:center; justify-content:center;">
+                        <div style="width:30px; height:5px; background:rgba(255,255,255,0.5); border-radius:3px;"></div>
+                      </div>
+                      <div style="width:80%; height:4px; background:rgba(255,255,255,0.55); border-radius:2px; margin-bottom:3px;"></div>
+                      <div style="width:60%; height:3px; background:rgba(255,255,255,0.2); border-radius:2px; margin-bottom:6px;"></div>
+                      <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="width:35%; height:10px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:3px;"></div>
+                        <div style="width:10px; height:10px; border-radius:50%; background:rgba(34,197,94,0.8); box-shadow:0 0 6px rgba(34,197,94,0.6);"></div>
+                      </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div style="flex:1; max-width:90px; padding:8px; background:rgba(255,255,255,0.04); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.07); border-radius:10px;">
+                      <div style="width:100%; height:24px; background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(59,130,246,0.15)); border-radius:5px; margin-bottom:5px;"></div>
+                      <div style="width:70%; height:4px; background:rgba(255,255,255,0.4); border-radius:2px; margin-bottom:3px;"></div>
+                      <div style="width:50%; height:3px; background:rgba(255,255,255,0.15); border-radius:2px; margin-bottom:3px;"></div>
+                      <div style="width:60%; height:3px; background:rgba(255,255,255,0.1); border-radius:2px; margin-bottom:5px;"></div>
+                      <div style="display:flex; gap:3px;">
+                        <div style="width:8px; height:8px; border-radius:50%; background:rgba(99,102,241,0.7);"></div>
+                        <div style="width:8px; height:8px; border-radius:50%; background:rgba(168,85,247,0.5);"></div>
+                        <div style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.2);"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ─ Barra de status inferior ─ -->
+                <div class="absolute bottom-0 left-0 right-0 flex items-center justify-between px-3 py-1 z-20"
+                     style="background:rgba(5,5,20,0.8); border-top:1px solid rgba(255,255,255,0.05);">
+                  <div style="display:flex; gap:4px;">
+                    <div style="width:4px; height:4px; border-radius:50%; background:rgba(34,197,94,0.8);"></div>
+                    <div style="width:20px; height:3px; background:rgba(255,255,255,0.15); border-radius:2px; margin-top:0.5px;"></div>
+                  </div>
+                  <div style="display:flex; gap:5px;">
+                    <div style="width:16px; height:3px; background:rgba(255,255,255,0.1); border-radius:2px; margin-top:0.5px;"></div>
+                    <div style="width:16px; height:3px; background:rgba(255,255,255,0.1); border-radius:2px; margin-top:0.5px;"></div>
+                  </div>
+                </div>
+
+                <!-- Glare/Reflexo do ecrã -->
+                <div class="absolute inset-0 pointer-events-none"
+                     style="background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 50%, rgba(255,255,255,0.01) 100%); z-index:25;"></div>
+
+              </div>
+              <!-- ── FIM CONTEÚDO DO ECRÃ ── -->
+
+            </div><!-- /ecrã -->
+          </div><!-- /moldura exterior -->
+        </div>
+        <!-- ─── FIM TAMPA ─── -->
+
+        <!-- ─── BASE DO MACBOOK ─── -->
+        <!-- Dobradiça -->
+        <div style="position:relative; width:100%; height:3px;
+                    background:linear-gradient(90deg, #1c1c1e 0%, #3a3a3c 20%, #4a4a4d 50%, #3a3a3c 80%, #1c1c1e 100%);
+                    box-shadow: 0 1px 0 rgba(255,255,255,0.06);"></div>
+
+        <!-- Superfície do teclado -->
+        <div style="position:relative; width:108%; left:-4%; height:18px;
+                    background:linear-gradient(180deg, #313135 0%, #2a2a2d 50%, #242427 100%);
+                    border-radius:0 0 10px 10px;
+                    box-shadow: 0 16px 40px rgba(0,0,0,0.7), 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+                    overflow:hidden; display:flex; align-items:center; justify-content:center;">
+          <!-- Track pad simulado -->
+          <div style="width:20%; height:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); border-radius:3px;"></div>
         </div>
 
-        <!-- Badge flutuante: conversão -->
-        <div class="absolute -bottom-4 -left-4 backdrop-blur-md bg-slate-900/80 border border-blue-500/30 rounded-xl px-4 py-3
-                    shadow-lg z-20 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center">
-            <i class="fas fa-arrow-trend-up text-green-400 text-sm"></i>
-          </div>
-          <div>
-            <p class="text-white text-sm font-bold leading-tight">+280%</p>
-            <p class="text-slate-400 text-[10px]">Taxa de Conversão</p>
-          </div>
-        </div>
+        <!-- Borda inferior (pé do MacBook) -->
+        <div style="position:relative; width:106%; left:-3%; height:3px;
+                    background:linear-gradient(180deg, #1a1a1c 0%, #111113 100%);
+                    border-radius:0 0 6px 6px;
+                    box-shadow:0 4px 16px rgba(0,0,0,0.6);"></div>
 
-        <!-- Badge flutuante: velocidade -->
-        <div class="absolute -top-4 -right-4 backdrop-blur-md bg-slate-900/80 border border-blue-500/30 rounded-xl px-4 py-3
-                    shadow-lg z-20 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-blue-500/15 flex items-center justify-center">
-            <i class="fas fa-bolt text-blue-400 text-sm"></i>
-          </div>
-          <div>
-            <p class="text-white text-sm font-bold leading-tight">100/100</p>
-            <p class="text-slate-400 text-[10px]">Google PageSpeed</p>
-          </div>
-        </div>
+        <!-- Sombra projetada no chão -->
+        <div style="position:absolute; bottom:-24px; left:5%; right:5%; height:20px;
+                    background:rgba(0,0,0,0.35); filter:blur(16px); border-radius:50%;"></div>
 
       </div>
+      <!-- ═══ FIM MACBOOK ═══ -->
+
     </div>
 
   </div>
@@ -255,6 +363,9 @@
       <p class="mt-4 text-lg text-slate-400 max-w-xl mx-auto">Fazer o cliente certo encontrar e confiar na sua empresa.</p>
     </div>
 
+  </div>
+</section>
+
 
 <!-- ══════════════════════════════════════════════
      RECURSOS
@@ -263,93 +374,274 @@
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
     <div class="max-w-2xl mb-20 animate-item">
-      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Plataforma completa</p>
+      <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wide">Performance Absoluta</p>
       <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">
-        Tudo que sua equipe precisa para atender melhor.
+        Velocidade que domina o Google.
       </h2>
-      <p class="mt-5 text-lg text-gray-500 dark:text-slate-400">Chega de clientes sem resposta. Controle total na palma da mão.</p>
+      <p class="mt-5 text-lg text-gray-500 dark:text-slate-400">Landing Pages ultrarrápidas, otimizadas para Core Web Vitals e máxima retenção.</p>
     </div>
 
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-xs font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wide">
-              Carro-chefe
-            </span>
-          </div>
-
-          <h3 class="text-2xl font-black text-white mb-3">Landing Pages de Alta Conversão</h3>
-          <p class="text-slate-400 leading-relaxed mb-7">
-            Sites criados para transformar visitas em clientes. Design moderno, carregamento ultrarrápido e estratégia de copy focada em vendas.
-          </p>
-
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-3 text-sm text-slate-300">
-              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
-              Design profissional e responsivo (mobile first)
-            </li>
-            <li class="flex items-center gap-3 text-sm text-slate-300">
-              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
-              Copy persuasivo focado em conversão
-            </li>
-            <li class="flex items-center gap-3 text-sm text-slate-300">
-              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
-              100/100 no Google PageSpeed
-            </li>
-            <li class="flex items-center gap-3 text-sm text-slate-300">
-              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
-              Integração com WhatsApp e CRM
-            </li>
-            <li class="flex items-center gap-3 text-sm text-slate-300">
-              <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
-              Entrega em até 7 dias úteis
-            </li>
-          </ul>
+    <!-- Feature 1 -->
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item mb-20">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xs font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+            Carro-chefe
+          </span>
         </div>
-        <div class="feature-img-wrap">
-          <img src="images/image2.png" alt="Painel de distribuição de atendimentos"
-               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
-        </div>
+
+        <h3 class="text-2xl font-black text-white mb-3">Landing Pages de Alta Conversão</h3>
+        <p class="text-slate-400 leading-relaxed mb-7">
+          Sites criados para transformar visitas em clientes. Design moderno, carregamento ultrarrápido e estratégia de copy focada em vendas.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+            Design profissional e responsivo (mobile first)
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+            Copy persuasivo focado em conversão
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+            100/100 no Google PageSpeed Insights
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+            Arquitetura voltada para SEO Técnico
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <i class="fas fa-check-circle text-blue-500 shrink-0"></i>
+            Entrega em até 7 dias úteis
+          </li>
+        </ul>
       </div>
-
-      <!-- Feature 2 -->
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
-        <div class="order-last lg:order-first feature-img-wrap">
-          <img src="images/image3.png" alt="Relatórios e métricas em tempo real"
-               class="w-full h-auto rounded-2xl shadow-2xl ring-1 ring-black/5 dark:ring-white/8">
-        </div>
-        <div class="space-y-6">
-          <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+      
+      <!-- Visual: PageSpeed Mockup -->
+      <div class="relative w-full aspect-square md:aspect-video rounded-3xl bg-[#0a0f1c] border border-white/5 shadow-2xl overflow-hidden flex items-center justify-center isolate">
+        <!-- Background glows -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-500/20 blur-[80px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-[50px] rounded-full pointer-events-none"></div>
+        
+        <!-- Glass card -->
+        <div class="relative z-10 w-64 h-72 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          <!-- PageSpeed Circle -->
+          <div class="relative w-32 h-32 flex items-center justify-center mb-6">
+            <svg class="w-full h-full transform -rotate-90 drop-shadow-[0_0_12px_rgba(34,197,94,0.5)]" viewBox="0 0 36 36">
+              <path class="text-white/10" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="text-green-500 drop-shadow-md" stroke-dasharray="100, 100" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
             </svg>
+            <div class="absolute text-4xl font-black text-white tracking-tighter">100</div>
           </div>
-          <h3 class="text-3xl font-black text-gray-900 dark:text-white">Métricas em tempo real</h3>
-          <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Acesse métricas de usuários, atendimentos e setores. Monitore tudo em tempo real com acesso supervisor e tome decisões com base em dados concretos.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Painel supervisor com visão geral em tempo real
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Relatórios exportáveis por período e setor
-            </li>
-            <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
-              <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
-              Performance individual por atendente
-            </li>
-          </ul>
-          <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
-            Conhecer os relatórios
-            <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </a>
+          
+          <h4 class="text-white font-bold text-lg mb-2">Performance</h4>
+          <div class="w-full space-y-3">
+            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-green-500 w-[100%] shadow-[0_0_8px_#22c55e]"></div>
+            </div>
+            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-green-500 w-[98%] shadow-[0_0_8px_#22c55e]"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating mini metrics -->
+        <div class="absolute top-8 left-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-2 shadow-lg hidden md:block">
+          <p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">LCP</p>
+          <p class="text-white font-bold text-sm">0.8s <span class="text-green-500 ml-1">●</span></p>
+        </div>
+        <div class="absolute bottom-8 right-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-2 shadow-lg hidden md:block">
+          <p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">CLS</p>
+          <p class="text-white font-bold text-sm">0.00 <span class="text-green-500 ml-1">●</span></p>
         </div>
       </div>
+    </div>
 
-                <p class="text-center text-white font-bold text-[11px] mb-2">Nos avalie no Google</p>
+    <!-- Feature 2 -->
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center animate-item">
+      <!-- Visual: Abstract Chart -->
+      <div class="order-last lg:order-first relative w-full aspect-square md:aspect-video rounded-3xl bg-[#0a0f1c] border border-white/5 shadow-2xl overflow-hidden flex items-center justify-center isolate">
+        <!-- Background glows -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-40 bg-blue-600/20 blur-[80px] rounded-full pointer-events-none"></div>
+        
+        <!-- Chart Glass Container -->
+        <div class="relative z-10 w-[80%] h-[70%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col justify-end shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          <!-- Abstract Line Chart using SVG -->
+          <svg class="w-full h-full drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(59,130,246,0.4)" />
+                <stop offset="100%" stop-color="rgba(59,130,246,0)" />
+              </linearGradient>
+            </defs>
+            <path d="M0,50 L0,40 C20,35 30,45 50,25 C65,10 80,15 100,5 L100,50 Z" fill="url(#chartGrad)" />
+            <path d="M0,40 C20,35 30,45 50,25 C65,10 80,15 100,5" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" />
+            <!-- Data points -->
+            <circle cx="50" cy="25" r="2" fill="#fff" class="drop-shadow-[0_0_4px_#fff]" />
+            <circle cx="100" cy="5" r="2" fill="#fff" class="drop-shadow-[0_0_4px_#fff]" />
+          </svg>
+          
+          <!-- Floating UI Elements -->
+          <div class="absolute top-4 left-6">
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest mb-1">Conversão</p>
+            <p class="text-3xl font-black text-white">+142%</p>
+          </div>
+          <div class="absolute top-8 right-6 bg-blue-500/20 border border-blue-500/30 rounded-full px-3 py-1 flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+            <span class="text-[10px] font-bold text-blue-300 uppercase tracking-wider">Live</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="inline-flex items-center justify-center w-11 h-11 bg-blue-600 rounded-xl shadow-lg shadow-blue-600/30">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-black text-gray-900 dark:text-white">Design que transforma cliques em clientes.</h3>
+        <p class="text-lg text-gray-500 dark:text-slate-400 leading-relaxed">Cada detalhe visual é desenhado com um propósito: guiar o usuário até a ação desejada utilizando gatilhos psicológicos eficientes.</p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+            <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+            Copywriting persuasivo e estratégico
+          </li>
+          <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+            <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+            Gatilhos mentais aplicados no design UI
+          </li>
+          <li class="flex items-start gap-3 text-gray-600 dark:text-slate-300">
+            <i class="fas fa-check text-blue-500 mt-0.5 text-sm shrink-0"></i>
+            Experiência fluída e otimizada para Mobile
+          </li>
+        </ul>
+        <a href="#form-cta" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group">
+          Começar a converter
+          <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+        </a>
+      </div>
 
-                <div class="flex justify-center mb-2">
-                  <div style="background:#fff;padding:4px;border-radius:5px;display:inline-block;">
-                    <svg width="48" height="48" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════
+     NFC PREMIUM CARDS — SECÇÃO DEDICADA
+══════════════════════════════════════════════ -->
+<section id="nfc-cards" class="py-24 md:py-36 relative overflow-hidden">
+
+  <!-- Fundo ambiente -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(160deg, #020B18 0%, #070d1f 40%, #06101e 70%, #020B18 100%);"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full" style="background: radial-gradient(ellipse, rgba(37,99,235,0.08) 0%, transparent 70%); filter: blur(40px);"></div>
+    <div class="absolute top-0 right-0 w-[400px] h-[400px]" style="background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%); filter: blur(60px);"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8">
+
+    <!-- Cabeçalho da secção -->
+    <div class="text-center mb-20 animate-item">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-6
+                  bg-blue-500/10 border border-blue-500/25 text-blue-400 text-sm font-medium backdrop-blur-sm">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+        </svg>
+        Cartão NFC Premium
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
+        Autoridade que se toca.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500">Reviews no Google em segundos.</span>
+      </h2>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        Um toque. Três segundos. O cliente já está a avaliar o seu negócio no Google. Sem app, sem digitar nada.
+      </p>
+    </div>
+
+    <!-- Layout: Cards à esquerda, features à direita -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+      <!-- ─── COLUNA ESQUERDA: Cards 3D ─── -->
+      <div class="relative flex items-center justify-center animate-item delay-100"
+           style="perspective: 1200px; min-height: 360px;">
+
+        <!-- Aura de fundo dos cartões -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-48 rounded-full"
+               style="background: radial-gradient(ellipse, rgba(37,99,235,0.2) 0%, transparent 70%); filter: blur(30px);"></div>
+        </div>
+
+        <!-- Stack de cartões -> Único Cartão Premium -->
+        <div class="relative" style="width: 340px; height: 212px;">
+
+          <!-- ══ CARTÃO PREMIUM ÚNICO ══ -->
+          <div class="absolute group" style="top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+            <div class="animate-float-card-1 relative w-full h-full overflow-hidden cursor-pointer"
+                 style="border-radius: 20px;
+                        background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
+                        border: 1px solid rgba(255,255,255,0.1);
+                        box-shadow: 0 40px 80px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.08);">
+
+              <!-- Glare effect -->
+              <div class="glare-effect"></div>
+              
+              <!-- Subtle diagonal inner shine -->
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.08) 50%, transparent 55%);"></div>
+
+              <!-- Top Section: NFC Chip & Waves -->
+              <div class="flex justify-between items-start w-full p-5 relative z-10">
+                <!-- Chip NFC simulado -->
+                <div style="width:36px; height:28px; border-radius:6px;
+                            background:linear-gradient(135deg,#2a2a2a,#111);
+                            border:1px solid rgba(255,255,255,0.2);
+                            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+                            display:grid; grid-template-columns:1fr 1fr; gap:2px; padding:3px;">
+                  <div style="background:rgba(255,255,255,0.1); border-radius:2px;"></div>
+                  <div style="background:rgba(255,255,255,0.15); border-radius:2px;"></div>
+                  <div style="background:rgba(255,255,255,0.1); border-radius:2px; grid-column:span 2; height: 4px;"></div>
+                  <div style="background:rgba(255,255,255,0.12); border-radius:2px;"></div>
+                  <div style="background:rgba(255,255,255,0.08); border-radius:2px;"></div>
+                </div>
+
+                <!-- Onda NFC (símbolo) -->
+                <div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3C8 3 4.5 5.5 3 9" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 3C16 3 19.5 5.5 21 9" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 7C9.5 7 7.5 8.5 6.5 10.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 7C14.5 7 16.5 8.5 17.5 10.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="12" cy="13" r="2" fill="rgba(255,255,255,0.9)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Bottom Section: Google + QR Code -->
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-end z-10">
+                <!-- Logo Google estilizado -->
+                <div class="flex flex-col gap-1">
+                  <!-- Letras Google coloridas simuladas -->
+                  <div style="display:flex; gap:1px; align-items:baseline;">
+                    <span style="font-size:18px; font-weight:700; color:#4285F4; font-family:sans-serif; letter-spacing: -0.5px;">G</span>
+                    <span style="font-size:18px; font-weight:700; color:#EA4335; font-family:sans-serif; letter-spacing: -0.5px;">o</span>
+                    <span style="font-size:18px; font-weight:700; color:#FBBC04; font-family:sans-serif; letter-spacing: -0.5px;">o</span>
+                    <span style="font-size:18px; font-weight:700; color:#4285F4; font-family:sans-serif; letter-spacing: -0.5px;">g</span>
+                    <span style="font-size:18px; font-weight:700; color:#34A853; font-family:sans-serif; letter-spacing: -0.5px;">l</span>
+                    <span style="font-size:18px; font-weight:700; color:#EA4335; font-family:sans-serif; letter-spacing: -0.5px;">e</span>
+                  </div>
+                  <!-- Estrelas -->
+                  <div style="display:flex; gap:2px;">
+                    <span style="color:#FBBC04; font-size:12px; filter: drop-shadow(0 0 4px rgba(251, 188, 4, 0.5));">★★★★★</span>
+                  </div>
+                  <span style="font-size:8px; color:rgba(255,255,255,0.3); letter-spacing:0.1em; margin-top:2px; text-transform:uppercase;">Avaliações Ativas</span>
+                </div>
+
+                <!-- QR Code Integrado -->
+                <div class="flex flex-col items-center gap-2">
+                  <div style="padding:4px; background:rgba(255,255,255,0.95); border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+                    <svg width="40" height="40" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
                       <rect width="21" height="21" fill="white"/>
                       <rect x="1" y="1" width="7" height="7" fill="#111" rx="1"/>
                       <rect x="2" y="2" width="5" height="5" fill="white" rx="0.5"/>
@@ -373,26 +665,96 @@
                       <rect x="17" y="15" width="3" height="3" fill="#111"/>
                     </svg>
                   </div>
-                </div>
-
-                <div class="flex items-center justify-between pt-2 border-t border-white/[0.07]">
-                  <span class="text-[8px] tracking-[0.2em] text-[#444] uppercase font-semibold">NFC-Stars</span>
-                  <div class="flex gap-1">
-                    <span class="w-1 h-1 rounded-full bg-[#333]"></span>
-                    <span class="w-1 h-1 rounded-full bg-[#444]"></span>
-                    <span class="w-1 h-1 rounded-full bg-blue-600 opacity-60"></span>
-                  </div>
+                  <span style="font-size:7px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; font-weight:700;">SCAN / TAP</span>
                 </div>
               </div>
+
             </div>
           </div>
+          <!-- ══ FIM CARTÃO PREMIUM ÚNICO ══ -->
 
         </div>
       </div>
+      <!-- ─── FIM CARTÕES ─── -->
+
+      <!-- ─── COLUNA DIREITA: Features ─── -->
+      <div class="flex flex-col gap-8 animate-item delay-200">
+
+        <!-- Feature 1 -->
+        <div class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+               style="background:rgba(37,99,235,0.12); border:1px solid rgba(37,99,235,0.2);">
+            <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">Aproxime. Avalie. Pronto.</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">O cliente encostar o dispositivo no cartão é suficiente. A página de avaliações do Google abre automaticamente, sem atritos.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+               style="background:rgba(37,99,235,0.12); border:1px solid rgba(37,99,235,0.2);">
+            <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">QR Code integrado no design</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Para dispositivos mais antigos, a tecnologia se mantém acessível. O QR Code está elegantemente fundido à interface visual do cartão.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+               style="background:rgba(37,99,235,0.12); border:1px solid rgba(37,99,235,0.2);">
+            <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">Design de Alta Engenharia</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Projetado com precisão milimétrica para máxima durabilidade e eficiência tecnológica. Uma peça que constrói autoridade instantânea.</p>
+          </div>
+        </div>
+
+        <!-- Stat row -->
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800/60">
+          <div class="text-center">
+            <p class="text-2xl font-black text-white">3s</p>
+            <p class="text-xs text-slate-500 mt-0.5">Até a avaliação</p>
+          </div>
+          <div class="text-center border-x border-slate-800/60">
+            <p class="text-2xl font-black text-white">5★</p>
+            <p class="text-xs text-slate-500 mt-0.5">Média clientes</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-black text-white">∞</p>
+            <p class="text-xs text-slate-500 mt-0.5">Usos possíveis</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/+5535933005536" target="_blank"
+           class="cta-primary inline-flex items-center justify-center gap-3 self-start
+                  bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-xl
+                  shadow-[0_0_30px_rgba(37,99,235,0.25)] hover:shadow-[0_0_50px_rgba(37,99,235,0.4)]
+                  transition-all text-sm ring-1 ring-blue-500/50">
+          <i class="fab fa-whatsapp text-lg"></i> Quero meu Cartão NFC Premium
+        </a>
+
+      </div>
+      <!-- ─── FIM FEATURES ─── -->
 
     </div>
   </div>
 </section>
+
+
 
 
 <!-- ══════════════════════════════════════════════
@@ -407,38 +769,67 @@
       <p class="mt-4 text-lg text-slate-400 max-w-xl mx-auto">Três passos. Resultado em dias.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 relative max-w-7xl mx-auto">
-      <div class="hidden md:block absolute top-[52px] left-[calc(16.66%+16px)] right-[calc(16.66%+16px)] h-px
-                  bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+    <div class="relative max-w-3xl mx-auto mt-12">
+      <!-- Glow Line Vertical -->
+      <div class="absolute left-[27px] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-500/50 to-transparent hidden md:block"></div>
+      
+      <!-- Steps Wrapper -->
+      <div class="space-y-8">
+        
+        <!-- Passo 1 -->
+        <div class="relative flex flex-col md:flex-row gap-8 items-start group animate-item delay-100">
+          <div class="hidden md:flex shrink-0 w-14 h-14 rounded-2xl bg-[#0a0f1c] border border-blue-500/30 items-center justify-center relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:border-blue-400 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all">
+            <span class="text-blue-400 font-bold text-lg">01</span>
+          </div>
+          <div class="flex-1 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:bg-white/10 transition-colors shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 text-xl md:hidden text-blue-400 font-bold">01</div>
+            <h3 class="text-white font-bold text-2xl mb-3 flex items-center gap-3">
+              Briefing Estratégico
+              <span class="inline-block px-2 py-1 text-[10px] uppercase tracking-wider bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Dia 1</span>
+            </h3>
+            <p class="text-slate-400 text-base leading-relaxed">
+              Mergulhamos fundo no DNA do seu negócio. Definimos juntos a proposta de valor irresistível, mapeamos o comportamento do seu público-alvo e estabelecemos a jornada exata para garantir máxima conversão.
+            </p>
+          </div>
+        </div>
 
-      <!-- Passo 1 -->
-      <div class="step-card rounded-2xl p-7 animate-item delay-100 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
-        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">01</p>
-        <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-xl">💬</div>
-        <h3 class="text-white font-bold text-lg mb-3">Briefing estratégico</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Entendemos o seu negócio, público-alvo e objetivo. Definimos o posicionamento e a proposta de valor que vai converter.
-        </p>
-      </div>
+        <!-- Passo 2 -->
+        <div class="relative flex flex-col md:flex-row gap-8 items-start group animate-item delay-200">
+          <div class="hidden md:flex shrink-0 w-14 h-14 rounded-2xl bg-[#0a0f1c] border border-blue-500/30 items-center justify-center relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:border-blue-400 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all">
+            <span class="text-blue-400 font-bold text-lg">02</span>
+          </div>
+          <div class="flex-1 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:bg-white/10 transition-colors shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 text-xl md:hidden text-blue-400 font-bold">02</div>
+            <h3 class="text-white font-bold text-2xl mb-3 flex items-center gap-3">
+              Design & Engenharia
+              <span class="inline-block px-2 py-1 text-[10px] uppercase tracking-wider bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Dia 2-5</span>
+            </h3>
+            <p class="text-slate-400 text-base leading-relaxed">
+              Nossa equipe cria a interface visual de luxo (UI) e aplica gatilhos psicológicos no design (UX). Desenvolvemos a arquitetura técnica com código otimizado, atingindo 100/100 no Google PageSpeed Insights.
+            </p>
+          </div>
+        </div>
 
-      <!-- Passo 2 -->
-      <div class="step-card rounded-2xl p-7 border-blue-500/15 bg-blue-500/3 animate-item delay-200 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
-        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">02</p>
-        <div class="w-11 h-11 rounded-xl bg-blue-500/12 flex items-center justify-center mb-6 text-xl">⚡</div>
-        <h3 class="text-white font-bold text-lg mb-3">Criação e desenvolvimento</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Nossa equipe cria o design, escreve o copy e desenvolve a landing page em até 7 dias úteis. Você aprova antes de publicar.
-        </p>
-      </div>
+        <!-- Passo 3 -->
+        <div class="relative flex flex-col md:flex-row gap-8 items-start group animate-item delay-300">
+          <div class="hidden md:flex shrink-0 w-14 h-14 rounded-2xl bg-[#0a0f1c] border border-blue-500/30 items-center justify-center relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:border-blue-400 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all">
+            <span class="text-blue-400 font-bold text-lg">03</span>
+          </div>
+          <div class="flex-1 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:bg-white/10 transition-colors shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 text-xl md:hidden text-blue-400 font-bold">03</div>
+            <h3 class="text-white font-bold text-2xl mb-3 flex items-center gap-3">
+              Go-Live & Escala
+              <span class="inline-block px-2 py-1 text-[10px] uppercase tracking-wider bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Dia 7</span>
+            </h3>
+            <p class="text-slate-400 text-base leading-relaxed">
+              Após testes rigorosos (QA) em diversos dispositivos, configuramos os eventos de conversão e conectamos o Meta Pixel e Google Analytics. Colocamos sua máquina de vendas no ar, perfeitamente calibrada para anúncios.
+            </p>
+          </div>
+        </div>
 
-      <!-- Passo 3 -->
-      <div class="step-card rounded-2xl p-7 animate-item delay-300 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
-        <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-6">03</p>
-        <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 text-xl">🚀</div>
-        <h3 class="text-white font-bold text-lg mb-3">Publicação e resultados</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Colocamos no ar, configuramos as integrações e você começa a receber leads. Acompanhamos os primeiros 30 dias.
-        </p>
       </div>
     </div>
 
@@ -691,7 +1082,7 @@
         </button>
       </form>
       <p class="text-xs text-center text-slate-600 mt-4">
-        <i class="fas fa-lock mr-1"></i> Seus dados estão seguros. Sem spam, jamais.
+        <i class="fas fa-lock mr-1"></i> Seus dados estão seguros. Não compartilhamos com terceiros.
       </p>
     </div>
   </div>

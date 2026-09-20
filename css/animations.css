@@ -1,13 +1,7 @@
 /* ==========================================================================
    ARQUIVO: css/animations.css
-   DESCRIÇÃO: Contém keyframes e classes de animações (Flutuação, Pulsar, Scroll).
-   
-   MAPA DE EDIÇÃO / ONDE ALTERAR:
-   - Animação do Robô: Altere @keyframes robot-float e .robot-float.
-   - Efeito de pulso do WhatsApp: Altere @keyframes wa-pulse.
-   - Animações de Scroll (fade-in): Altere .animate-item e as classes de delay.
+   DESCRIÇÃO: Animações premium — MacBook Open, Float Cards, Glare, Scroll Reveal.
    ========================================================================== */
-
 
 
 /* --- Animação de Pulso do WhatsApp --- */
@@ -33,3 +27,112 @@
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
+
+
+/* ==========================================================================
+   MACBOOK — ANIMAÇÃO DE ABERTURA DA TAMPA (Premium)
+   ========================================================================== */
+
+@keyframes macbook-lid-open {
+  0% {
+    transform: perspective(1400px) rotateX(-88deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* A tampa roda a partir da dobradiça (bottom center) */
+.macbook-lid {
+  transform-origin: bottom center;
+  animation: macbook-lid-open 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.4s;
+  transform: perspective(1400px) rotateX(-88deg);
+  transform-style: preserve-3d;
+  opacity: 0;
+}
+
+/* Wrapper principal: inclinação 3D elegante e persistente */
+.macbook-wrapper {
+  transform: perspective(1200px) rotateX(4deg) rotateY(-6deg);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.macbook-wrapper:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-2deg);
+}
+
+
+/* ==========================================================================
+   NFC CARDS — FLUTUAÇÃO 3D PREMIUM
+   ========================================================================== */
+
+/* Cartão frontal — Google NFC */
+@keyframes float-card-1 {
+  0%   { transform: translateY(0px)   rotateX(10deg) rotateY(-15deg); }
+  50%  { transform: translateY(-18px) rotateX(12deg) rotateY(-18deg); }
+  100% { transform: translateY(0px)   rotateX(10deg) rotateY(-15deg); }
+}
+
+/* Cartão traseiro — QR Code (movimento ligeiramente diferente) */
+@keyframes float-card-2 {
+  0%   { transform: translateY(0px)   rotateX(8deg)  rotateY(-10deg) translateZ(-30px); }
+  50%  { transform: translateY(-12px) rotateX(10deg) rotateY(-13deg) translateZ(-30px); }
+  100% { transform: translateY(0px)   rotateX(8deg)  rotateY(-10deg) translateZ(-30px); }
+}
+
+.animate-float-card-1 {
+  animation: float-card-1 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-card-2 {
+  animation: float-card-2 6.5s ease-in-out infinite 0.8s;
+  will-change: transform;
+}
+
+.animate-float-card-1:hover,
+.animate-float-card-2:hover {
+  animation-play-state: paused;
+}
+
+
+/* ==========================================================================
+   GLARE EFFECT — Brilho de luz a varrer o cartão como material de luxo
+   ========================================================================== */
+
+.glare-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.04) 35%,
+    rgba(255, 255, 255, 0.16) 50%,
+    rgba(255, 255, 255, 0.04) 65%,
+    transparent 80%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+/* Ativar glare ao hover no container pai */
+.animate-float-card-1:hover .glare-effect,
+.animate-float-card-2:hover .glare-effect {
+  transform: translateX(200%) skewX(-15deg);
+}
+
+/* Suporte alternativo via .group */
+.group:hover .glare-effect {
+  transform: translateX(200%) skewX(-15deg);
+}

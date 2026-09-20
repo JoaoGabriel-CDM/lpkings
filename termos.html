@@ -17,7 +17,7 @@
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="index.html" class="flex items-center shrink-0">
-        <img src="images/logo (2).png" alt="FlyNode" class="h-10 w-auto">
+        <img src="images/logo (2).png" alt="FlyNode" class="h-14 w-auto">
       </a>
       <a href="index.html" class="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
         &larr; Voltar ao site
@@ -57,9 +57,43 @@
   </div>
 </main>
 
-<footer class="py-8 border-t border-slate-800/60 mt-auto">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 text-center">
-    <p class="text-sm text-slate-600">&copy; 2026 FlyNode. Todos os direitos reservados.</p>
+<footer class="py-16 md:py-24 border-t border-white/10 relative overflow-hidden bg-[#020B18]">
+  <!-- Fundo com glow sutil -->
+  <div class="absolute bottom-0 left-0 w-[600px] h-[300px] bg-blue-600/5 blur-[100px] rounded-full pointer-events-none"></div>
+  
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      
+      <!-- Coluna Esquerda: Logo e Frase -->
+      <div class="flex flex-col items-start">
+        <a href="index.html" class="mb-6 block transform hover:scale-105 transition-transform duration-300">
+          <img src="images/logo (2).png" alt="FlyNode" class="h-20 md:h-24 w-auto opacity-95 hover:opacity-100 transition-opacity filter drop-shadow-[0_10px_20px_rgba(37,99,235,0.15)]">
+        </a>
+        <p class="text-slate-400 text-lg font-medium max-w-sm tracking-wide">
+          Elevando marcas ao topo do digital.
+        </p>
+      </div>
+
+      <!-- Coluna Direita: Links -->
+      <div class="flex flex-col md:items-end justify-center">
+        <nav class="flex flex-col space-y-4 md:text-right">
+          <a href="termos.html" class="text-base font-medium text-slate-400 hover:text-white hover:translate-x-1 md:hover:-translate-x-1 transition-all">Termos de Serviço</a>
+          <a href="politica.html" class="text-base font-medium text-slate-400 hover:text-white hover:translate-x-1 md:hover:-translate-x-1 transition-all">Política de Privacidade</a>
+          <a href="index.html#faq" class="text-base font-medium text-slate-400 hover:text-white hover:translate-x-1 md:hover:-translate-x-1 transition-all">FAQ</a>
+        </nav>
+      </div>
+      
+    </div>
+    
+    <!-- Inferior: Linha Divisória e Copyright -->
+    <div class="w-full h-px bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 mb-8"></div>
+    <div class="flex justify-between items-center flex-col md:flex-row gap-4">
+      <p class="text-sm text-slate-500 font-medium tracking-wider">&copy; 2026 FlyNode. Construído para resultados.</p>
+      <div class="flex gap-4">
+        <a href="#" class="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
   </div>
 </footer>
 
